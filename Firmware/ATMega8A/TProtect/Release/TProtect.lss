@@ -1,0 +1,3100 @@
+
+TProtect.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001d82  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00001e19  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          000002c5  00800060  00800060  00001e16  2**0
+                  ALLOC
+  3 .eeprom       00000003  00810000  00810000  00001e16  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000030  00000000  00000000  00001e19  2**0
+                  CONTENTS, READONLY
+  5 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001e4c  2**2
+                  CONTENTS, READONLY
+  6 .debug_aranges 00000060  00000000  00000000  00001e88  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   0000068c  00000000  00000000  00001ee8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 0000048a  00000000  00000000  00002574  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   000002cc  00000000  00000000  000029fe  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000017a  00000000  00000000  00002cca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	c6 c2       	rjmp	.+1420   	; 0x58e <__ctors_end>
+       2:	38 ce       	rjmp	.-912    	; 0xfffffc74 <__eeprom_end+0xff7efc71>
+       4:	d4 c2       	rjmp	.+1448   	; 0x5ae <__bad_interrupt>
+       6:	25 ce       	rjmp	.-950    	; 0xfffffc52 <__eeprom_end+0xff7efc4f>
+       8:	d2 c2       	rjmp	.+1444   	; 0x5ae <__bad_interrupt>
+       a:	d1 c2       	rjmp	.+1442   	; 0x5ae <__bad_interrupt>
+       c:	d0 c2       	rjmp	.+1440   	; 0x5ae <__bad_interrupt>
+       e:	cf c2       	rjmp	.+1438   	; 0x5ae <__bad_interrupt>
+      10:	ce c2       	rjmp	.+1436   	; 0x5ae <__bad_interrupt>
+      12:	cd c2       	rjmp	.+1434   	; 0x5ae <__bad_interrupt>
+      14:	cc c2       	rjmp	.+1432   	; 0x5ae <__bad_interrupt>
+      16:	47 ce       	rjmp	.-882    	; 0xfffffca6 <__eeprom_end+0xff7efca3>
+      18:	69 ce       	rjmp	.-814    	; 0xfffffcec <__eeprom_end+0xff7efce9>
+      1a:	c9 c2       	rjmp	.+1426   	; 0x5ae <__bad_interrupt>
+      1c:	c8 c2       	rjmp	.+1424   	; 0x5ae <__bad_interrupt>
+      1e:	c7 c2       	rjmp	.+1422   	; 0x5ae <__bad_interrupt>
+      20:	c6 c2       	rjmp	.+1420   	; 0x5ae <__bad_interrupt>
+      22:	c5 c2       	rjmp	.+1418   	; 0x5ae <__bad_interrupt>
+      24:	c4 c2       	rjmp	.+1416   	; 0x5ae <__bad_interrupt>
+      26:	7a c5       	rjmp	.+2804   	; 0xb1c <FSM_OWS_Process+0x18>
+      28:	84 c5       	rjmp	.+2824   	; 0xb32 <FSM_OWS_Process+0x2e>
+      2a:	92 c5       	rjmp	.+2852   	; 0xb50 <FSM_OWS_Process+0x4c>
+      2c:	a7 c5       	rjmp	.+2894   	; 0xb7c <FSM_OWS_Process+0x78>
+      2e:	d3 c5       	rjmp	.+2982   	; 0xbd6 <FSM_OWS_Process+0xd2>
+      30:	f4 c5       	rjmp	.+3048   	; 0xc1a <FSM_OWS_Process+0x116>
+      32:	11 c6       	rjmp	.+3106   	; 0xc56 <FSM_OWS_Process+0x152>
+      34:	57 c6       	rjmp	.+3246   	; 0xce4 <FSM_OWS_Process+0x1e0>
+      36:	9b c6       	rjmp	.+3382   	; 0xd6e <FSM_SYSTEM_Process+0x18>
+      38:	a1 c6       	rjmp	.+3394   	; 0xd7c <FSM_SYSTEM_Process+0x26>
+      3a:	ab c6       	rjmp	.+3414   	; 0xd92 <FSM_SYSTEM_Process+0x3c>
+      3c:	c5 c7       	rjmp	.+3978   	; 0xfc8 <FSM_SYSTEM_Process+0x272>
+      3e:	fd c7       	rjmp	.+4090   	; 0x103a <FSM_SYSTEM_Process+0x2e4>
+      40:	09 c8       	rjmp	.-4078   	; 0xfffff054 <__eeprom_end+0xff7ef051>
+      42:	29 c8       	rjmp	.-4014   	; 0xfffff096 <__eeprom_end+0xff7ef093>
+      44:	26 c8       	rjmp	.-4020   	; 0xfffff092 <__eeprom_end+0xff7ef08f>
+      46:	36 c8       	rjmp	.-3988   	; 0xfffff0b4 <__eeprom_end+0xff7ef0b1>
+      48:	5c c9       	rjmp	.-3400   	; 0xfffff302 <__eeprom_end+0xff7ef2ff>
+      4a:	74 c9       	rjmp	.-3352   	; 0xfffff334 <__eeprom_end+0xff7ef331>
+      4c:	38 ca       	rjmp	.-2960   	; 0xfffff4be <__eeprom_end+0xff7ef4bb>
+      4e:	61 ca       	rjmp	.-2878   	; 0xfffff512 <__eeprom_end+0xff7ef50f>
+      50:	8e ca       	rjmp	.-2788   	; 0xfffff56e <__eeprom_end+0xff7ef56b>
+      52:	a8 ca       	rjmp	.-2736   	; 0xfffff5a4 <__eeprom_end+0xff7ef5a1>
+      54:	64 ca       	rjmp	.-2872   	; 0xfffff51e <__eeprom_end+0xff7ef51b>
+      56:	6d ca       	rjmp	.-2854   	; 0xfffff532 <__eeprom_end+0xff7ef52f>
+      58:	72 ca       	rjmp	.-2844   	; 0xfffff53e <__eeprom_end+0xff7ef53b>
+      5a:	c3 ca       	rjmp	.-2682   	; 0xfffff5e2 <__eeprom_end+0xff7ef5df>
+      5c:	cb ca       	rjmp	.-2666   	; 0xfffff5f4 <__eeprom_end+0xff7ef5f1>
+
+0000005e <__trampolines_end>:
+      5e:	10 27       	eor	r17, r16
+      60:	e8 03       	fmulsu	r22, r16
+      62:	64 00       	.word	0x0064	; ????
+      64:	0a 00       	.word	0x000a	; ????
+      66:	01 00       	.word	0x0001	; ????
+
+00000068 <pow3Table8>:
+      68:	64 0a 01                                            d..
+
+0000006b <Hexidecimal>:
+      6b:	30 31 32 33 34 35 36 37 38 39 41 42 43 44 45 46     0123456789ABCDEF
+	...
+
+0000007c <crc8_table>:
+      7c:	00 5e bc e2 61 3f dd 83 c2 9c 7e 20 a3 fd 1f 41     .^..a?....~ ...A
+      8c:	9d c3 21 7f fc a2 40 1e 5f 01 e3 bd 3e 60 82 dc     ..!...@._...>`..
+      9c:	23 7d 9f c1 42 1c fe a0 e1 bf 5d 03 80 de 3c 62     #}..B.....]...<b
+      ac:	be e0 02 5c df 81 63 3d 7c 22 c0 9e 1d 43 a1 ff     ...\..c=|"...C..
+      bc:	46 18 fa a4 27 79 9b c5 84 da 38 66 e5 bb 59 07     F...'y....8f..Y.
+      cc:	db 85 67 39 ba e4 06 58 19 47 a5 fb 78 26 c4 9a     ..g9...X.G..x&..
+      dc:	65 3b d9 87 04 5a b8 e6 a7 f9 1b 45 c6 98 7a 24     e;...Z.....E..z$
+      ec:	f8 a6 44 1a 99 c7 25 7b 3a 64 86 d8 5b 05 e7 b9     ..D...%{:d..[...
+      fc:	8c d2 30 6e ed b3 51 0f 4e 10 f2 ac 2f 71 93 cd     ..0n..Q.N.../q..
+     10c:	11 4f ad f3 70 2e cc 92 d3 8d 6f 31 b2 ec 0e 50     .O..p.....o1...P
+     11c:	af f1 13 4d ce 90 72 2c 6d 33 d1 8f 0c 52 b0 ee     ...M..r,m3...R..
+     12c:	32 6c 8e d0 53 0d ef b1 f0 ae 4c 12 91 cf 2d 73     2l..S.....L...-s
+     13c:	ca 94 76 28 ab f5 17 49 08 56 b4 ea 69 37 d5 8b     ..v(...I.V..i7..
+     14c:	57 09 eb b5 36 68 8a d4 95 cb 29 77 f4 aa 48 16     W...6h....)w..H.
+     15c:	e9 b7 55 0b 88 d6 34 6a 2b 75 97 c9 4a 14 f6 a8     ..U...4j+u..J...
+     16c:	74 2a c8 96 15 4b a9 f7 b6 e8 0a 54 d7 89 6b 35     t*...K.....T..k5
+
+0000017c <ERROR_UNKNOWN_CMD>:
+     17c:	55 6e 6b 6e 6f 77 6e 20 63 6f 6d 6d 61 6e 64 2e     Unknown command.
+     18c:	20 46 6f 72 20 68 65 6c 70 20 2d 20 70 72 69 6e      For help - prin
+     19c:	74 20 22 68 65 6c 70 22 0d 0a 00                    t "help"...
+
+000001a7 <ERROR_CHANGE_VALUE_ACTIVE_CMD>:
+     1a7:	43 6f 75 6c 64 20 6e 6f 74 20 63 68 61 6e 67 65     Could not change
+     1b7:	20 76 61 6c 75 65 20 77 68 69 6c 65 20 64 65 76      value while dev
+     1c7:	69 63 65 20 74 75 72 6e 65 64 20 4f 4e 00           ice turned ON.
+
+000001d5 <ERROR_INVALID_VALUE_CMD>:
+     1d5:	49 6e 76 61 6c 69 64 20 76 61 6c 75 65 20 72 61     Invalid value ra
+     1e5:	6e 67 65 2e 20 4d 69 6e 2f 6d 61 78 3a 20 00        nge. Min/max: .
+
+000001f4 <ERROR_UNCOMPLETE_CMD>:
+     1f4:	43 6f 6d 6d 61 6e 64 20 69 6e 63 6f 6d 70 6c 65     Command incomple
+     204:	74 65 2e 20 46 6f 72 20 68 65 6c 70 20 2d 20 70     te. For help - p
+     214:	72 69 6e 74 20 22 68 65 6c 70 22 0d 0a 00           rint "help"...
+
+00000222 <ERROR_STR_TOO_LARGE>:
+     222:	53 74 72 69 6e 67 20 74 6f 6f 20 6c 61 72 67 65     String too large
+     232:	0d 0a 00                                            ...
+
+00000235 <MSG_TFON_VALUE_CHANGED>:
+     235:	5b 54 66 6f 6e 5d 20 76 61 6c 75 65 20 77 61 73     [Tfon] value was
+     245:	20 63 68 61 6e 67 65 64 20 74 6f 20 00               changed to .
+
+00000252 <MSG_TFOFF_VALUE_CHANGED>:
+     252:	5b 54 66 6f 66 66 5d 20 76 61 6c 75 65 20 77 61     [Tfoff] value wa
+     262:	73 20 63 68 61 6e 67 65 64 20 74 6f 20 00           s changed to .
+
+00000270 <MSG_T_HYSTERESIS>:
+     270:	54 65 6d 70 65 72 61 74 75 72 65 20 68 79 73 74     Temperature hyst
+     280:	65 72 65 73 69 73 20 69 73 20 00                    eresis is .
+
+0000028b <MSG_OK>:
+     28b:	2b 2b 4f 4b 2b 2b 0d 0a 0d 0a 00                    ++OK++.....
+
+00000296 <CMD_ON>:
+     296:	6f 6e 00                                            on.
+
+00000299 <CMD_OFF>:
+     299:	6f 66 66 00                                         off.
+
+0000029d <CMD_SET_LOAD>:
+     29d:	6c 6f 61 64 00                                      load.
+
+000002a2 <CMD_SET_TOFF>:
+     2a2:	74 6f 66 66 00                                      toff.
+
+000002a7 <CMD_SET_TFOFF>:
+     2a7:	74 66 6f 66 66 00                                   tfoff.
+
+000002ad <CMD_SET_TFON>:
+     2ad:	74 66 6f 6e 00                                      tfon.
+
+000002b2 <CMD_SET>:
+     2b2:	73 65 74 00                                         set.
+
+000002b6 <CMD_SAVE>:
+     2b6:	73 61 76 65 00                                      save.
+
+000002bb <CMD_LOAD>:
+     2bb:	6c 6f 61 64 00                                      load.
+
+000002c0 <CMD_RESET>:
+     2c0:	72 65 73 65 74 00                                   reset.
+
+000002c6 <CMD_INFO>:
+     2c6:	69 6e 66 6f 00                                      info.
+
+000002cb <CMD_HELP>:
+     2cb:	68 65 6c 70 00                                      help.
+
+000002d0 <HLP_STR11>:
+     2d0:	73 61 76 65 09 7c 09 09 7c 20 53 61 76 65 20 70     save.|..| Save p
+     2e0:	61 72 61 6d 73 20 74 6f 20 45 45 50 52 4f 4d 0d     arams to EEPROM.
+     2f0:	0a 00                                               ..
+
+000002f2 <HLP_STR10>:
+     2f2:	6c 6f 61 64 09 7c 09 09 7c 20 4c 6f 61 64 20 70     load.|..| Load p
+     302:	61 72 61 6d 73 20 66 72 6f 6d 20 45 45 50 52 4f     arams from EEPRO
+     312:	4d 0d 0a 00                                         M...
+
+00000316 <HLP_STR9>:
+     316:	72 65 73 65 74 09 7c 09 09 7c 20 52 65 73 65 74     reset.|..| Reset
+     326:	20 54 45 52 4d 41 4c 20 50 52 4f 54 45 43 54 49      TERMAL PROTECTI
+     336:	4f 4e 20 6d 6f 64 75 6c 65 0d 0a 00                 ON module...
+
+00000342 <HLP_STR8>:
+     342:	09 7c 20 6c 6f 61 64 20 5b 6f 6e 7c 6f 66 66 5d     .| load [on|off]
+     352:	09 7c 20 4f 6e 2f 6f 66 66 20 6c 6f 61 64 0d 0a     .| On/off load..
+	...
+
+00000363 <HLP_STR7>:
+     363:	09 7c 20 74 6f 66 66 20 5b 76 61 6c 5d 09 7c 20     .| toff [val].| 
+     373:	45 6d 65 72 67 65 6e 63 79 20 53 57 49 54 43 48     Emergency SWITCH
+     383:	20 4f 46 46 20 74 65 6d 70 65 72 61 74 75 72 65      OFF temperature
+     393:	0d 0a 00                                            ...
+
+00000396 <HLP_STR6>:
+     396:	09 7c 20 74 66 6f 66 66 20 5b 76 61 6c 5d 09 7c     .| tfoff [val].|
+     3a6:	20 46 61 6e 20 4f 46 46 20 74 65 6d 70 65 72 61      Fan OFF tempera
+     3b6:	74 75 72 65 0d 0a 00                                ture...
+
+000003bd <HLP_STR5>:
+     3bd:	73 65 74 09 7c 20 74 66 6f 6e 20 5b 76 61 6c 5d     set.| tfon [val]
+     3cd:	09 7c 20 46 61 6e 20 4f 4e 20 74 65 6d 70 65 72     .| Fan ON temper
+     3dd:	61 74 75 72 65 0d 0a 00                             ature...
+
+000003e5 <HLP_STR4>:
+     3e5:	68 65 6c 70 09 7c 09 09 7c 20 52 65 74 75 72 6e     help.|..| Return
+     3f5:	20 74 68 69 73 20 68 65 6c 70 20 64 65 73 6b 0d      this help desk.
+     405:	0a 00                                               ..
+
+00000407 <HLP_STR3>:
+     407:	69 6e 66 6f 09 7c 09 09 7c 20 44 69 73 70 6c 61     info.|..| Displa
+     417:	79 20 73 79 73 74 65 6d 20 69 6e 66 6f 0d 0a 00     y system info...
+
+00000427 <HLP_STR2>:
+     427:	2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d     ----------------
+     437:	2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d     ----------------
+     447:	2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 0d 0a 00     -------------...
+
+00000457 <HLP_STR1>:
+     457:	43 4d 44 09 7c 20 50 41 52 41 4d 53 09 7c 20 44     CMD.| PARAMS.| D
+     467:	65 73 63 72 69 70 74 69 6f 6e 0d 0a 00              escription...
+
+00000474 <FW_STR13>:
+     474:	54 6f 66 66 3a 09 00                                Toff:..
+
+0000047b <FW_STR12>:
+     47b:	54 66 6f 66 66 3a 09 00                             Tfoff:..
+
+00000483 <FW_STR11>:
+     483:	54 66 6f 6e 3a 09 00                                Tfon:..
+
+0000048a <FW_STR10>:
+     48a:	50 61 72 61 6d 73 3a 0d 0a 2d 2d 2d 2d 2d 2d 2d     Params:..-------
+     49a:	0d 0a 00                                            ...
+
+0000049d <FW_STR9>:
+     49d:	4c 6f 61 64 20 73 74 61 74 65 3a 09 00              Load state:..
+
+000004aa <FW_STR8>:
+     4aa:	46 61 6e 20 73 70 65 65 64 3a 09 00                 Fan speed:..
+
+000004b6 <FW_STR7>:
+     4b6:	54 53 20 74 65 6d 70 3a 09 00                       TS temp:..
+
+000004c0 <FW_STR6>:
+     4c0:	54 53 20 73 65 72 61 69 6c 3a 09 00                 TS serail:..
+
+000004cc <FW_STR5>:
+     4cc:	54 53 20 74 79 70 65 3a 09 00                       TS type:..
+
+000004d6 <FW_STR4>:
+     4d6:	53 79 73 74 65 6d 3a 0d 0a 2d 2d 2d 2d 2d 2d 2d     System:..-------
+     4e6:	0d 0a 00                                            ...
+
+000004e9 <FW_STR3>:
+     4e9:	46 57 3a 20 31 2e 30 61 28 46 65 62 20 31 30 20     FW: 1.0a(Feb 10 
+     4f9:	32 30 31 39 2c 20 30 30 3a 32 30 3a 31 32 29 2c     2019, 00:20:12),
+     509:	20 48 57 3a 20 31 2e 30 0d 0a 0d 0a 00               HW: 1.0.....
+
+00000516 <FW_STR2>:
+     516:	28 63 29 32 30 31 38 20 66 6c 79 38 72 20 3c 66     (c)2018 fly8r <f
+     526:	6c 79 38 72 40 66 6c 79 38 72 2e 72 75 3e 0d 0a     ly8r@fly8r.ru>..
+	...
+
+00000537 <FW_STR1>:
+     537:	3e 3e 3e 20 54 45 52 4d 41 4c 20 50 52 4f 54 45     >>> TERMAL PROTE
+     547:	43 54 49 4f 4e 20 3c 3c 3c 0d 0a 00                 CTION <<<...
+
+00000553 <SLASH>:
+     553:	2f 00                                               /.
+
+00000555 <PLUS>:
+     555:	2b 00                                               +.
+
+00000557 <MINUS>:
+     557:	2d 00                                               -.
+
+00000559 <UNKNOWN>:
+     559:	75 6e 6b 6e 6f 77 6e 00                             unknown.
+
+00000561 <DS18S>:
+     561:	44 53 31 38 53 32 30 00                             DS18S20.
+
+00000569 <DS18B>:
+     569:	44 53 31 38 42 32 30 00                             DS18B20.
+
+00000571 <VS>:
+     571:	7c 00                                               |.
+
+00000573 <RPM>:
+     573:	52 50 4d 00                                         RPM.
+
+00000577 <ON>:
+     577:	4f 4e 00                                            ON.
+
+0000057a <OFF>:
+     57a:	4f 46 46 00                                         OFF.
+
+0000057e <FAILED>:
+     57e:	66 61 69 6c 65 64 00                                failed.
+
+00000585 <CR>:
+     585:	0d 0a 00                                            ...
+
+00000588 <CONSOLE>:
+     588:	3e 20 00                                            > .
+
+0000058b <CELS>:
+     58b:	2a 43 00                                            *C.
+
+0000058e <__ctors_end>:
+     58e:	11 24       	eor	r1, r1
+     590:	1f be       	out	0x3f, r1	; 63
+     592:	cf e5       	ldi	r28, 0x5F	; 95
+     594:	d4 e0       	ldi	r29, 0x04	; 4
+     596:	de bf       	out	0x3e, r29	; 62
+     598:	cd bf       	out	0x3d, r28	; 61
+
+0000059a <__do_clear_bss>:
+     59a:	23 e0       	ldi	r18, 0x03	; 3
+     59c:	a0 e6       	ldi	r26, 0x60	; 96
+     59e:	b0 e0       	ldi	r27, 0x00	; 0
+     5a0:	01 c0       	rjmp	.+2      	; 0x5a4 <.do_clear_bss_start>
+
+000005a2 <.do_clear_bss_loop>:
+     5a2:	1d 92       	st	X+, r1
+
+000005a4 <.do_clear_bss_start>:
+     5a4:	a5 32       	cpi	r26, 0x25	; 37
+     5a6:	b2 07       	cpc	r27, r18
+     5a8:	e1 f7       	brne	.-8      	; 0x5a2 <.do_clear_bss_loop>
+     5aa:	3c db       	rcall	.-2440   	; 0xfffffc24 <__eeprom_end+0xff7efc21>
+     5ac:	e8 cb       	rjmp	.-2096   	; 0xfffffd7e <__eeprom_end+0xff7efd7b>
+
+000005ae <__bad_interrupt>:
+     5ae:	28 cd       	rjmp	.-1456   	; 0x0 <__vectors>
+
+000005b0 <UART_AddString>:
+     5b0:	fc 01       	movw	r30, r24
+     5b2:	20 e0       	ldi	r18, 0x00	; 0
+     5b4:	30 e0       	ldi	r19, 0x00	; 0
+     5b6:	41 91       	ld	r20, Z+
+     5b8:	44 23       	and	r20, r20
+     5ba:	31 f0       	breq	.+12     	; 0x5c8 <UART_AddString+0x18>
+     5bc:	2f 5f       	subi	r18, 0xFF	; 255
+     5be:	3f 4f       	sbci	r19, 0xFF	; 255
+     5c0:	24 3f       	cpi	r18, 0xF4	; 244
+     5c2:	41 e0       	ldi	r20, 0x01	; 1
+     5c4:	34 07       	cpc	r19, r20
+     5c6:	b9 f7       	brne	.-18     	; 0x5b6 <UART_AddString+0x6>
+     5c8:	55 98       	cbi	0x0a, 5	; 10
+     5ca:	60 91 64 00 	lds	r22, 0x0064	; 0x800064 <uart_tx_queue_length>
+     5ce:	70 91 65 00 	lds	r23, 0x0065	; 0x800065 <uart_tx_queue_length+0x1>
+     5d2:	55 9a       	sbi	0x0a, 5	; 10
+     5d4:	44 ef       	ldi	r20, 0xF4	; 244
+     5d6:	51 e0       	ldi	r21, 0x01	; 1
+     5d8:	46 1b       	sub	r20, r22
+     5da:	57 0b       	sbc	r21, r23
+     5dc:	24 17       	cp	r18, r20
+     5de:	35 07       	cpc	r19, r21
+     5e0:	80 f5       	brcc	.+96     	; 0x642 <UART_AddString+0x92>
+     5e2:	fc 01       	movw	r30, r24
+     5e4:	a0 91 62 00 	lds	r26, 0x0062	; 0x800062 <uart_p_write>
+     5e8:	b0 91 63 00 	lds	r27, 0x0063	; 0x800063 <uart_p_write+0x1>
+     5ec:	41 91       	ld	r20, Z+
+     5ee:	ad 56       	subi	r26, 0x6D	; 109
+     5f0:	bf 4f       	sbci	r27, 0xFF	; 255
+     5f2:	4c 93       	st	X, r20
+     5f4:	40 91 62 00 	lds	r20, 0x0062	; 0x800062 <uart_p_write>
+     5f8:	50 91 63 00 	lds	r21, 0x0063	; 0x800063 <uart_p_write+0x1>
+     5fc:	4f 5f       	subi	r20, 0xFF	; 255
+     5fe:	5f 4f       	sbci	r21, 0xFF	; 255
+     600:	50 93 63 00 	sts	0x0063, r21	; 0x800063 <uart_p_write+0x1>
+     604:	40 93 62 00 	sts	0x0062, r20	; 0x800062 <uart_p_write>
+     608:	40 91 62 00 	lds	r20, 0x0062	; 0x800062 <uart_p_write>
+     60c:	50 91 63 00 	lds	r21, 0x0063	; 0x800063 <uart_p_write+0x1>
+     610:	44 3f       	cpi	r20, 0xF4	; 244
+     612:	51 40       	sbci	r21, 0x01	; 1
+     614:	20 f0       	brcs	.+8      	; 0x61e <UART_AddString+0x6e>
+     616:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <uart_p_write+0x1>
+     61a:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <uart_p_write>
+     61e:	55 98       	cbi	0x0a, 5	; 10
+     620:	40 91 64 00 	lds	r20, 0x0064	; 0x800064 <uart_tx_queue_length>
+     624:	50 91 65 00 	lds	r21, 0x0065	; 0x800065 <uart_tx_queue_length+0x1>
+     628:	4f 5f       	subi	r20, 0xFF	; 255
+     62a:	5f 4f       	sbci	r21, 0xFF	; 255
+     62c:	50 93 65 00 	sts	0x0065, r21	; 0x800065 <uart_tx_queue_length+0x1>
+     630:	40 93 64 00 	sts	0x0064, r20	; 0x800064 <uart_tx_queue_length>
+     634:	55 9a       	sbi	0x0a, 5	; 10
+     636:	af 01       	movw	r20, r30
+     638:	48 1b       	sub	r20, r24
+     63a:	59 0b       	sbc	r21, r25
+     63c:	42 17       	cp	r20, r18
+     63e:	53 07       	cpc	r21, r19
+     640:	88 f2       	brcs	.-94     	; 0x5e4 <UART_AddString+0x34>
+     642:	08 95       	ret
+
+00000644 <UART_AddStringFromFlash>:
+     644:	20 e0       	ldi	r18, 0x00	; 0
+     646:	30 e0       	ldi	r19, 0x00	; 0
+     648:	fc 01       	movw	r30, r24
+     64a:	e2 0f       	add	r30, r18
+     64c:	f3 1f       	adc	r31, r19
+     64e:	e4 91       	lpm	r30, Z
+     650:	ee 23       	and	r30, r30
+     652:	31 f0       	breq	.+12     	; 0x660 <UART_AddStringFromFlash+0x1c>
+     654:	2f 5f       	subi	r18, 0xFF	; 255
+     656:	3f 4f       	sbci	r19, 0xFF	; 255
+     658:	24 3f       	cpi	r18, 0xF4	; 244
+     65a:	41 e0       	ldi	r20, 0x01	; 1
+     65c:	34 07       	cpc	r19, r20
+     65e:	a1 f7       	brne	.-24     	; 0x648 <UART_AddStringFromFlash+0x4>
+     660:	55 98       	cbi	0x0a, 5	; 10
+     662:	60 91 64 00 	lds	r22, 0x0064	; 0x800064 <uart_tx_queue_length>
+     666:	70 91 65 00 	lds	r23, 0x0065	; 0x800065 <uart_tx_queue_length+0x1>
+     66a:	55 9a       	sbi	0x0a, 5	; 10
+     66c:	44 ef       	ldi	r20, 0xF4	; 244
+     66e:	51 e0       	ldi	r21, 0x01	; 1
+     670:	46 1b       	sub	r20, r22
+     672:	57 0b       	sbc	r21, r23
+     674:	24 17       	cp	r18, r20
+     676:	35 07       	cpc	r19, r21
+     678:	a0 f5       	brcc	.+104    	; 0x6e2 <UART_AddStringFromFlash+0x9e>
+     67a:	40 e0       	ldi	r20, 0x00	; 0
+     67c:	50 e0       	ldi	r21, 0x00	; 0
+     67e:	60 91 62 00 	lds	r22, 0x0062	; 0x800062 <uart_p_write>
+     682:	70 91 63 00 	lds	r23, 0x0063	; 0x800063 <uart_p_write+0x1>
+     686:	fc 01       	movw	r30, r24
+     688:	e4 0f       	add	r30, r20
+     68a:	f5 1f       	adc	r31, r21
+     68c:	e4 91       	lpm	r30, Z
+     68e:	db 01       	movw	r26, r22
+     690:	ad 56       	subi	r26, 0x6D	; 109
+     692:	bf 4f       	sbci	r27, 0xFF	; 255
+     694:	ec 93       	st	X, r30
+     696:	60 91 62 00 	lds	r22, 0x0062	; 0x800062 <uart_p_write>
+     69a:	70 91 63 00 	lds	r23, 0x0063	; 0x800063 <uart_p_write+0x1>
+     69e:	6f 5f       	subi	r22, 0xFF	; 255
+     6a0:	7f 4f       	sbci	r23, 0xFF	; 255
+     6a2:	70 93 63 00 	sts	0x0063, r23	; 0x800063 <uart_p_write+0x1>
+     6a6:	60 93 62 00 	sts	0x0062, r22	; 0x800062 <uart_p_write>
+     6aa:	60 91 62 00 	lds	r22, 0x0062	; 0x800062 <uart_p_write>
+     6ae:	70 91 63 00 	lds	r23, 0x0063	; 0x800063 <uart_p_write+0x1>
+     6b2:	64 3f       	cpi	r22, 0xF4	; 244
+     6b4:	71 40       	sbci	r23, 0x01	; 1
+     6b6:	20 f0       	brcs	.+8      	; 0x6c0 <UART_AddStringFromFlash+0x7c>
+     6b8:	10 92 63 00 	sts	0x0063, r1	; 0x800063 <uart_p_write+0x1>
+     6bc:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <uart_p_write>
+     6c0:	55 98       	cbi	0x0a, 5	; 10
+     6c2:	60 91 64 00 	lds	r22, 0x0064	; 0x800064 <uart_tx_queue_length>
+     6c6:	70 91 65 00 	lds	r23, 0x0065	; 0x800065 <uart_tx_queue_length+0x1>
+     6ca:	6f 5f       	subi	r22, 0xFF	; 255
+     6cc:	7f 4f       	sbci	r23, 0xFF	; 255
+     6ce:	70 93 65 00 	sts	0x0065, r23	; 0x800065 <uart_tx_queue_length+0x1>
+     6d2:	60 93 64 00 	sts	0x0064, r22	; 0x800064 <uart_tx_queue_length>
+     6d6:	55 9a       	sbi	0x0a, 5	; 10
+     6d8:	4f 5f       	subi	r20, 0xFF	; 255
+     6da:	5f 4f       	sbci	r21, 0xFF	; 255
+     6dc:	42 17       	cp	r20, r18
+     6de:	53 07       	cpc	r21, r19
+     6e0:	70 f2       	brcs	.-100    	; 0x67e <UART_AddStringFromFlash+0x3a>
+     6e2:	08 95       	ret
+
+000006e4 <UART_TX_Service>:
+     6e4:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <uart_tx_queue_length>
+     6e8:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <uart_tx_queue_length+0x1>
+     6ec:	89 2b       	or	r24, r25
+     6ee:	31 f1       	breq	.+76     	; 0x73c <UART_TX_Service+0x58>
+     6f0:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <_edata>
+     6f4:	f0 91 61 00 	lds	r31, 0x0061	; 0x800061 <_edata+0x1>
+     6f8:	ed 56       	subi	r30, 0x6D	; 109
+     6fa:	ff 4f       	sbci	r31, 0xFF	; 255
+     6fc:	80 81       	ld	r24, Z
+     6fe:	8c b9       	out	0x0c, r24	; 12
+     700:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
+     704:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <_edata+0x1>
+     708:	01 96       	adiw	r24, 0x01	; 1
+     70a:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <_edata+0x1>
+     70e:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+     712:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
+     716:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <_edata+0x1>
+     71a:	84 3f       	cpi	r24, 0xF4	; 244
+     71c:	91 40       	sbci	r25, 0x01	; 1
+     71e:	20 f0       	brcs	.+8      	; 0x728 <UART_TX_Service+0x44>
+     720:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <_edata+0x1>
+     724:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <_edata>
+     728:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <uart_tx_queue_length>
+     72c:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <uart_tx_queue_length+0x1>
+     730:	01 97       	sbiw	r24, 0x01	; 1
+     732:	90 93 65 00 	sts	0x0065, r25	; 0x800065 <uart_tx_queue_length+0x1>
+     736:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <uart_tx_queue_length>
+     73a:	08 95       	ret
+     73c:	55 98       	cbi	0x0a, 5	; 10
+     73e:	08 95       	ret
+
+00000740 <UART_RX_Service>:
+     740:	8c b1       	in	r24, 0x0c	; 12
+     742:	8d 30       	cpi	r24, 0x0D	; 13
+     744:	29 f0       	breq	.+10     	; 0x750 <UART_RX_Service+0x10>
+     746:	8f 37       	cpi	r24, 0x7F	; 127
+     748:	29 f0       	breq	.+10     	; 0x754 <UART_RX_Service+0x14>
+     74a:	88 30       	cpi	r24, 0x08	; 8
+     74c:	d1 f4       	brne	.+52     	; 0x782 <UART_RX_Service+0x42>
+     74e:	02 c0       	rjmp	.+4      	; 0x754 <UART_RX_Service+0x14>
+     750:	82 e0       	ldi	r24, 0x02	; 2
+     752:	34 c0       	rjmp	.+104    	; 0x7bc <UART_RX_Service+0x7c>
+     754:	90 91 67 00 	lds	r25, 0x0067	; 0x800067 <uart_rx_queue_length>
+     758:	99 23       	and	r25, r25
+     75a:	91 f1       	breq	.+100    	; 0x7c0 <UART_RX_Service+0x80>
+     75c:	8c b9       	out	0x0c, r24	; 12
+     75e:	80 91 67 00 	lds	r24, 0x0067	; 0x800067 <uart_rx_queue_length>
+     762:	81 50       	subi	r24, 0x01	; 1
+     764:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <uart_rx_queue_length>
+     768:	80 91 66 00 	lds	r24, 0x0066	; 0x800066 <uart_rx_buff_tail>
+     76c:	81 11       	cpse	r24, r1
+     76e:	03 c0       	rjmp	.+6      	; 0x776 <UART_RX_Service+0x36>
+     770:	84 e1       	ldi	r24, 0x14	; 20
+     772:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <uart_rx_buff_tail>
+     776:	80 91 66 00 	lds	r24, 0x0066	; 0x800066 <uart_rx_buff_tail>
+     77a:	81 50       	subi	r24, 0x01	; 1
+     77c:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <uart_rx_buff_tail>
+     780:	08 95       	ret
+     782:	90 91 67 00 	lds	r25, 0x0067	; 0x800067 <uart_rx_queue_length>
+     786:	94 31       	cpi	r25, 0x14	; 20
+     788:	c0 f4       	brcc	.+48     	; 0x7ba <UART_RX_Service+0x7a>
+     78a:	8c b9       	out	0x0c, r24	; 12
+     78c:	e0 91 66 00 	lds	r30, 0x0066	; 0x800066 <uart_rx_buff_tail>
+     790:	f0 e0       	ldi	r31, 0x00	; 0
+     792:	e9 57       	subi	r30, 0x79	; 121
+     794:	fd 4f       	sbci	r31, 0xFD	; 253
+     796:	80 83       	st	Z, r24
+     798:	80 91 66 00 	lds	r24, 0x0066	; 0x800066 <uart_rx_buff_tail>
+     79c:	8f 5f       	subi	r24, 0xFF	; 255
+     79e:	80 93 66 00 	sts	0x0066, r24	; 0x800066 <uart_rx_buff_tail>
+     7a2:	80 91 66 00 	lds	r24, 0x0066	; 0x800066 <uart_rx_buff_tail>
+     7a6:	84 31       	cpi	r24, 0x14	; 20
+     7a8:	11 f4       	brne	.+4      	; 0x7ae <UART_RX_Service+0x6e>
+     7aa:	10 92 66 00 	sts	0x0066, r1	; 0x800066 <uart_rx_buff_tail>
+     7ae:	80 91 67 00 	lds	r24, 0x0067	; 0x800067 <uart_rx_queue_length>
+     7b2:	8f 5f       	subi	r24, 0xFF	; 255
+     7b4:	80 93 67 00 	sts	0x0067, r24	; 0x800067 <uart_rx_queue_length>
+     7b8:	08 95       	ret
+     7ba:	81 e0       	ldi	r24, 0x01	; 1
+     7bc:	80 93 68 00 	sts	0x0068, r24	; 0x800068 <UART_RX_STATE>
+     7c0:	08 95       	ret
+
+000007c2 <UART_RX_FlushBuffer>:
+     7c2:	10 92 66 00 	sts	0x0066, r1	; 0x800066 <uart_rx_buff_tail>
+     7c6:	10 92 67 00 	sts	0x0067, r1	; 0x800067 <uart_rx_queue_length>
+     7ca:	08 95       	ret
+
+000007cc <FSM_BUTTON_Init>:
+     7cc:	10 92 6c 00 	sts	0x006C, r1	; 0x80006c <FSM_state>
+     7d0:	e9 e6       	ldi	r30, 0x69	; 105
+     7d2:	f0 e0       	ldi	r31, 0x00	; 0
+     7d4:	11 82       	std	Z+1, r1	; 0x01
+     7d6:	10 82       	st	Z, r1
+     7d8:	08 95       	ret
+
+000007da <FSM_BUTTON_Process>:
+     7da:	cf 93       	push	r28
+     7dc:	c0 91 6c 00 	lds	r28, 0x006C	; 0x80006c <FSM_state>
+     7e0:	c1 30       	cpi	r28, 0x01	; 1
+     7e2:	c9 f0       	breq	.+50     	; 0x816 <FSM_BUTTON_Process+0x3c>
+     7e4:	18 f0       	brcs	.+6      	; 0x7ec <FSM_BUTTON_Process+0x12>
+     7e6:	c2 30       	cpi	r28, 0x02	; 2
+     7e8:	79 f1       	breq	.+94     	; 0x848 <FSM_BUTTON_Process+0x6e>
+     7ea:	34 c0       	rjmp	.+104    	; 0x854 <FSM_BUTTON_Process+0x7a>
+     7ec:	85 99       	sbic	0x10, 5	; 16
+     7ee:	06 c0       	rjmp	.+12     	; 0x7fc <FSM_BUTTON_Process+0x22>
+     7f0:	10 92 69 00 	sts	0x0069, r1	; 0x800069 <button>
+     7f4:	10 92 6b 00 	sts	0x006B, r1	; 0x80006b <button+0x2>
+     7f8:	81 e0       	ldi	r24, 0x01	; 1
+     7fa:	1e c0       	rjmp	.+60     	; 0x838 <FSM_BUTTON_Process+0x5e>
+     7fc:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <button>
+     800:	88 23       	and	r24, r24
+     802:	41 f1       	breq	.+80     	; 0x854 <FSM_BUTTON_Process+0x7a>
+     804:	83 e0       	ldi	r24, 0x03	; 3
+     806:	5b d8       	rcall	.-3914   	; 0xfffff8be <__eeprom_end+0xff7ef8bb>
+     808:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <button>
+     80c:	80 93 6a 00 	sts	0x006A, r24	; 0x80006a <button+0x1>
+     810:	10 92 69 00 	sts	0x0069, r1	; 0x800069 <button>
+     814:	1f c0       	rjmp	.+62     	; 0x854 <FSM_BUTTON_Process+0x7a>
+     816:	83 e0       	ldi	r24, 0x03	; 3
+     818:	cd d9       	rcall	.-3174   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     81a:	0a 97       	sbiw	r24, 0x0a	; 10
+     81c:	d8 f0       	brcs	.+54     	; 0x854 <FSM_BUTTON_Process+0x7a>
+     81e:	85 99       	sbic	0x10, 5	; 16
+     820:	0e c0       	rjmp	.+28     	; 0x83e <FSM_BUTTON_Process+0x64>
+     822:	c0 93 69 00 	sts	0x0069, r28	; 0x800069 <button>
+     826:	80 91 6b 00 	lds	r24, 0x006B	; 0x80006b <button+0x2>
+     82a:	91 e0       	ldi	r25, 0x01	; 1
+     82c:	98 0f       	add	r25, r24
+     82e:	90 93 6b 00 	sts	0x006B, r25	; 0x80006b <button+0x2>
+     832:	8c 33       	cpi	r24, 0x3C	; 60
+     834:	30 f0       	brcs	.+12     	; 0x842 <FSM_BUTTON_Process+0x68>
+     836:	82 e0       	ldi	r24, 0x02	; 2
+     838:	80 93 6c 00 	sts	0x006C, r24	; 0x80006c <FSM_state>
+     83c:	02 c0       	rjmp	.+4      	; 0x842 <FSM_BUTTON_Process+0x68>
+     83e:	10 92 6c 00 	sts	0x006C, r1	; 0x80006c <FSM_state>
+     842:	83 e0       	ldi	r24, 0x03	; 3
+     844:	cf 91       	pop	r28
+     846:	bf c9       	rjmp	.-3202   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+     848:	85 9b       	sbis	0x10, 5	; 16
+     84a:	04 c0       	rjmp	.+8      	; 0x854 <FSM_BUTTON_Process+0x7a>
+     84c:	c0 93 69 00 	sts	0x0069, r28	; 0x800069 <button>
+     850:	10 92 6c 00 	sts	0x006C, r1	; 0x80006c <FSM_state>
+     854:	cf 91       	pop	r28
+     856:	08 95       	ret
+
+00000858 <FSM_FAN_Init>:
+     858:	eb e9       	ldi	r30, 0x9B	; 155
+     85a:	f2 e0       	ldi	r31, 0x02	; 2
+     85c:	13 82       	std	Z+3, r1	; 0x03
+     85e:	12 82       	std	Z+2, r1	; 0x02
+     860:	10 82       	st	Z, r1
+     862:	11 82       	std	Z+1, r1	; 0x01
+     864:	10 92 6d 00 	sts	0x006D, r1	; 0x80006d <FSM_state>
+     868:	84 e0       	ldi	r24, 0x04	; 4
+     86a:	ad c9       	rjmp	.-3238   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+
+0000086c <FSM_FAN_RPM2String>:
+     86c:	cf 93       	push	r28
+     86e:	df 93       	push	r29
+     870:	00 d0       	rcall	.+0      	; 0x872 <FSM_FAN_RPM2String+0x6>
+     872:	00 d0       	rcall	.+0      	; 0x874 <FSM_FAN_RPM2String+0x8>
+     874:	00 d0       	rcall	.+0      	; 0x876 <FSM_FAN_RPM2String+0xa>
+     876:	cd b7       	in	r28, 0x3d	; 61
+     878:	de b7       	in	r29, 0x3e	; 62
+     87a:	be 01       	movw	r22, r28
+     87c:	6f 5f       	subi	r22, 0xFF	; 255
+     87e:	7f 4f       	sbci	r23, 0xFF	; 255
+     880:	80 91 9f 02 	lds	r24, 0x029F	; 0x80029f <fan+0x4>
+     884:	90 91 a0 02 	lds	r25, 0x02A0	; 0x8002a0 <fan+0x5>
+     888:	2b d9       	rcall	.-3498   	; 0xfffffae0 <__eeprom_end+0xff7efadd>
+     88a:	e1 ea       	ldi	r30, 0xA1	; 161
+     88c:	f2 e0       	ldi	r31, 0x02	; 2
+     88e:	dc 01       	movw	r26, r24
+     890:	2d 91       	ld	r18, X+
+     892:	cd 01       	movw	r24, r26
+     894:	21 93       	st	Z+, r18
+     896:	b2 e0       	ldi	r27, 0x02	; 2
+     898:	e7 3a       	cpi	r30, 0xA7	; 167
+     89a:	fb 07       	cpc	r31, r27
+     89c:	c1 f7       	brne	.-16     	; 0x88e <FSM_FAN_RPM2String+0x22>
+     89e:	26 96       	adiw	r28, 0x06	; 6
+     8a0:	0f b6       	in	r0, 0x3f	; 63
+     8a2:	f8 94       	cli
+     8a4:	de bf       	out	0x3e, r29	; 62
+     8a6:	0f be       	out	0x3f, r0	; 63
+     8a8:	cd bf       	out	0x3d, r28	; 61
+     8aa:	df 91       	pop	r29
+     8ac:	cf 91       	pop	r28
+     8ae:	08 95       	ret
+
+000008b0 <FSM_FAN_Process>:
+     8b0:	cf 93       	push	r28
+     8b2:	c0 91 6d 00 	lds	r28, 0x006D	; 0x80006d <FSM_state>
+     8b6:	c1 30       	cpi	r28, 0x01	; 1
+     8b8:	b1 f1       	breq	.+108    	; 0x926 <FSM_FAN_Process+0x76>
+     8ba:	78 f0       	brcs	.+30     	; 0x8da <FSM_FAN_Process+0x2a>
+     8bc:	c2 30       	cpi	r28, 0x02	; 2
+     8be:	09 f4       	brne	.+2      	; 0x8c2 <FSM_FAN_Process+0x12>
+     8c0:	63 c0       	rjmp	.+198    	; 0x988 <FSM_FAN_Process+0xd8>
+     8c2:	c3 30       	cpi	r28, 0x03	; 3
+     8c4:	09 f0       	breq	.+2      	; 0x8c8 <FSM_FAN_Process+0x18>
+     8c6:	68 c0       	rjmp	.+208    	; 0x998 <FSM_FAN_Process+0xe8>
+     8c8:	c0 98       	cbi	0x18, 0	; 24
+     8ca:	10 92 9b 02 	sts	0x029B, r1	; 0x80029b <fan>
+     8ce:	10 92 a0 02 	sts	0x02A0, r1	; 0x8002a0 <fan+0x5>
+     8d2:	10 92 9f 02 	sts	0x029F, r1	; 0x80029f <fan+0x4>
+     8d6:	ca df       	rcall	.-108    	; 0x86c <FSM_FAN_RPM2String>
+     8d8:	5d c0       	rjmp	.+186    	; 0x994 <FSM_FAN_Process+0xe4>
+     8da:	88 e0       	ldi	r24, 0x08	; 8
+     8dc:	d3 d7       	rcall	.+4006   	; 0x1884 <GetMessage>
+     8de:	88 23       	and	r24, r24
+     8e0:	11 f0       	breq	.+4      	; 0x8e6 <FSM_FAN_Process+0x36>
+     8e2:	82 e0       	ldi	r24, 0x02	; 2
+     8e4:	49 c0       	rjmp	.+146    	; 0x978 <FSM_FAN_Process+0xc8>
+     8e6:	80 e0       	ldi	r24, 0x00	; 0
+     8e8:	f4 d7       	rcall	.+4072   	; 0x18d2 <GetBCMessage>
+     8ea:	81 11       	cpse	r24, r1
+     8ec:	fa cf       	rjmp	.-12     	; 0x8e2 <FSM_FAN_Process+0x32>
+     8ee:	89 e0       	ldi	r24, 0x09	; 9
+     8f0:	c9 d7       	rcall	.+3986   	; 0x1884 <GetMessage>
+     8f2:	81 11       	cpse	r24, r1
+     8f4:	40 c0       	rjmp	.+128    	; 0x976 <FSM_FAN_Process+0xc6>
+     8f6:	81 e0       	ldi	r24, 0x01	; 1
+     8f8:	ec d7       	rcall	.+4056   	; 0x18d2 <GetBCMessage>
+     8fa:	81 11       	cpse	r24, r1
+     8fc:	3c c0       	rjmp	.+120    	; 0x976 <FSM_FAN_Process+0xc6>
+     8fe:	80 91 9b 02 	lds	r24, 0x029B	; 0x80029b <fan>
+     902:	81 11       	cpse	r24, r1
+     904:	07 c0       	rjmp	.+14     	; 0x914 <FSM_FAN_Process+0x64>
+     906:	10 92 9e 02 	sts	0x029E, r1	; 0x80029e <fan+0x3>
+     90a:	10 92 9d 02 	sts	0x029D, r1	; 0x80029d <fan+0x2>
+     90e:	84 e0       	ldi	r24, 0x04	; 4
+     910:	cf 91       	pop	r28
+     912:	59 c9       	rjmp	.-3406   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+     914:	84 e0       	ldi	r24, 0x04	; 4
+     916:	4e d9       	rcall	.-3428   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     918:	84 3f       	cpi	r24, 0xF4	; 244
+     91a:	91 40       	sbci	r25, 0x01	; 1
+     91c:	e8 f1       	brcs	.+122    	; 0x998 <FSM_FAN_Process+0xe8>
+     91e:	84 e0       	ldi	r24, 0x04	; 4
+     920:	52 d9       	rcall	.-3420   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+     922:	81 e0       	ldi	r24, 0x01	; 1
+     924:	29 c0       	rjmp	.+82     	; 0x978 <FSM_FAN_Process+0xc8>
+     926:	8b b7       	in	r24, 0x3b	; 59
+     928:	8f 7b       	andi	r24, 0xBF	; 191
+     92a:	8b bf       	out	0x3b, r24	; 59
+     92c:	20 91 9d 02 	lds	r18, 0x029D	; 0x80029d <fan+0x2>
+     930:	30 91 9e 02 	lds	r19, 0x029E	; 0x80029e <fan+0x3>
+     934:	4c e3       	ldi	r20, 0x3C	; 60
+     936:	42 9f       	mul	r20, r18
+     938:	c0 01       	movw	r24, r0
+     93a:	43 9f       	mul	r20, r19
+     93c:	90 0d       	add	r25, r0
+     93e:	11 24       	eor	r1, r1
+     940:	90 93 a0 02 	sts	0x02A0, r25	; 0x8002a0 <fan+0x5>
+     944:	80 93 9f 02 	sts	0x029F, r24	; 0x80029f <fan+0x4>
+     948:	10 92 9e 02 	sts	0x029E, r1	; 0x80029e <fan+0x3>
+     94c:	10 92 9d 02 	sts	0x029D, r1	; 0x80029d <fan+0x2>
+     950:	8d df       	rcall	.-230    	; 0x86c <FSM_FAN_RPM2String>
+     952:	80 91 9f 02 	lds	r24, 0x029F	; 0x80029f <fan+0x4>
+     956:	90 91 a0 02 	lds	r25, 0x02A0	; 0x8002a0 <fan+0x5>
+     95a:	89 2b       	or	r24, r25
+     95c:	19 f4       	brne	.+6      	; 0x964 <FSM_FAN_Process+0xb4>
+     95e:	c0 93 9c 02 	sts	0x029C, r28	; 0x80029c <fan+0x1>
+     962:	02 c0       	rjmp	.+4      	; 0x968 <FSM_FAN_Process+0xb8>
+     964:	10 92 9c 02 	sts	0x029C, r1	; 0x80029c <fan+0x1>
+     968:	8b b7       	in	r24, 0x3b	; 59
+     96a:	80 64       	ori	r24, 0x40	; 64
+     96c:	8b bf       	out	0x3b, r24	; 59
+     96e:	89 e0       	ldi	r24, 0x09	; 9
+     970:	89 d7       	rcall	.+3858   	; 0x1884 <GetMessage>
+     972:	88 23       	and	r24, r24
+     974:	21 f0       	breq	.+8      	; 0x97e <FSM_FAN_Process+0xce>
+     976:	83 e0       	ldi	r24, 0x03	; 3
+     978:	80 93 6d 00 	sts	0x006D, r24	; 0x80006d <FSM_state>
+     97c:	0d c0       	rjmp	.+26     	; 0x998 <FSM_FAN_Process+0xe8>
+     97e:	81 e0       	ldi	r24, 0x01	; 1
+     980:	a8 d7       	rcall	.+3920   	; 0x18d2 <GetBCMessage>
+     982:	81 11       	cpse	r24, r1
+     984:	f8 cf       	rjmp	.-16     	; 0x976 <FSM_FAN_Process+0xc6>
+     986:	06 c0       	rjmp	.+12     	; 0x994 <FSM_FAN_Process+0xe4>
+     988:	c0 9a       	sbi	0x18, 0	; 24
+     98a:	81 e0       	ldi	r24, 0x01	; 1
+     98c:	80 93 9b 02 	sts	0x029B, r24	; 0x80029b <fan>
+     990:	80 93 9c 02 	sts	0x029C, r24	; 0x80029c <fan+0x1>
+     994:	10 92 6d 00 	sts	0x006D, r1	; 0x80006d <FSM_state>
+     998:	cf 91       	pop	r28
+     99a:	08 95       	ret
+
+0000099c <FSM_LEDS_Init>:
+     99c:	10 92 71 00 	sts	0x0071, r1	; 0x800071 <FSM_state>
+     9a0:	10 92 70 00 	sts	0x0070, r1	; 0x800070 <led_bitmap>
+     9a4:	08 95       	ret
+
+000009a6 <FSM_LEDS_Process>:
+     9a6:	cf 93       	push	r28
+     9a8:	c0 91 71 00 	lds	r28, 0x0071	; 0x800071 <FSM_state>
+     9ac:	c1 30       	cpi	r28, 0x01	; 1
+     9ae:	29 f0       	breq	.+10     	; 0x9ba <FSM_LEDS_Process+0x14>
+     9b0:	68 f1       	brcs	.+90     	; 0xa0c <FSM_LEDS_Process+0x66>
+     9b2:	c2 30       	cpi	r28, 0x02	; 2
+     9b4:	09 f4       	brne	.+2      	; 0x9b8 <FSM_LEDS_Process+0x12>
+     9b6:	47 c0       	rjmp	.+142    	; 0xa46 <FSM_LEDS_Process+0xa0>
+     9b8:	a0 c0       	rjmp	.+320    	; 0xafa <FSM_LEDS_Process+0x154>
+     9ba:	81 e0       	ldi	r24, 0x01	; 1
+     9bc:	8a d7       	rcall	.+3860   	; 0x18d2 <GetBCMessage>
+     9be:	88 23       	and	r24, r24
+     9c0:	29 f0       	breq	.+10     	; 0x9cc <FSM_LEDS_Process+0x26>
+     9c2:	10 92 71 00 	sts	0x0071, r1	; 0x800071 <FSM_state>
+     9c6:	96 98       	cbi	0x12, 6	; 18
+     9c8:	97 98       	cbi	0x12, 7	; 18
+     9ca:	97 c0       	rjmp	.+302    	; 0xafa <FSM_LEDS_Process+0x154>
+     9cc:	85 e0       	ldi	r24, 0x05	; 5
+     9ce:	f2 d8       	rcall	.-3612   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     9d0:	8c 32       	cpi	r24, 0x2C	; 44
+     9d2:	91 40       	sbci	r25, 0x01	; 1
+     9d4:	08 f4       	brcc	.+2      	; 0x9d8 <FSM_LEDS_Process+0x32>
+     9d6:	91 c0       	rjmp	.+290    	; 0xafa <FSM_LEDS_Process+0x154>
+     9d8:	80 91 70 00 	lds	r24, 0x0070	; 0x800070 <led_bitmap>
+     9dc:	83 30       	cpi	r24, 0x03	; 3
+     9de:	20 f4       	brcc	.+8      	; 0x9e8 <FSM_LEDS_Process+0x42>
+     9e0:	8f 5f       	subi	r24, 0xFF	; 255
+     9e2:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <led_bitmap>
+     9e6:	02 c0       	rjmp	.+4      	; 0x9ec <FSM_LEDS_Process+0x46>
+     9e8:	c0 93 70 00 	sts	0x0070, r28	; 0x800070 <led_bitmap>
+     9ec:	80 91 70 00 	lds	r24, 0x0070	; 0x800070 <led_bitmap>
+     9f0:	82 30       	cpi	r24, 0x02	; 2
+     9f2:	31 f0       	breq	.+12     	; 0xa00 <FSM_LEDS_Process+0x5a>
+     9f4:	83 30       	cpi	r24, 0x03	; 3
+     9f6:	39 f0       	breq	.+14     	; 0xa06 <FSM_LEDS_Process+0x60>
+     9f8:	96 98       	cbi	0x12, 6	; 18
+     9fa:	81 30       	cpi	r24, 0x01	; 1
+     9fc:	29 f4       	brne	.+10     	; 0xa08 <FSM_LEDS_Process+0x62>
+     9fe:	01 c0       	rjmp	.+2      	; 0xa02 <FSM_LEDS_Process+0x5c>
+     a00:	96 9a       	sbi	0x12, 6	; 18
+     a02:	97 9a       	sbi	0x12, 7	; 18
+     a04:	0a c0       	rjmp	.+20     	; 0xa1a <FSM_LEDS_Process+0x74>
+     a06:	96 9a       	sbi	0x12, 6	; 18
+     a08:	97 98       	cbi	0x12, 7	; 18
+     a0a:	07 c0       	rjmp	.+14     	; 0xa1a <FSM_LEDS_Process+0x74>
+     a0c:	80 e0       	ldi	r24, 0x00	; 0
+     a0e:	61 d7       	rcall	.+3778   	; 0x18d2 <GetBCMessage>
+     a10:	88 23       	and	r24, r24
+     a12:	29 f0       	breq	.+10     	; 0xa1e <FSM_LEDS_Process+0x78>
+     a14:	81 e0       	ldi	r24, 0x01	; 1
+     a16:	80 93 71 00 	sts	0x0071, r24	; 0x800071 <FSM_state>
+     a1a:	85 e0       	ldi	r24, 0x05	; 5
+     a1c:	6c c0       	rjmp	.+216    	; 0xaf6 <FSM_LEDS_Process+0x150>
+     a1e:	8b e0       	ldi	r24, 0x0B	; 11
+     a20:	31 d7       	rcall	.+3682   	; 0x1884 <GetMessage>
+     a22:	88 23       	and	r24, r24
+     a24:	09 f4       	brne	.+2      	; 0xa28 <FSM_LEDS_Process+0x82>
+     a26:	69 c0       	rjmp	.+210    	; 0xafa <FSM_LEDS_Process+0x154>
+     a28:	8b e0       	ldi	r24, 0x0B	; 11
+     a2a:	3d d7       	rcall	.+3706   	; 0x18a6 <GetMessageParam>
+     a2c:	90 93 6f 00 	sts	0x006F, r25	; 0x80006f <led_params+0x1>
+     a30:	80 93 6e 00 	sts	0x006E, r24	; 0x80006e <led_params>
+     a34:	21 e0       	ldi	r18, 0x01	; 1
+     a36:	fc 01       	movw	r30, r24
+     a38:	20 83       	st	Z, r18
+     a3a:	82 e0       	ldi	r24, 0x02	; 2
+     a3c:	80 93 71 00 	sts	0x0071, r24	; 0x800071 <FSM_state>
+     a40:	85 e0       	ldi	r24, 0x05	; 5
+     a42:	c1 d8       	rcall	.-3710   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+     a44:	57 c0       	rjmp	.+174    	; 0xaf4 <FSM_LEDS_Process+0x14e>
+     a46:	e0 91 6e 00 	lds	r30, 0x006E	; 0x80006e <led_params>
+     a4a:	f0 91 6f 00 	lds	r31, 0x006F	; 0x80006f <led_params+0x1>
+     a4e:	83 81       	ldd	r24, Z+3	; 0x03
+     a50:	94 81       	ldd	r25, Z+4	; 0x04
+     a52:	01 96       	adiw	r24, 0x01	; 1
+     a54:	29 f4       	brne	.+10     	; 0xa60 <FSM_LEDS_Process+0xba>
+     a56:	8c e0       	ldi	r24, 0x0C	; 12
+     a58:	15 d7       	rcall	.+3626   	; 0x1884 <GetMessage>
+     a5a:	88 23       	and	r24, r24
+     a5c:	89 f0       	breq	.+34     	; 0xa80 <FSM_LEDS_Process+0xda>
+     a5e:	0b c0       	rjmp	.+22     	; 0xa76 <FSM_LEDS_Process+0xd0>
+     a60:	85 e0       	ldi	r24, 0x05	; 5
+     a62:	a8 d8       	rcall	.-3760   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     a64:	e0 91 6e 00 	lds	r30, 0x006E	; 0x80006e <led_params>
+     a68:	f0 91 6f 00 	lds	r31, 0x006F	; 0x80006f <led_params+0x1>
+     a6c:	23 81       	ldd	r18, Z+3	; 0x03
+     a6e:	34 81       	ldd	r19, Z+4	; 0x04
+     a70:	82 17       	cp	r24, r18
+     a72:	93 07       	cpc	r25, r19
+     a74:	80 f3       	brcs	.-32     	; 0xa56 <FSM_LEDS_Process+0xb0>
+     a76:	96 98       	cbi	0x12, 6	; 18
+     a78:	97 98       	cbi	0x12, 7	; 18
+     a7a:	10 92 71 00 	sts	0x0071, r1	; 0x800071 <FSM_state>
+     a7e:	3d c0       	rjmp	.+122    	; 0xafa <FSM_LEDS_Process+0x154>
+     a80:	e0 91 6e 00 	lds	r30, 0x006E	; 0x80006e <led_params>
+     a84:	f0 91 6f 00 	lds	r31, 0x006F	; 0x80006f <led_params+0x1>
+     a88:	80 81       	ld	r24, Z
+     a8a:	88 23       	and	r24, r24
+     a8c:	f9 f0       	breq	.+62     	; 0xacc <FSM_LEDS_Process+0x126>
+     a8e:	82 81       	ldd	r24, Z+2	; 0x02
+     a90:	81 30       	cpi	r24, 0x01	; 1
+     a92:	41 f0       	breq	.+16     	; 0xaa4 <FSM_LEDS_Process+0xfe>
+     a94:	28 f0       	brcs	.+10     	; 0xaa0 <FSM_LEDS_Process+0xfa>
+     a96:	82 30       	cpi	r24, 0x02	; 2
+     a98:	39 f4       	brne	.+14     	; 0xaa8 <FSM_LEDS_Process+0x102>
+     a9a:	96 9a       	sbi	0x12, 6	; 18
+     a9c:	97 98       	cbi	0x12, 7	; 18
+     a9e:	04 c0       	rjmp	.+8      	; 0xaa8 <FSM_LEDS_Process+0x102>
+     aa0:	96 98       	cbi	0x12, 6	; 18
+     aa2:	01 c0       	rjmp	.+2      	; 0xaa6 <FSM_LEDS_Process+0x100>
+     aa4:	96 9a       	sbi	0x12, 6	; 18
+     aa6:	97 9a       	sbi	0x12, 7	; 18
+     aa8:	e0 91 6e 00 	lds	r30, 0x006E	; 0x80006e <led_params>
+     aac:	f0 91 6f 00 	lds	r31, 0x006F	; 0x80006f <led_params+0x1>
+     ab0:	81 81       	ldd	r24, Z+1	; 0x01
+     ab2:	88 23       	and	r24, r24
+     ab4:	11 f1       	breq	.+68     	; 0xafa <FSM_LEDS_Process+0x154>
+     ab6:	86 e0       	ldi	r24, 0x06	; 6
+     ab8:	7d d8       	rcall	.-3846   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     aba:	8c 32       	cpi	r24, 0x2C	; 44
+     abc:	91 40       	sbci	r25, 0x01	; 1
+     abe:	e8 f0       	brcs	.+58     	; 0xafa <FSM_LEDS_Process+0x154>
+     ac0:	e0 91 6e 00 	lds	r30, 0x006E	; 0x80006e <led_params>
+     ac4:	f0 91 6f 00 	lds	r31, 0x006F	; 0x80006f <led_params+0x1>
+     ac8:	10 82       	st	Z, r1
+     aca:	14 c0       	rjmp	.+40     	; 0xaf4 <FSM_LEDS_Process+0x14e>
+     acc:	96 98       	cbi	0x12, 6	; 18
+     ace:	97 98       	cbi	0x12, 7	; 18
+     ad0:	e0 91 6e 00 	lds	r30, 0x006E	; 0x80006e <led_params>
+     ad4:	f0 91 6f 00 	lds	r31, 0x006F	; 0x80006f <led_params+0x1>
+     ad8:	81 81       	ldd	r24, Z+1	; 0x01
+     ada:	88 23       	and	r24, r24
+     adc:	71 f0       	breq	.+28     	; 0xafa <FSM_LEDS_Process+0x154>
+     ade:	86 e0       	ldi	r24, 0x06	; 6
+     ae0:	69 d8       	rcall	.-3886   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     ae2:	8c 32       	cpi	r24, 0x2C	; 44
+     ae4:	91 40       	sbci	r25, 0x01	; 1
+     ae6:	48 f0       	brcs	.+18     	; 0xafa <FSM_LEDS_Process+0x154>
+     ae8:	e0 91 6e 00 	lds	r30, 0x006E	; 0x80006e <led_params>
+     aec:	f0 91 6f 00 	lds	r31, 0x006F	; 0x80006f <led_params+0x1>
+     af0:	81 e0       	ldi	r24, 0x01	; 1
+     af2:	80 83       	st	Z, r24
+     af4:	86 e0       	ldi	r24, 0x06	; 6
+     af6:	cf 91       	pop	r28
+     af8:	66 c8       	rjmp	.-3892   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+     afa:	cf 91       	pop	r28
+     afc:	08 95       	ret
+
+00000afe <FSM_OWS_Init>:
+     afe:	10 92 77 00 	sts	0x0077, r1	; 0x800077 <FSM_state>
+     b02:	08 95       	ret
+
+00000b04 <FSM_OWS_Process>:
+     b04:	e0 91 77 00 	lds	r30, 0x0077	; 0x800077 <FSM_state>
+     b08:	8e 2f       	mov	r24, r30
+     b0a:	90 e0       	ldi	r25, 0x00	; 0
+     b0c:	88 30       	cpi	r24, 0x08	; 8
+     b0e:	91 05       	cpc	r25, r1
+     b10:	08 f0       	brcs	.+2      	; 0xb14 <FSM_OWS_Process+0x10>
+     b12:	f2 c0       	rjmp	.+484    	; 0xcf8 <FSM_OWS_Process+0x1f4>
+     b14:	fc 01       	movw	r30, r24
+     b16:	ed 5e       	subi	r30, 0xED	; 237
+     b18:	ff 4f       	sbci	r31, 0xFF	; 255
+     b1a:	09 94       	ijmp
+     b1c:	87 e0       	ldi	r24, 0x07	; 7
+     b1e:	b2 d6       	rcall	.+3428   	; 0x1884 <GetMessage>
+     b20:	88 23       	and	r24, r24
+     b22:	09 f4       	brne	.+2      	; 0xb26 <FSM_OWS_Process+0x22>
+     b24:	e9 c0       	rjmp	.+466    	; 0xcf8 <FSM_OWS_Process+0x1f4>
+     b26:	10 92 d6 02 	sts	0x02D6, r1	; 0x8002d6 <ows+0x18>
+     b2a:	81 e0       	ldi	r24, 0x01	; 1
+     b2c:	80 93 d5 02 	sts	0x02D5, r24	; 0x8002d5 <ows+0x17>
+     b30:	06 c0       	rjmp	.+12     	; 0xb3e <FSM_OWS_Process+0x3a>
+     b32:	9a 99       	sbic	0x13, 2	; 19
+     b34:	07 c0       	rjmp	.+14     	; 0xb44 <FSM_OWS_Process+0x40>
+     b36:	81 e0       	ldi	r24, 0x01	; 1
+     b38:	80 93 d6 02 	sts	0x02D6, r24	; 0x8002d6 <ows+0x18>
+     b3c:	87 e0       	ldi	r24, 0x07	; 7
+     b3e:	80 93 77 00 	sts	0x0077, r24	; 0x800077 <FSM_state>
+     b42:	08 95       	ret
+     b44:	a2 9a       	sbi	0x14, 2	; 20
+     b46:	82 e0       	ldi	r24, 0x02	; 2
+     b48:	80 93 77 00 	sts	0x0077, r24	; 0x800077 <FSM_state>
+     b4c:	81 e0       	ldi	r24, 0x01	; 1
+     b4e:	3b c8       	rjmp	.-3978   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+     b50:	81 e0       	ldi	r24, 0x01	; 1
+     b52:	30 d8       	rcall	.-4000   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     b54:	89 2b       	or	r24, r25
+     b56:	09 f4       	brne	.+2      	; 0xb5a <FSM_OWS_Process+0x56>
+     b58:	cf c0       	rjmp	.+414    	; 0xcf8 <FSM_OWS_Process+0x1f4>
+     b5a:	a2 98       	cbi	0x14, 2	; 20
+     b5c:	88 ec       	ldi	r24, 0xC8	; 200
+     b5e:	9a 99       	sbic	0x13, 2	; 19
+     b60:	09 c0       	rjmp	.+18     	; 0xb74 <FSM_OWS_Process+0x70>
+     b62:	81 e0       	ldi	r24, 0x01	; 1
+     b64:	30 d8       	rcall	.-4000   	; 0xfffffbc6 <__eeprom_end+0xff7efbc3>
+     b66:	8e eb       	ldi	r24, 0xBE	; 190
+     b68:	92 e0       	ldi	r25, 0x02	; 2
+     b6a:	90 93 73 00 	sts	0x0073, r25	; 0x800073 <p_buff+0x1>
+     b6e:	80 93 72 00 	sts	0x0072, r24	; 0x800072 <p_buff>
+     b72:	51 c0       	rjmp	.+162    	; 0xc16 <FSM_OWS_Process+0x112>
+     b74:	81 50       	subi	r24, 0x01	; 1
+     b76:	99 f7       	brne	.-26     	; 0xb5e <FSM_OWS_Process+0x5a>
+     b78:	82 e0       	ldi	r24, 0x02	; 2
+     b7a:	de cf       	rjmp	.-68     	; 0xb38 <FSM_OWS_Process+0x34>
+     b7c:	81 e0       	ldi	r24, 0x01	; 1
+     b7e:	1a d8       	rcall	.-4044   	; 0xfffffbb4 <__eeprom_end+0xff7efbb1>
+     b80:	89 2b       	or	r24, r25
+     b82:	09 f4       	brne	.+2      	; 0xb86 <FSM_OWS_Process+0x82>
+     b84:	b9 c0       	rjmp	.+370    	; 0xcf8 <FSM_OWS_Process+0x1f4>
+     b86:	80 91 d2 02 	lds	r24, 0x02D2	; 0x8002d2 <ows+0x14>
+     b8a:	9f ef       	ldi	r25, 0xFF	; 255
+     b8c:	98 0f       	add	r25, r24
+     b8e:	90 93 d2 02 	sts	0x02D2, r25	; 0x8002d2 <ows+0x14>
+     b92:	88 23       	and	r24, r24
+     b94:	91 f0       	breq	.+36     	; 0xbba <FSM_OWS_Process+0xb6>
+     b96:	e0 91 72 00 	lds	r30, 0x0072	; 0x800072 <p_buff>
+     b9a:	f0 91 73 00 	lds	r31, 0x0073	; 0x800073 <p_buff+0x1>
+     b9e:	cf 01       	movw	r24, r30
+     ba0:	01 96       	adiw	r24, 0x01	; 1
+     ba2:	90 93 73 00 	sts	0x0073, r25	; 0x800073 <p_buff+0x1>
+     ba6:	80 93 72 00 	sts	0x0072, r24	; 0x800072 <p_buff>
+     baa:	80 81       	ld	r24, Z
+     bac:	80 93 76 00 	sts	0x0076, r24	; 0x800076 <curr_byte>
+     bb0:	88 e0       	ldi	r24, 0x08	; 8
+     bb2:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <i>
+     bb6:	84 e0       	ldi	r24, 0x04	; 4
+     bb8:	c2 cf       	rjmp	.-124    	; 0xb3e <FSM_OWS_Process+0x3a>
+     bba:	80 91 d3 02 	lds	r24, 0x02D3	; 0x8002d3 <ows+0x15>
+     bbe:	88 23       	and	r24, r24
+     bc0:	09 f4       	brne	.+2      	; 0xbc4 <FSM_OWS_Process+0xc0>
+     bc2:	bc cf       	rjmp	.-136    	; 0xb3c <FSM_OWS_Process+0x38>
+     bc4:	88 ec       	ldi	r24, 0xC8	; 200
+     bc6:	92 e0       	ldi	r25, 0x02	; 2
+     bc8:	90 93 73 00 	sts	0x0073, r25	; 0x800073 <p_buff+0x1>
+     bcc:	80 93 72 00 	sts	0x0072, r24	; 0x800072 <p_buff>
+     bd0:	10 92 75 00 	sts	0x0075, r1	; 0x800075 <curr_crc8>
+     bd4:	85 c0       	rjmp	.+266    	; 0xce0 <FSM_OWS_Process+0x1dc>
+     bd6:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <i>
+     bda:	9f ef       	ldi	r25, 0xFF	; 255
+     bdc:	98 0f       	add	r25, r24
+     bde:	90 93 74 00 	sts	0x0074, r25	; 0x800074 <i>
+     be2:	88 23       	and	r24, r24
+     be4:	c1 f0       	breq	.+48     	; 0xc16 <FSM_OWS_Process+0x112>
+     be6:	8f b7       	in	r24, 0x3f	; 63
+     be8:	f8 94       	cli
+     bea:	90 91 76 00 	lds	r25, 0x0076	; 0x800076 <curr_byte>
+     bee:	a2 9a       	sbi	0x14, 2	; 20
+     bf0:	90 ff       	sbrs	r25, 0
+     bf2:	05 c0       	rjmp	.+10     	; 0xbfe <FSM_OWS_Process+0xfa>
+     bf4:	9d e0       	ldi	r25, 0x0D	; 13
+     bf6:	9a 95       	dec	r25
+     bf8:	f1 f7       	brne	.-4      	; 0xbf6 <FSM_OWS_Process+0xf2>
+     bfa:	00 00       	nop
+     bfc:	a2 98       	cbi	0x14, 2	; 20
+     bfe:	95 ed       	ldi	r25, 0xD5	; 213
+     c00:	9a 95       	dec	r25
+     c02:	f1 f7       	brne	.-4      	; 0xc00 <FSM_OWS_Process+0xfc>
+     c04:	00 00       	nop
+     c06:	a2 98       	cbi	0x14, 2	; 20
+     c08:	8f bf       	out	0x3f, r24	; 63
+     c0a:	80 91 76 00 	lds	r24, 0x0076	; 0x800076 <curr_byte>
+     c0e:	86 95       	lsr	r24
+     c10:	80 93 76 00 	sts	0x0076, r24	; 0x800076 <curr_byte>
+     c14:	08 95       	ret
+     c16:	83 e0       	ldi	r24, 0x03	; 3
+     c18:	92 cf       	rjmp	.-220    	; 0xb3e <FSM_OWS_Process+0x3a>
+     c1a:	80 91 d3 02 	lds	r24, 0x02D3	; 0x8002d3 <ows+0x15>
+     c1e:	9f ef       	ldi	r25, 0xFF	; 255
+     c20:	98 0f       	add	r25, r24
+     c22:	90 93 d3 02 	sts	0x02D3, r25	; 0x8002d3 <ows+0x15>
+     c26:	88 23       	and	r24, r24
+     c28:	29 f0       	breq	.+10     	; 0xc34 <FSM_OWS_Process+0x130>
+     c2a:	88 e0       	ldi	r24, 0x08	; 8
+     c2c:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <i>
+     c30:	86 e0       	ldi	r24, 0x06	; 6
+     c32:	85 cf       	rjmp	.-246    	; 0xb3e <FSM_OWS_Process+0x3a>
+     c34:	80 91 d4 02 	lds	r24, 0x02D4	; 0x8002d4 <ows+0x16>
+     c38:	88 23       	and	r24, r24
+     c3a:	09 f4       	brne	.+2      	; 0xc3e <FSM_OWS_Process+0x13a>
+     c3c:	7f cf       	rjmp	.-258    	; 0xb3c <FSM_OWS_Process+0x38>
+     c3e:	e0 91 72 00 	lds	r30, 0x0072	; 0x800072 <p_buff>
+     c42:	f0 91 73 00 	lds	r31, 0x0073	; 0x800073 <p_buff+0x1>
+     c46:	90 81       	ld	r25, Z
+     c48:	80 91 75 00 	lds	r24, 0x0075	; 0x800075 <curr_crc8>
+     c4c:	98 17       	cp	r25, r24
+     c4e:	09 f4       	brne	.+2      	; 0xc52 <FSM_OWS_Process+0x14e>
+     c50:	75 cf       	rjmp	.-278    	; 0xb3c <FSM_OWS_Process+0x38>
+     c52:	83 e0       	ldi	r24, 0x03	; 3
+     c54:	71 cf       	rjmp	.-286    	; 0xb38 <FSM_OWS_Process+0x34>
+     c56:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <i>
+     c5a:	9f ef       	ldi	r25, 0xFF	; 255
+     c5c:	98 0f       	add	r25, r24
+     c5e:	90 93 74 00 	sts	0x0074, r25	; 0x800074 <i>
+     c62:	88 23       	and	r24, r24
+     c64:	11 f1       	breq	.+68     	; 0xcaa <FSM_OWS_Process+0x1a6>
+     c66:	9f b7       	in	r25, 0x3f	; 63
+     c68:	f8 94       	cli
+     c6a:	e0 91 72 00 	lds	r30, 0x0072	; 0x800072 <p_buff>
+     c6e:	f0 91 73 00 	lds	r31, 0x0073	; 0x800073 <p_buff+0x1>
+     c72:	80 81       	ld	r24, Z
+     c74:	86 95       	lsr	r24
+     c76:	80 83       	st	Z, r24
+     c78:	a2 9a       	sbi	0x14, 2	; 20
+     c7a:	85 e0       	ldi	r24, 0x05	; 5
+     c7c:	8a 95       	dec	r24
+     c7e:	f1 f7       	brne	.-4      	; 0xc7c <FSM_OWS_Process+0x178>
+     c80:	00 00       	nop
+     c82:	a2 98       	cbi	0x14, 2	; 20
+     c84:	85 e1       	ldi	r24, 0x15	; 21
+     c86:	8a 95       	dec	r24
+     c88:	f1 f7       	brne	.-4      	; 0xc86 <FSM_OWS_Process+0x182>
+     c8a:	00 00       	nop
+     c8c:	9a 9b       	sbis	0x13, 2	; 19
+     c8e:	07 c0       	rjmp	.+14     	; 0xc9e <FSM_OWS_Process+0x19a>
+     c90:	e0 91 72 00 	lds	r30, 0x0072	; 0x800072 <p_buff>
+     c94:	f0 91 73 00 	lds	r31, 0x0073	; 0x800073 <p_buff+0x1>
+     c98:	80 81       	ld	r24, Z
+     c9a:	80 68       	ori	r24, 0x80	; 128
+     c9c:	80 83       	st	Z, r24
+     c9e:	85 ed       	ldi	r24, 0xD5	; 213
+     ca0:	8a 95       	dec	r24
+     ca2:	f1 f7       	brne	.-4      	; 0xca0 <FSM_OWS_Process+0x19c>
+     ca4:	00 00       	nop
+     ca6:	9f bf       	out	0x3f, r25	; 63
+     ca8:	08 95       	ret
+     caa:	80 91 d3 02 	lds	r24, 0x02D3	; 0x8002d3 <ows+0x15>
+     cae:	88 23       	and	r24, r24
+     cb0:	b9 f0       	breq	.+46     	; 0xce0 <FSM_OWS_Process+0x1dc>
+     cb2:	80 91 d4 02 	lds	r24, 0x02D4	; 0x8002d4 <ows+0x16>
+     cb6:	88 23       	and	r24, r24
+     cb8:	51 f0       	breq	.+20     	; 0xcce <FSM_OWS_Process+0x1ca>
+     cba:	e0 91 72 00 	lds	r30, 0x0072	; 0x800072 <p_buff>
+     cbe:	f0 91 73 00 	lds	r31, 0x0073	; 0x800073 <p_buff+0x1>
+     cc2:	60 81       	ld	r22, Z
+     cc4:	80 91 75 00 	lds	r24, 0x0075	; 0x800075 <curr_crc8>
+     cc8:	ac d6       	rcall	.+3416   	; 0x1a22 <CRC8>
+     cca:	80 93 75 00 	sts	0x0075, r24	; 0x800075 <curr_crc8>
+     cce:	80 91 72 00 	lds	r24, 0x0072	; 0x800072 <p_buff>
+     cd2:	90 91 73 00 	lds	r25, 0x0073	; 0x800073 <p_buff+0x1>
+     cd6:	01 96       	adiw	r24, 0x01	; 1
+     cd8:	90 93 73 00 	sts	0x0073, r25	; 0x800073 <p_buff+0x1>
+     cdc:	80 93 72 00 	sts	0x0072, r24	; 0x800072 <p_buff>
+     ce0:	85 e0       	ldi	r24, 0x05	; 5
+     ce2:	2d cf       	rjmp	.-422    	; 0xb3e <FSM_OWS_Process+0x3a>
+     ce4:	10 92 d2 02 	sts	0x02D2, r1	; 0x8002d2 <ows+0x14>
+     ce8:	10 92 d3 02 	sts	0x02D3, r1	; 0x8002d3 <ows+0x15>
+     cec:	10 92 d5 02 	sts	0x02D5, r1	; 0x8002d5 <ows+0x17>
+     cf0:	82 e0       	ldi	r24, 0x02	; 2
+     cf2:	e5 d5       	rcall	.+3018   	; 0x18be <SendBCMessage>
+     cf4:	10 92 77 00 	sts	0x0077, r1	; 0x800077 <FSM_state>
+     cf8:	08 95       	ret
+
+00000cfa <FSM_SYSTEM_Init>:
+     cfa:	10 92 7e 00 	sts	0x007E, r1	; 0x80007e <FSM_state>
+     cfe:	80 e0       	ldi	r24, 0x00	; 0
+     d00:	62 d7       	rcall	.+3780   	; 0x1bc6 <ResetTimer>
+     d02:	e7 eb       	ldi	r30, 0xB7	; 183
+     d04:	f2 e0       	ldi	r31, 0x02	; 2
+     d06:	13 82       	std	Z+3, r1	; 0x03
+     d08:	10 92 78 00 	sts	0x0078, r1	; 0x800078 <fan_retry_count>
+     d0c:	81 e0       	ldi	r24, 0x01	; 1
+     d0e:	82 83       	std	Z+2, r24	; 0x02
+     d10:	08 95       	ret
+
+00000d12 <FSM_SYSTEM_LoadEEPROM>:
+     d12:	e1 99       	sbic	0x1c, 1	; 28
+     d14:	fe cf       	rjmp	.-4      	; 0xd12 <FSM_SYSTEM_LoadEEPROM>
+     d16:	43 e0       	ldi	r20, 0x03	; 3
+     d18:	50 e0       	ldi	r21, 0x00	; 0
+     d1a:	60 e0       	ldi	r22, 0x00	; 0
+     d1c:	70 e0       	ldi	r23, 0x00	; 0
+     d1e:	8b eb       	ldi	r24, 0xBB	; 187
+     d20:	92 e0       	ldi	r25, 0x02	; 2
+     d22:	07 d8       	rcall	.-4082   	; 0xfffffd32 <__eeprom_end+0xff7efd2f>
+     d24:	80 91 bb 02 	lds	r24, 0x02BB	; 0x8002bb <device+0x4>
+     d28:	81 50       	subi	r24, 0x01	; 1
+     d2a:	8e 3f       	cpi	r24, 0xFE	; 254
+     d2c:	18 f0       	brcs	.+6      	; 0xd34 <FSM_SYSTEM_LoadEEPROM+0x22>
+     d2e:	88 e2       	ldi	r24, 0x28	; 40
+     d30:	80 93 bb 02 	sts	0x02BB, r24	; 0x8002bb <device+0x4>
+     d34:	80 91 bc 02 	lds	r24, 0x02BC	; 0x8002bc <device+0x5>
+     d38:	81 50       	subi	r24, 0x01	; 1
+     d3a:	8e 3f       	cpi	r24, 0xFE	; 254
+     d3c:	18 f0       	brcs	.+6      	; 0xd44 <FSM_SYSTEM_LoadEEPROM+0x32>
+     d3e:	83 e2       	ldi	r24, 0x23	; 35
+     d40:	80 93 bc 02 	sts	0x02BC, r24	; 0x8002bc <device+0x5>
+     d44:	80 91 bd 02 	lds	r24, 0x02BD	; 0x8002bd <device+0x6>
+     d48:	81 50       	subi	r24, 0x01	; 1
+     d4a:	8e 3f       	cpi	r24, 0xFE	; 254
+     d4c:	18 f0       	brcs	.+6      	; 0xd54 <FSM_SYSTEM_LoadEEPROM+0x42>
+     d4e:	86 e4       	ldi	r24, 0x46	; 70
+     d50:	80 93 bd 02 	sts	0x02BD, r24	; 0x8002bd <device+0x6>
+     d54:	08 95       	ret
+
+00000d56 <FSM_SYSTEM_Process>:
+     d56:	e0 91 7e 00 	lds	r30, 0x007E	; 0x80007e <FSM_state>
+     d5a:	8e 2f       	mov	r24, r30
+     d5c:	90 e0       	ldi	r25, 0x00	; 0
+     d5e:	89 30       	cpi	r24, 0x09	; 9
+     d60:	91 05       	cpc	r25, r1
+     d62:	08 f0       	brcs	.+2      	; 0xd66 <FSM_SYSTEM_Process+0x10>
+     d64:	b8 c1       	rjmp	.+880    	; 0x10d6 <FSM_SYSTEM_Process+0x380>
+     d66:	fc 01       	movw	r30, r24
+     d68:	e5 5e       	subi	r30, 0xE5	; 229
+     d6a:	ff 4f       	sbci	r31, 0xFF	; 255
+     d6c:	09 94       	ijmp
+     d6e:	80 e0       	ldi	r24, 0x00	; 0
+     d70:	a6 d5       	rcall	.+2892   	; 0x18be <SendBCMessage>
+     d72:	81 e0       	ldi	r24, 0x01	; 1
+     d74:	80 93 7e 00 	sts	0x007E, r24	; 0x80007e <FSM_state>
+     d78:	80 e0       	ldi	r24, 0x00	; 0
+     d7a:	25 c7       	rjmp	.+3658   	; 0x1bc6 <ResetTimer>
+     d7c:	80 e0       	ldi	r24, 0x00	; 0
+     d7e:	1a d7       	rcall	.+3636   	; 0x1bb4 <GetTimer>
+     d80:	88 38       	cpi	r24, 0x88	; 136
+     d82:	93 41       	sbci	r25, 0x13	; 19
+     d84:	08 f4       	brcc	.+2      	; 0xd88 <FSM_SYSTEM_Process+0x32>
+     d86:	a7 c1       	rjmp	.+846    	; 0x10d6 <FSM_SYSTEM_Process+0x380>
+     d88:	81 e0       	ldi	r24, 0x01	; 1
+     d8a:	99 d5       	rcall	.+2866   	; 0x18be <SendBCMessage>
+     d8c:	83 e0       	ldi	r24, 0x03	; 3
+     d8e:	6b d5       	rcall	.+2774   	; 0x1866 <SendMessageWOParam>
+     d90:	22 c1       	rjmp	.+580    	; 0xfd6 <FSM_SYSTEM_Process+0x280>
+     d92:	90 91 b7 02 	lds	r25, 0x02B7	; 0x8002b7 <device>
+     d96:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     d9a:	99 23       	and	r25, r25
+     d9c:	11 f0       	breq	.+4      	; 0xda2 <FSM_SYSTEM_Process+0x4c>
+     d9e:	82 60       	ori	r24, 0x02	; 2
+     da0:	01 c0       	rjmp	.+2      	; 0xda4 <FSM_SYSTEM_Process+0x4e>
+     da2:	8d 7f       	andi	r24, 0xFD	; 253
+     da4:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     da8:	90 91 a7 02 	lds	r25, 0x02A7	; 0x8002a7 <tsens>
+     dac:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     db0:	91 11       	cpse	r25, r1
+     db2:	06 c0       	rjmp	.+12     	; 0xdc0 <FSM_SYSTEM_Process+0x6a>
+     db4:	20 91 b1 02 	lds	r18, 0x02B1	; 0x8002b1 <tsens+0xa>
+     db8:	90 91 bd 02 	lds	r25, 0x02BD	; 0x8002bd <device+0x6>
+     dbc:	29 17       	cp	r18, r25
+     dbe:	28 f0       	brcs	.+10     	; 0xdca <FSM_SYSTEM_Process+0x74>
+     dc0:	91 e0       	ldi	r25, 0x01	; 1
+     dc2:	90 93 b8 02 	sts	0x02B8, r25	; 0x8002b8 <device+0x1>
+     dc6:	80 68       	ori	r24, 0x80	; 128
+     dc8:	03 c0       	rjmp	.+6      	; 0xdd0 <FSM_SYSTEM_Process+0x7a>
+     dca:	10 92 b8 02 	sts	0x02B8, r1	; 0x8002b8 <device+0x1>
+     dce:	8f 77       	andi	r24, 0x7F	; 127
+     dd0:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     dd4:	80 91 b8 02 	lds	r24, 0x02B8	; 0x8002b8 <device+0x1>
+     dd8:	81 11       	cpse	r24, r1
+     dda:	6a c0       	rjmp	.+212    	; 0xeb0 <FSM_SYSTEM_Process+0x15a>
+     ddc:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     de0:	81 ff       	sbrs	r24, 1
+     de2:	5a c0       	rjmp	.+180    	; 0xe98 <FSM_SYSTEM_Process+0x142>
+     de4:	90 91 9c 02 	lds	r25, 0x029C	; 0x80029c <fan+0x1>
+     de8:	99 23       	and	r25, r25
+     dea:	a9 f0       	breq	.+42     	; 0xe16 <FSM_SYSTEM_Process+0xc0>
+     dec:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <fan_retry_count>
+     df0:	83 30       	cpi	r24, 0x03	; 3
+     df2:	38 f4       	brcc	.+14     	; 0xe02 <FSM_SYSTEM_Process+0xac>
+     df4:	88 e0       	ldi	r24, 0x08	; 8
+     df6:	37 d5       	rcall	.+2670   	; 0x1866 <SendMessageWOParam>
+     df8:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <fan_retry_count>
+     dfc:	8f 5f       	subi	r24, 0xFF	; 255
+     dfe:	80 93 78 00 	sts	0x0078, r24	; 0x800078 <fan_retry_count>
+     e02:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <fan_retry_count>
+     e06:	83 30       	cpi	r24, 0x03	; 3
+     e08:	59 f4       	brne	.+22     	; 0xe20 <FSM_SYSTEM_Process+0xca>
+     e0a:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     e0e:	80 62       	ori	r24, 0x20	; 32
+     e10:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     e14:	05 c0       	rjmp	.+10     	; 0xe20 <FSM_SYSTEM_Process+0xca>
+     e16:	8f 7d       	andi	r24, 0xDF	; 223
+     e18:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     e1c:	10 92 78 00 	sts	0x0078, r1	; 0x800078 <fan_retry_count>
+     e20:	20 91 b1 02 	lds	r18, 0x02B1	; 0x8002b1 <tsens+0xa>
+     e24:	90 91 bc 02 	lds	r25, 0x02BC	; 0x8002bc <device+0x5>
+     e28:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     e2c:	92 17       	cp	r25, r18
+     e2e:	60 f0       	brcs	.+24     	; 0xe48 <FSM_SYSTEM_Process+0xf2>
+     e30:	85 fd       	sbrc	r24, 5
+     e32:	06 c0       	rjmp	.+12     	; 0xe40 <FSM_SYSTEM_Process+0xea>
+     e34:	80 91 9b 02 	lds	r24, 0x029B	; 0x80029b <fan>
+     e38:	88 23       	and	r24, r24
+     e3a:	11 f0       	breq	.+4      	; 0xe40 <FSM_SYSTEM_Process+0xea>
+     e3c:	89 e0       	ldi	r24, 0x09	; 9
+     e3e:	13 d5       	rcall	.+2598   	; 0x1866 <SendMessageWOParam>
+     e40:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     e44:	80 61       	ori	r24, 0x10	; 16
+     e46:	01 c0       	rjmp	.+2      	; 0xe4a <FSM_SYSTEM_Process+0xf4>
+     e48:	8f 7e       	andi	r24, 0xEF	; 239
+     e4a:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     e4e:	90 91 b1 02 	lds	r25, 0x02B1	; 0x8002b1 <tsens+0xa>
+     e52:	30 91 bc 02 	lds	r19, 0x02BC	; 0x8002bc <device+0x5>
+     e56:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     e5a:	20 91 bb 02 	lds	r18, 0x02BB	; 0x8002bb <device+0x4>
+     e5e:	39 17       	cp	r19, r25
+     e60:	20 f4       	brcc	.+8      	; 0xe6a <FSM_SYSTEM_Process+0x114>
+     e62:	92 17       	cp	r25, r18
+     e64:	10 f4       	brcc	.+4      	; 0xe6a <FSM_SYSTEM_Process+0x114>
+     e66:	88 60       	ori	r24, 0x08	; 8
+     e68:	01 c0       	rjmp	.+2      	; 0xe6c <FSM_SYSTEM_Process+0x116>
+     e6a:	87 7f       	andi	r24, 0xF7	; 247
+     e6c:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     e70:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     e74:	92 17       	cp	r25, r18
+     e76:	60 f0       	brcs	.+24     	; 0xe90 <FSM_SYSTEM_Process+0x13a>
+     e78:	85 fd       	sbrc	r24, 5
+     e7a:	06 c0       	rjmp	.+12     	; 0xe88 <FSM_SYSTEM_Process+0x132>
+     e7c:	80 91 9b 02 	lds	r24, 0x029B	; 0x80029b <fan>
+     e80:	81 11       	cpse	r24, r1
+     e82:	02 c0       	rjmp	.+4      	; 0xe88 <FSM_SYSTEM_Process+0x132>
+     e84:	88 e0       	ldi	r24, 0x08	; 8
+     e86:	ef d4       	rcall	.+2526   	; 0x1866 <SendMessageWOParam>
+     e88:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     e8c:	84 60       	ori	r24, 0x04	; 4
+     e8e:	01 c0       	rjmp	.+2      	; 0xe92 <FSM_SYSTEM_Process+0x13c>
+     e90:	8b 7f       	andi	r24, 0xFB	; 251
+     e92:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     e96:	0c c0       	rjmp	.+24     	; 0xeb0 <FSM_SYSTEM_Process+0x15a>
+     e98:	80 91 9b 02 	lds	r24, 0x029B	; 0x80029b <fan>
+     e9c:	88 23       	and	r24, r24
+     e9e:	41 f0       	breq	.+16     	; 0xeb0 <FSM_SYSTEM_Process+0x15a>
+     ea0:	90 91 b1 02 	lds	r25, 0x02B1	; 0x8002b1 <tsens+0xa>
+     ea4:	80 91 bc 02 	lds	r24, 0x02BC	; 0x8002bc <device+0x5>
+     ea8:	89 17       	cp	r24, r25
+     eaa:	10 f0       	brcs	.+4      	; 0xeb0 <FSM_SYSTEM_Process+0x15a>
+     eac:	89 e0       	ldi	r24, 0x09	; 9
+     eae:	db d4       	rcall	.+2486   	; 0x1866 <SendMessageWOParam>
+     eb0:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     eb4:	90 91 ba 02 	lds	r25, 0x02BA	; 0x8002ba <device+0x3>
+     eb8:	89 17       	cp	r24, r25
+     eba:	09 f4       	brne	.+2      	; 0xebe <FSM_SYSTEM_Process+0x168>
+     ebc:	7a c0       	rjmp	.+244    	; 0xfb2 <FSM_SYSTEM_Process+0x25c>
+     ebe:	80 93 ba 02 	sts	0x02BA, r24	; 0x8002ba <device+0x3>
+     ec2:	81 ff       	sbrs	r24, 1
+     ec4:	51 c0       	rjmp	.+162    	; 0xf68 <FSM_SYSTEM_Process+0x212>
+     ec6:	20 91 b1 02 	lds	r18, 0x02B1	; 0x8002b1 <tsens+0xa>
+     eca:	90 91 bd 02 	lds	r25, 0x02BD	; 0x8002bd <device+0x6>
+     ece:	29 17       	cp	r18, r25
+     ed0:	30 f0       	brcs	.+12     	; 0xede <FSM_SYSTEM_Process+0x188>
+     ed2:	81 e0       	ldi	r24, 0x01	; 1
+     ed4:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <led_params>
+     ed8:	10 92 7a 00 	sts	0x007A, r1	; 0x80007a <led_params+0x1>
+     edc:	09 c0       	rjmp	.+18     	; 0xef0 <FSM_SYSTEM_Process+0x19a>
+     ede:	90 91 a7 02 	lds	r25, 0x02A7	; 0x8002a7 <tsens>
+     ee2:	99 23       	and	r25, r25
+     ee4:	91 f0       	breq	.+36     	; 0xf0a <FSM_SYSTEM_Process+0x1b4>
+     ee6:	81 e0       	ldi	r24, 0x01	; 1
+     ee8:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <led_params>
+     eec:	80 93 7a 00 	sts	0x007A, r24	; 0x80007a <led_params+0x1>
+     ef0:	10 92 7b 00 	sts	0x007B, r1	; 0x80007b <led_params+0x2>
+     ef4:	80 e1       	ldi	r24, 0x10	; 16
+     ef6:	97 e2       	ldi	r25, 0x27	; 39
+     ef8:	90 93 7d 00 	sts	0x007D, r25	; 0x80007d <led_params+0x4>
+     efc:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <led_params+0x3>
+     f00:	69 e7       	ldi	r22, 0x79	; 121
+     f02:	70 e0       	ldi	r23, 0x00	; 0
+     f04:	8b e0       	ldi	r24, 0x0B	; 11
+     f06:	9e d4       	rcall	.+2364   	; 0x1844 <SendMessageWParam>
+     f08:	54 c0       	rjmp	.+168    	; 0xfb2 <FSM_SYSTEM_Process+0x25c>
+     f0a:	84 fd       	sbrc	r24, 4
+     f0c:	08 c0       	rjmp	.+16     	; 0xf1e <FSM_SYSTEM_Process+0x1c8>
+     f0e:	98 2f       	mov	r25, r24
+     f10:	98 70       	andi	r25, 0x08	; 8
+     f12:	83 ff       	sbrs	r24, 3
+     f14:	11 c0       	rjmp	.+34     	; 0xf38 <FSM_SYSTEM_Process+0x1e2>
+     f16:	20 91 9b 02 	lds	r18, 0x029B	; 0x80029b <fan>
+     f1a:	21 11       	cpse	r18, r1
+     f1c:	0d c0       	rjmp	.+26     	; 0xf38 <FSM_SYSTEM_Process+0x1e2>
+     f1e:	85 ff       	sbrs	r24, 5
+     f20:	04 c0       	rjmp	.+8      	; 0xf2a <FSM_SYSTEM_Process+0x1d4>
+     f22:	81 e0       	ldi	r24, 0x01	; 1
+     f24:	80 93 7a 00 	sts	0x007A, r24	; 0x80007a <led_params+0x1>
+     f28:	02 c0       	rjmp	.+4      	; 0xf2e <FSM_SYSTEM_Process+0x1d8>
+     f2a:	10 92 7a 00 	sts	0x007A, r1	; 0x80007a <led_params+0x1>
+     f2e:	81 e0       	ldi	r24, 0x01	; 1
+     f30:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <led_params>
+     f34:	82 e0       	ldi	r24, 0x02	; 2
+     f36:	13 c0       	rjmp	.+38     	; 0xf5e <FSM_SYSTEM_Process+0x208>
+     f38:	82 fd       	sbrc	r24, 2
+     f3a:	06 c0       	rjmp	.+12     	; 0xf48 <FSM_SYSTEM_Process+0x1f2>
+     f3c:	99 23       	and	r25, r25
+     f3e:	c9 f1       	breq	.+114    	; 0xfb2 <FSM_SYSTEM_Process+0x25c>
+     f40:	90 91 9b 02 	lds	r25, 0x029B	; 0x80029b <fan>
+     f44:	99 23       	and	r25, r25
+     f46:	a9 f1       	breq	.+106    	; 0xfb2 <FSM_SYSTEM_Process+0x25c>
+     f48:	85 ff       	sbrs	r24, 5
+     f4a:	04 c0       	rjmp	.+8      	; 0xf54 <FSM_SYSTEM_Process+0x1fe>
+     f4c:	81 e0       	ldi	r24, 0x01	; 1
+     f4e:	80 93 7a 00 	sts	0x007A, r24	; 0x80007a <led_params+0x1>
+     f52:	02 c0       	rjmp	.+4      	; 0xf58 <FSM_SYSTEM_Process+0x202>
+     f54:	10 92 7a 00 	sts	0x007A, r1	; 0x80007a <led_params+0x1>
+     f58:	81 e0       	ldi	r24, 0x01	; 1
+     f5a:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <led_params>
+     f5e:	80 93 7b 00 	sts	0x007B, r24	; 0x80007b <led_params+0x2>
+     f62:	8f ef       	ldi	r24, 0xFF	; 255
+     f64:	9f ef       	ldi	r25, 0xFF	; 255
+     f66:	c8 cf       	rjmp	.-112    	; 0xef8 <FSM_SYSTEM_Process+0x1a2>
+     f68:	80 ff       	sbrs	r24, 0
+     f6a:	23 c0       	rjmp	.+70     	; 0xfb2 <FSM_SYSTEM_Process+0x25c>
+     f6c:	80 91 a7 02 	lds	r24, 0x02A7	; 0x8002a7 <tsens>
+     f70:	88 23       	and	r24, r24
+     f72:	31 f0       	breq	.+12     	; 0xf80 <FSM_SYSTEM_Process+0x22a>
+     f74:	81 e0       	ldi	r24, 0x01	; 1
+     f76:	80 93 7a 00 	sts	0x007A, r24	; 0x80007a <led_params+0x1>
+     f7a:	10 92 7b 00 	sts	0x007B, r1	; 0x80007b <led_params+0x2>
+     f7e:	09 c0       	rjmp	.+18     	; 0xf92 <FSM_SYSTEM_Process+0x23c>
+     f80:	80 91 9c 02 	lds	r24, 0x029C	; 0x80029c <fan+0x1>
+     f84:	88 23       	and	r24, r24
+     f86:	79 f0       	breq	.+30     	; 0xfa6 <FSM_SYSTEM_Process+0x250>
+     f88:	81 e0       	ldi	r24, 0x01	; 1
+     f8a:	80 93 7a 00 	sts	0x007A, r24	; 0x80007a <led_params+0x1>
+     f8e:	80 93 7b 00 	sts	0x007B, r24	; 0x80007b <led_params+0x2>
+     f92:	80 e1       	ldi	r24, 0x10	; 16
+     f94:	97 e2       	ldi	r25, 0x27	; 39
+     f96:	90 93 7d 00 	sts	0x007D, r25	; 0x80007d <led_params+0x4>
+     f9a:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <led_params+0x3>
+     f9e:	69 e7       	ldi	r22, 0x79	; 121
+     fa0:	70 e0       	ldi	r23, 0x00	; 0
+     fa2:	8b e0       	ldi	r24, 0x0B	; 11
+     fa4:	4f d4       	rcall	.+2206   	; 0x1844 <SendMessageWParam>
+     fa6:	80 91 b9 02 	lds	r24, 0x02B9	; 0x8002b9 <device+0x2>
+     faa:	8e 7f       	andi	r24, 0xFE	; 254
+     fac:	80 93 b9 02 	sts	0x02B9, r24	; 0x8002b9 <device+0x2>
+     fb0:	b0 de       	rcall	.-672    	; 0xd12 <FSM_SYSTEM_LoadEEPROM>
+     fb2:	80 91 b8 02 	lds	r24, 0x02B8	; 0x8002b8 <device+0x1>
+     fb6:	88 23       	and	r24, r24
+     fb8:	09 f4       	brne	.+2      	; 0xfbc <FSM_SYSTEM_Process+0x266>
+     fba:	78 c0       	rjmp	.+240    	; 0x10ac <FSM_SYSTEM_Process+0x356>
+     fbc:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+     fc0:	88 23       	and	r24, r24
+     fc2:	09 f4       	brne	.+2      	; 0xfc6 <FSM_SYSTEM_Process+0x270>
+     fc4:	73 c0       	rjmp	.+230    	; 0x10ac <FSM_SYSTEM_Process+0x356>
+     fc6:	24 c0       	rjmp	.+72     	; 0x1010 <FSM_SYSTEM_Process+0x2ba>
+     fc8:	80 e0       	ldi	r24, 0x00	; 0
+     fca:	f4 d5       	rcall	.+3048   	; 0x1bb4 <GetTimer>
+     fcc:	88 3e       	cpi	r24, 0xE8	; 232
+     fce:	93 40       	sbci	r25, 0x03	; 3
+     fd0:	20 f0       	brcs	.+8      	; 0xfda <FSM_SYSTEM_Process+0x284>
+     fd2:	80 e0       	ldi	r24, 0x00	; 0
+     fd4:	f8 d5       	rcall	.+3056   	; 0x1bc6 <ResetTimer>
+     fd6:	82 e0       	ldi	r24, 0x02	; 2
+     fd8:	6a c0       	rjmp	.+212    	; 0x10ae <FSM_SYSTEM_Process+0x358>
+     fda:	83 e0       	ldi	r24, 0x03	; 3
+     fdc:	7a d4       	rcall	.+2292   	; 0x18d2 <GetBCMessage>
+     fde:	88 23       	and	r24, r24
+     fe0:	29 f0       	breq	.+10     	; 0xfec <FSM_SYSTEM_Process+0x296>
+     fe2:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+     fe6:	88 23       	and	r24, r24
+     fe8:	49 f0       	breq	.+18     	; 0xffc <FSM_SYSTEM_Process+0x2a6>
+     fea:	12 c0       	rjmp	.+36     	; 0x1010 <FSM_SYSTEM_Process+0x2ba>
+     fec:	81 e0       	ldi	r24, 0x01	; 1
+     fee:	4a d4       	rcall	.+2196   	; 0x1884 <GetMessage>
+     ff0:	88 23       	and	r24, r24
+     ff2:	31 f0       	breq	.+12     	; 0x1000 <FSM_SYSTEM_Process+0x2aa>
+     ff4:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+     ff8:	81 11       	cpse	r24, r1
+     ffa:	02 c0       	rjmp	.+4      	; 0x1000 <FSM_SYSTEM_Process+0x2aa>
+     ffc:	84 e0       	ldi	r24, 0x04	; 4
+     ffe:	57 c0       	rjmp	.+174    	; 0x10ae <FSM_SYSTEM_Process+0x358>
+    1000:	82 e0       	ldi	r24, 0x02	; 2
+    1002:	40 d4       	rcall	.+2176   	; 0x1884 <GetMessage>
+    1004:	88 23       	and	r24, r24
+    1006:	31 f0       	breq	.+12     	; 0x1014 <FSM_SYSTEM_Process+0x2be>
+    1008:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+    100c:	81 30       	cpi	r24, 0x01	; 1
+    100e:	11 f4       	brne	.+4      	; 0x1014 <FSM_SYSTEM_Process+0x2be>
+    1010:	85 e0       	ldi	r24, 0x05	; 5
+    1012:	4d c0       	rjmp	.+154    	; 0x10ae <FSM_SYSTEM_Process+0x358>
+    1014:	8e e0       	ldi	r24, 0x0E	; 14
+    1016:	36 d4       	rcall	.+2156   	; 0x1884 <GetMessage>
+    1018:	88 23       	and	r24, r24
+    101a:	11 f0       	breq	.+4      	; 0x1020 <FSM_SYSTEM_Process+0x2ca>
+    101c:	87 e0       	ldi	r24, 0x07	; 7
+    101e:	47 c0       	rjmp	.+142    	; 0x10ae <FSM_SYSTEM_Process+0x358>
+    1020:	8d e0       	ldi	r24, 0x0D	; 13
+    1022:	30 d4       	rcall	.+2144   	; 0x1884 <GetMessage>
+    1024:	88 23       	and	r24, r24
+    1026:	11 f0       	breq	.+4      	; 0x102c <FSM_SYSTEM_Process+0x2d6>
+    1028:	86 e0       	ldi	r24, 0x06	; 6
+    102a:	41 c0       	rjmp	.+130    	; 0x10ae <FSM_SYSTEM_Process+0x358>
+    102c:	8f e0       	ldi	r24, 0x0F	; 15
+    102e:	2a d4       	rcall	.+2132   	; 0x1884 <GetMessage>
+    1030:	88 23       	and	r24, r24
+    1032:	09 f4       	brne	.+2      	; 0x1036 <FSM_SYSTEM_Process+0x2e0>
+    1034:	50 c0       	rjmp	.+160    	; 0x10d6 <FSM_SYSTEM_Process+0x380>
+    1036:	88 e0       	ldi	r24, 0x08	; 8
+    1038:	3a c0       	rjmp	.+116    	; 0x10ae <FSM_SYSTEM_Process+0x358>
+    103a:	80 91 b8 02 	lds	r24, 0x02B8	; 0x8002b8 <device+0x1>
+    103e:	81 11       	cpse	r24, r1
+    1040:	35 c0       	rjmp	.+106    	; 0x10ac <FSM_SYSTEM_Process+0x356>
+    1042:	81 e0       	ldi	r24, 0x01	; 1
+    1044:	80 93 b7 02 	sts	0x02B7, r24	; 0x8002b7 <device>
+    1048:	88 e0       	ldi	r24, 0x08	; 8
+    104a:	0d d4       	rcall	.+2074   	; 0x1866 <SendMessageWOParam>
+    104c:	10 92 78 00 	sts	0x0078, r1	; 0x800078 <fan_retry_count>
+    1050:	ad 9a       	sbi	0x15, 5	; 21
+    1052:	2c c0       	rjmp	.+88     	; 0x10ac <FSM_SYSTEM_Process+0x356>
+    1054:	10 92 b7 02 	sts	0x02B7, r1	; 0x8002b7 <device>
+    1058:	80 91 9c 02 	lds	r24, 0x029C	; 0x80029c <fan+0x1>
+    105c:	81 11       	cpse	r24, r1
+    105e:	06 c0       	rjmp	.+12     	; 0x106c <FSM_SYSTEM_Process+0x316>
+    1060:	90 91 b1 02 	lds	r25, 0x02B1	; 0x8002b1 <tsens+0xa>
+    1064:	80 91 bc 02 	lds	r24, 0x02BC	; 0x8002bc <device+0x5>
+    1068:	89 17       	cp	r24, r25
+    106a:	10 f0       	brcs	.+4      	; 0x1070 <FSM_SYSTEM_Process+0x31a>
+    106c:	89 e0       	ldi	r24, 0x09	; 9
+    106e:	fb d3       	rcall	.+2038   	; 0x1866 <SendMessageWOParam>
+    1070:	80 91 b8 02 	lds	r24, 0x02B8	; 0x8002b8 <device+0x1>
+    1074:	81 11       	cpse	r24, r1
+    1076:	05 c0       	rjmp	.+10     	; 0x1082 <FSM_SYSTEM_Process+0x32c>
+    1078:	10 92 7d 00 	sts	0x007D, r1	; 0x80007d <led_params+0x4>
+    107c:	10 92 7c 00 	sts	0x007C, r1	; 0x80007c <led_params+0x3>
+    1080:	06 c0       	rjmp	.+12     	; 0x108e <FSM_SYSTEM_Process+0x338>
+    1082:	80 e1       	ldi	r24, 0x10	; 16
+    1084:	97 e2       	ldi	r25, 0x27	; 39
+    1086:	90 93 7d 00 	sts	0x007D, r25	; 0x80007d <led_params+0x4>
+    108a:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <led_params+0x3>
+    108e:	ad 98       	cbi	0x15, 5	; 21
+    1090:	0d c0       	rjmp	.+26     	; 0x10ac <FSM_SYSTEM_Process+0x356>
+    1092:	3f de       	rcall	.-898    	; 0xd12 <FSM_SYSTEM_LoadEEPROM>
+    1094:	09 c0       	rjmp	.+18     	; 0x10a8 <FSM_SYSTEM_Process+0x352>
+    1096:	e1 99       	sbic	0x1c, 1	; 28
+    1098:	fe cf       	rjmp	.-4      	; 0x1096 <FSM_SYSTEM_Process+0x340>
+    109a:	43 e0       	ldi	r20, 0x03	; 3
+    109c:	50 e0       	ldi	r21, 0x00	; 0
+    109e:	60 e0       	ldi	r22, 0x00	; 0
+    10a0:	70 e0       	ldi	r23, 0x00	; 0
+    10a2:	8b eb       	ldi	r24, 0xBB	; 187
+    10a4:	92 e0       	ldi	r25, 0x02	; 2
+    10a6:	55 d6       	rcall	.+3242   	; 0x1d52 <eeprom_write_block>
+    10a8:	85 e0       	ldi	r24, 0x05	; 5
+    10aa:	dd d3       	rcall	.+1978   	; 0x1866 <SendMessageWOParam>
+    10ac:	83 e0       	ldi	r24, 0x03	; 3
+    10ae:	80 93 7e 00 	sts	0x007E, r24	; 0x80007e <FSM_state>
+    10b2:	08 95       	ret
+    10b4:	0f b6       	in	r0, 0x3f	; 63
+    10b6:	f8 94       	cli
+    10b8:	a8 95       	wdr
+    10ba:	81 b5       	in	r24, 0x21	; 33
+    10bc:	88 61       	ori	r24, 0x18	; 24
+    10be:	81 bd       	out	0x21, r24	; 33
+    10c0:	11 bc       	out	0x21, r1	; 33
+    10c2:	0f be       	out	0x3f, r0	; 63
+    10c4:	98 e0       	ldi	r25, 0x08	; 8
+    10c6:	88 e1       	ldi	r24, 0x18	; 24
+    10c8:	0f b6       	in	r0, 0x3f	; 63
+    10ca:	f8 94       	cli
+    10cc:	a8 95       	wdr
+    10ce:	81 bd       	out	0x21, r24	; 33
+    10d0:	0f be       	out	0x3f, r0	; 63
+    10d2:	91 bd       	out	0x21, r25	; 33
+    10d4:	ff cf       	rjmp	.-2      	; 0x10d4 <FSM_SYSTEM_Process+0x37e>
+    10d6:	08 95       	ret
+
+000010d8 <FSM_DS18X20_Init>:
+    10d8:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <FSM_state>
+    10dc:	81 e0       	ldi	r24, 0x01	; 1
+    10de:	80 93 7f 00 	sts	0x007F, r24	; 0x80007f <sensor_type>
+    10e2:	08 95       	ret
+
+000010e4 <FSM_DS18X20_Process>:
+    10e4:	cf 93       	push	r28
+    10e6:	df 93       	push	r29
+    10e8:	00 d0       	rcall	.+0      	; 0x10ea <FSM_DS18X20_Process+0x6>
+    10ea:	00 d0       	rcall	.+0      	; 0x10ec <FSM_DS18X20_Process+0x8>
+    10ec:	cd b7       	in	r28, 0x3d	; 61
+    10ee:	de b7       	in	r29, 0x3e	; 62
+    10f0:	80 91 80 00 	lds	r24, 0x0080	; 0x800080 <FSM_state>
+    10f4:	82 30       	cpi	r24, 0x02	; 2
+    10f6:	e1 f1       	breq	.+120    	; 0x1170 <FSM_DS18X20_Process+0x8c>
+    10f8:	28 f4       	brcc	.+10     	; 0x1104 <FSM_DS18X20_Process+0x20>
+    10fa:	88 23       	and	r24, r24
+    10fc:	61 f0       	breq	.+24     	; 0x1116 <FSM_DS18X20_Process+0x32>
+    10fe:	81 30       	cpi	r24, 0x01	; 1
+    1100:	19 f1       	breq	.+70     	; 0x1148 <FSM_DS18X20_Process+0x64>
+    1102:	e1 c0       	rjmp	.+450    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    1104:	84 30       	cpi	r24, 0x04	; 4
+    1106:	09 f4       	brne	.+2      	; 0x110a <FSM_DS18X20_Process+0x26>
+    1108:	73 c0       	rjmp	.+230    	; 0x11f0 <FSM_DS18X20_Process+0x10c>
+    110a:	08 f4       	brcc	.+2      	; 0x110e <FSM_DS18X20_Process+0x2a>
+    110c:	58 c0       	rjmp	.+176    	; 0x11be <FSM_DS18X20_Process+0xda>
+    110e:	85 30       	cpi	r24, 0x05	; 5
+    1110:	09 f4       	brne	.+2      	; 0x1114 <FSM_DS18X20_Process+0x30>
+    1112:	8f c0       	rjmp	.+286    	; 0x1232 <FSM_DS18X20_Process+0x14e>
+    1114:	d8 c0       	rjmp	.+432    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    1116:	86 e0       	ldi	r24, 0x06	; 6
+    1118:	b5 d3       	rcall	.+1898   	; 0x1884 <GetMessage>
+    111a:	88 23       	and	r24, r24
+    111c:	11 f0       	breq	.+4      	; 0x1122 <FSM_DS18X20_Process+0x3e>
+    111e:	81 e0       	ldi	r24, 0x01	; 1
+    1120:	10 c0       	rjmp	.+32     	; 0x1142 <FSM_DS18X20_Process+0x5e>
+    1122:	80 e0       	ldi	r24, 0x00	; 0
+    1124:	d6 d3       	rcall	.+1964   	; 0x18d2 <GetBCMessage>
+    1126:	81 11       	cpse	r24, r1
+    1128:	fa cf       	rjmp	.-12     	; 0x111e <FSM_DS18X20_Process+0x3a>
+    112a:	80 91 7f 00 	lds	r24, 0x007F	; 0x80007f <sensor_type>
+    112e:	88 23       	and	r24, r24
+    1130:	09 f4       	brne	.+2      	; 0x1134 <FSM_DS18X20_Process+0x50>
+    1132:	c9 c0       	rjmp	.+402    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    1134:	82 e0       	ldi	r24, 0x02	; 2
+    1136:	3e d5       	rcall	.+2684   	; 0x1bb4 <GetTimer>
+    1138:	89 3b       	cpi	r24, 0xB9	; 185
+    113a:	9b 40       	sbci	r25, 0x0B	; 11
+    113c:	08 f4       	brcc	.+2      	; 0x1140 <FSM_DS18X20_Process+0x5c>
+    113e:	c3 c0       	rjmp	.+390    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    1140:	83 e0       	ldi	r24, 0x03	; 3
+    1142:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <FSM_state>
+    1146:	bf c0       	rjmp	.+382    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    1148:	90 91 d5 02 	lds	r25, 0x02D5	; 0x8002d5 <ows+0x17>
+    114c:	91 11       	cpse	r25, r1
+    114e:	bb c0       	rjmp	.+374    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    1150:	93 e3       	ldi	r25, 0x33	; 51
+    1152:	90 93 be 02 	sts	0x02BE, r25	; 0x8002be <ows>
+    1156:	80 93 d2 02 	sts	0x02D2, r24	; 0x8002d2 <ows+0x14>
+    115a:	98 e0       	ldi	r25, 0x08	; 8
+    115c:	90 93 d3 02 	sts	0x02D3, r25	; 0x8002d3 <ows+0x15>
+    1160:	80 93 d4 02 	sts	0x02D4, r24	; 0x8002d4 <ows+0x16>
+    1164:	10 92 a7 02 	sts	0x02A7, r1	; 0x8002a7 <tsens>
+    1168:	87 e0       	ldi	r24, 0x07	; 7
+    116a:	7d d3       	rcall	.+1786   	; 0x1866 <SendMessageWOParam>
+    116c:	82 e0       	ldi	r24, 0x02	; 2
+    116e:	e9 cf       	rjmp	.-46     	; 0x1142 <FSM_DS18X20_Process+0x5e>
+    1170:	82 e0       	ldi	r24, 0x02	; 2
+    1172:	af d3       	rcall	.+1886   	; 0x18d2 <GetBCMessage>
+    1174:	88 23       	and	r24, r24
+    1176:	09 f4       	brne	.+2      	; 0x117a <FSM_DS18X20_Process+0x96>
+    1178:	a6 c0       	rjmp	.+332    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    117a:	80 91 d6 02 	lds	r24, 0x02D6	; 0x8002d6 <ows+0x18>
+    117e:	81 11       	cpse	r24, r1
+    1180:	18 c0       	rjmp	.+48     	; 0x11b2 <FSM_DS18X20_Process+0xce>
+    1182:	a8 ec       	ldi	r26, 0xC8	; 200
+    1184:	b2 e0       	ldi	r27, 0x02	; 2
+    1186:	e8 ea       	ldi	r30, 0xA8	; 168
+    1188:	f2 e0       	ldi	r31, 0x02	; 2
+    118a:	80 eb       	ldi	r24, 0xB0	; 176
+    118c:	92 e0       	ldi	r25, 0x02	; 2
+    118e:	2d 91       	ld	r18, X+
+    1190:	21 93       	st	Z+, r18
+    1192:	8e 17       	cp	r24, r30
+    1194:	9f 07       	cpc	r25, r31
+    1196:	d9 f7       	brne	.-10     	; 0x118e <FSM_DS18X20_Process+0xaa>
+    1198:	80 91 a8 02 	lds	r24, 0x02A8	; 0x8002a8 <tsens+0x1>
+    119c:	88 32       	cpi	r24, 0x28	; 40
+    119e:	21 f4       	brne	.+8      	; 0x11a8 <FSM_DS18X20_Process+0xc4>
+    11a0:	82 e0       	ldi	r24, 0x02	; 2
+    11a2:	80 93 7f 00 	sts	0x007F, r24	; 0x80007f <sensor_type>
+    11a6:	08 c0       	rjmp	.+16     	; 0x11b8 <FSM_DS18X20_Process+0xd4>
+    11a8:	80 31       	cpi	r24, 0x10	; 16
+    11aa:	31 f0       	breq	.+12     	; 0x11b8 <FSM_DS18X20_Process+0xd4>
+    11ac:	10 92 7f 00 	sts	0x007F, r1	; 0x80007f <sensor_type>
+    11b0:	03 c0       	rjmp	.+6      	; 0x11b8 <FSM_DS18X20_Process+0xd4>
+    11b2:	81 e0       	ldi	r24, 0x01	; 1
+    11b4:	80 93 a7 02 	sts	0x02A7, r24	; 0x8002a7 <tsens>
+    11b8:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <FSM_state>
+    11bc:	16 c0       	rjmp	.+44     	; 0x11ea <FSM_DS18X20_Process+0x106>
+    11be:	80 91 d5 02 	lds	r24, 0x02D5	; 0x8002d5 <ows+0x17>
+    11c2:	81 11       	cpse	r24, r1
+    11c4:	80 c0       	rjmp	.+256    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    11c6:	8c ec       	ldi	r24, 0xCC	; 204
+    11c8:	80 93 be 02 	sts	0x02BE, r24	; 0x8002be <ows>
+    11cc:	84 e4       	ldi	r24, 0x44	; 68
+    11ce:	80 93 bf 02 	sts	0x02BF, r24	; 0x8002bf <ows+0x1>
+    11d2:	82 e0       	ldi	r24, 0x02	; 2
+    11d4:	80 93 d2 02 	sts	0x02D2, r24	; 0x8002d2 <ows+0x14>
+    11d8:	10 92 d3 02 	sts	0x02D3, r1	; 0x8002d3 <ows+0x15>
+    11dc:	10 92 a7 02 	sts	0x02A7, r1	; 0x8002a7 <tsens>
+    11e0:	87 e0       	ldi	r24, 0x07	; 7
+    11e2:	41 d3       	rcall	.+1666   	; 0x1866 <SendMessageWOParam>
+    11e4:	84 e0       	ldi	r24, 0x04	; 4
+    11e6:	80 93 80 00 	sts	0x0080, r24	; 0x800080 <FSM_state>
+    11ea:	82 e0       	ldi	r24, 0x02	; 2
+    11ec:	ec d4       	rcall	.+2520   	; 0x1bc6 <ResetTimer>
+    11ee:	6b c0       	rjmp	.+214    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    11f0:	82 e0       	ldi	r24, 0x02	; 2
+    11f2:	e0 d4       	rcall	.+2496   	; 0x1bb4 <GetTimer>
+    11f4:	81 32       	cpi	r24, 0x21	; 33
+    11f6:	93 40       	sbci	r25, 0x03	; 3
+    11f8:	08 f4       	brcc	.+2      	; 0x11fc <FSM_DS18X20_Process+0x118>
+    11fa:	65 c0       	rjmp	.+202    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    11fc:	80 91 d6 02 	lds	r24, 0x02D6	; 0x8002d6 <ows+0x18>
+    1200:	81 11       	cpse	r24, r1
+    1202:	5c c0       	rjmp	.+184    	; 0x12bc <FSM_DS18X20_Process+0x1d8>
+    1204:	80 91 d5 02 	lds	r24, 0x02D5	; 0x8002d5 <ows+0x17>
+    1208:	81 11       	cpse	r24, r1
+    120a:	5d c0       	rjmp	.+186    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    120c:	8c ec       	ldi	r24, 0xCC	; 204
+    120e:	80 93 be 02 	sts	0x02BE, r24	; 0x8002be <ows>
+    1212:	8e eb       	ldi	r24, 0xBE	; 190
+    1214:	80 93 bf 02 	sts	0x02BF, r24	; 0x8002bf <ows+0x1>
+    1218:	82 e0       	ldi	r24, 0x02	; 2
+    121a:	80 93 d2 02 	sts	0x02D2, r24	; 0x8002d2 <ows+0x14>
+    121e:	89 e0       	ldi	r24, 0x09	; 9
+    1220:	80 93 d3 02 	sts	0x02D3, r24	; 0x8002d3 <ows+0x15>
+    1224:	81 e0       	ldi	r24, 0x01	; 1
+    1226:	80 93 d4 02 	sts	0x02D4, r24	; 0x8002d4 <ows+0x16>
+    122a:	87 e0       	ldi	r24, 0x07	; 7
+    122c:	1c d3       	rcall	.+1592   	; 0x1866 <SendMessageWOParam>
+    122e:	85 e0       	ldi	r24, 0x05	; 5
+    1230:	88 cf       	rjmp	.-240    	; 0x1142 <FSM_DS18X20_Process+0x5e>
+    1232:	82 e0       	ldi	r24, 0x02	; 2
+    1234:	4e d3       	rcall	.+1692   	; 0x18d2 <GetBCMessage>
+    1236:	88 23       	and	r24, r24
+    1238:	09 f4       	brne	.+2      	; 0x123c <FSM_DS18X20_Process+0x158>
+    123a:	45 c0       	rjmp	.+138    	; 0x12c6 <FSM_DS18X20_Process+0x1e2>
+    123c:	80 91 d6 02 	lds	r24, 0x02D6	; 0x8002d6 <ows+0x18>
+    1240:	81 11       	cpse	r24, r1
+    1242:	3c c0       	rjmp	.+120    	; 0x12bc <FSM_DS18X20_Process+0x1d8>
+    1244:	80 91 7f 00 	lds	r24, 0x007F	; 0x80007f <sensor_type>
+    1248:	82 30       	cpi	r24, 0x02	; 2
+    124a:	69 f4       	brne	.+26     	; 0x1266 <FSM_DS18X20_Process+0x182>
+    124c:	80 91 c8 02 	lds	r24, 0x02C8	; 0x8002c8 <ows+0xa>
+    1250:	90 91 c9 02 	lds	r25, 0x02C9	; 0x8002c9 <ows+0xb>
+    1254:	33 e0       	ldi	r19, 0x03	; 3
+    1256:	95 95       	asr	r25
+    1258:	87 95       	ror	r24
+    125a:	3a 95       	dec	r19
+    125c:	e1 f7       	brne	.-8      	; 0x1256 <FSM_DS18X20_Process+0x172>
+    125e:	90 93 c9 02 	sts	0x02C9, r25	; 0x8002c9 <ows+0xb>
+    1262:	80 93 c8 02 	sts	0x02C8, r24	; 0x8002c8 <ows+0xa>
+    1266:	80 91 c8 02 	lds	r24, 0x02C8	; 0x8002c8 <ows+0xa>
+    126a:	90 91 c9 02 	lds	r25, 0x02C9	; 0x8002c9 <ows+0xb>
+    126e:	95 95       	asr	r25
+    1270:	87 95       	ror	r24
+    1272:	90 93 c9 02 	sts	0x02C9, r25	; 0x8002c9 <ows+0xb>
+    1276:	80 93 c8 02 	sts	0x02C8, r24	; 0x8002c8 <ows+0xa>
+    127a:	80 93 b0 02 	sts	0x02B0, r24	; 0x8002b0 <tsens+0x9>
+    127e:	87 ff       	sbrs	r24, 7
+    1280:	05 c0       	rjmp	.+10     	; 0x128c <FSM_DS18X20_Process+0x1a8>
+    1282:	91 e0       	ldi	r25, 0x01	; 1
+    1284:	90 93 b2 02 	sts	0x02B2, r25	; 0x8002b2 <tsens+0xb>
+    1288:	81 95       	neg	r24
+    128a:	02 c0       	rjmp	.+4      	; 0x1290 <FSM_DS18X20_Process+0x1ac>
+    128c:	10 92 b2 02 	sts	0x02B2, r1	; 0x8002b2 <tsens+0xb>
+    1290:	80 93 b1 02 	sts	0x02B1, r24	; 0x8002b1 <tsens+0xa>
+    1294:	be 01       	movw	r22, r28
+    1296:	6f 5f       	subi	r22, 0xFF	; 255
+    1298:	7f 4f       	sbci	r23, 0xFF	; 255
+    129a:	80 91 b1 02 	lds	r24, 0x02B1	; 0x8002b1 <tsens+0xa>
+    129e:	de d3       	rcall	.+1980   	; 0x1a5c <utoa_cycle_sub8>
+    12a0:	fc 01       	movw	r30, r24
+    12a2:	80 81       	ld	r24, Z
+    12a4:	80 93 b3 02 	sts	0x02B3, r24	; 0x8002b3 <tsens+0xc>
+    12a8:	81 81       	ldd	r24, Z+1	; 0x01
+    12aa:	80 93 b4 02 	sts	0x02B4, r24	; 0x8002b4 <tsens+0xd>
+    12ae:	82 81       	ldd	r24, Z+2	; 0x02
+    12b0:	80 93 b5 02 	sts	0x02B5, r24	; 0x8002b5 <tsens+0xe>
+    12b4:	83 81       	ldd	r24, Z+3	; 0x03
+    12b6:	80 93 b6 02 	sts	0x02B6, r24	; 0x8002b6 <tsens+0xf>
+    12ba:	03 c0       	rjmp	.+6      	; 0x12c2 <FSM_DS18X20_Process+0x1de>
+    12bc:	81 e0       	ldi	r24, 0x01	; 1
+    12be:	80 93 a7 02 	sts	0x02A7, r24	; 0x8002a7 <tsens>
+    12c2:	10 92 80 00 	sts	0x0080, r1	; 0x800080 <FSM_state>
+    12c6:	0f 90       	pop	r0
+    12c8:	0f 90       	pop	r0
+    12ca:	0f 90       	pop	r0
+    12cc:	0f 90       	pop	r0
+    12ce:	df 91       	pop	r29
+    12d0:	cf 91       	pop	r28
+    12d2:	08 95       	ret
+
+000012d4 <FSM_UART_Init>:
+    12d4:	10 92 83 00 	sts	0x0083, r1	; 0x800083 <FSM_state>
+    12d8:	08 95       	ret
+
+000012da <FSM_UART_Process>:
+    12da:	0f 93       	push	r16
+    12dc:	1f 93       	push	r17
+    12de:	cf 93       	push	r28
+    12e0:	df 93       	push	r29
+    12e2:	00 d0       	rcall	.+0      	; 0x12e4 <FSM_UART_Process+0xa>
+    12e4:	00 d0       	rcall	.+0      	; 0x12e6 <FSM_UART_Process+0xc>
+    12e6:	cd b7       	in	r28, 0x3d	; 61
+    12e8:	de b7       	in	r29, 0x3e	; 62
+    12ea:	e0 91 83 00 	lds	r30, 0x0083	; 0x800083 <FSM_state>
+    12ee:	8e 2f       	mov	r24, r30
+    12f0:	90 e0       	ldi	r25, 0x00	; 0
+    12f2:	8b 30       	cpi	r24, 0x0B	; 11
+    12f4:	91 05       	cpc	r25, r1
+    12f6:	08 f0       	brcs	.+2      	; 0x12fa <FSM_UART_Process+0x20>
+    12f8:	85 c2       	rjmp	.+1290   	; 0x1804 <FSM_UART_Process+0x52a>
+    12fa:	fc 01       	movw	r30, r24
+    12fc:	ec 5d       	subi	r30, 0xDC	; 220
+    12fe:	ff 4f       	sbci	r31, 0xFF	; 255
+    1300:	09 94       	ijmp
+    1302:	83 e0       	ldi	r24, 0x03	; 3
+    1304:	bf d2       	rcall	.+1406   	; 0x1884 <GetMessage>
+    1306:	88 23       	and	r24, r24
+    1308:	11 f0       	breq	.+4      	; 0x130e <FSM_UART_Process+0x34>
+    130a:	81 e0       	ldi	r24, 0x01	; 1
+    130c:	6c c2       	rjmp	.+1240   	; 0x17e6 <FSM_UART_Process+0x50c>
+    130e:	85 e0       	ldi	r24, 0x05	; 5
+    1310:	b9 d2       	rcall	.+1394   	; 0x1884 <GetMessage>
+    1312:	81 11       	cpse	r24, r1
+    1314:	65 c2       	rjmp	.+1226   	; 0x17e0 <FSM_UART_Process+0x506>
+    1316:	80 91 68 00 	lds	r24, 0x0068	; 0x800068 <UART_RX_STATE>
+    131a:	81 30       	cpi	r24, 0x01	; 1
+    131c:	29 f0       	breq	.+10     	; 0x1328 <FSM_UART_Process+0x4e>
+    131e:	82 30       	cpi	r24, 0x02	; 2
+    1320:	09 f0       	breq	.+2      	; 0x1324 <FSM_UART_Process+0x4a>
+    1322:	70 c2       	rjmp	.+1248   	; 0x1804 <FSM_UART_Process+0x52a>
+    1324:	8a e0       	ldi	r24, 0x0A	; 10
+    1326:	01 c0       	rjmp	.+2      	; 0x132a <FSM_UART_Process+0x50>
+    1328:	87 e0       	ldi	r24, 0x07	; 7
+    132a:	80 93 83 00 	sts	0x0083, r24	; 0x800083 <FSM_state>
+    132e:	10 92 68 00 	sts	0x0068, r1	; 0x800068 <UART_RX_STATE>
+    1332:	68 c2       	rjmp	.+1232   	; 0x1804 <FSM_UART_Process+0x52a>
+    1334:	57 98       	cbi	0x0a, 7	; 10
+    1336:	85 e8       	ldi	r24, 0x85	; 133
+    1338:	95 e0       	ldi	r25, 0x05	; 5
+    133a:	84 d9       	rcall	.-3320   	; 0x644 <UART_AddStringFromFlash>
+    133c:	87 e3       	ldi	r24, 0x37	; 55
+    133e:	95 e0       	ldi	r25, 0x05	; 5
+    1340:	81 d9       	rcall	.-3326   	; 0x644 <UART_AddStringFromFlash>
+    1342:	86 e1       	ldi	r24, 0x16	; 22
+    1344:	95 e0       	ldi	r25, 0x05	; 5
+    1346:	7e d9       	rcall	.-3332   	; 0x644 <UART_AddStringFromFlash>
+    1348:	89 ee       	ldi	r24, 0xE9	; 233
+    134a:	94 e0       	ldi	r25, 0x04	; 4
+    134c:	7b d9       	rcall	.-3338   	; 0x644 <UART_AddStringFromFlash>
+    134e:	86 ed       	ldi	r24, 0xD6	; 214
+    1350:	94 e0       	ldi	r25, 0x04	; 4
+    1352:	78 d9       	rcall	.-3344   	; 0x644 <UART_AddStringFromFlash>
+    1354:	8c ec       	ldi	r24, 0xCC	; 204
+    1356:	94 e0       	ldi	r25, 0x04	; 4
+    1358:	75 d9       	rcall	.-3350   	; 0x644 <UART_AddStringFromFlash>
+    135a:	80 91 a8 02 	lds	r24, 0x02A8	; 0x8002a8 <tsens+0x1>
+    135e:	88 23       	and	r24, r24
+    1360:	09 f4       	brne	.+2      	; 0x1364 <FSM_UART_Process+0x8a>
+    1362:	46 c0       	rjmp	.+140    	; 0x13f0 <FSM_UART_Process+0x116>
+    1364:	82 30       	cpi	r24, 0x02	; 2
+    1366:	19 f4       	brne	.+6      	; 0x136e <FSM_UART_Process+0x94>
+    1368:	89 e6       	ldi	r24, 0x69	; 105
+    136a:	95 e0       	ldi	r25, 0x05	; 5
+    136c:	02 c0       	rjmp	.+4      	; 0x1372 <FSM_UART_Process+0x98>
+    136e:	81 e6       	ldi	r24, 0x61	; 97
+    1370:	95 e0       	ldi	r25, 0x05	; 5
+    1372:	68 d9       	rcall	.-3376   	; 0x644 <UART_AddStringFromFlash>
+    1374:	85 e8       	ldi	r24, 0x85	; 133
+    1376:	95 e0       	ldi	r25, 0x05	; 5
+    1378:	65 d9       	rcall	.-3382   	; 0x644 <UART_AddStringFromFlash>
+    137a:	80 ec       	ldi	r24, 0xC0	; 192
+    137c:	94 e0       	ldi	r25, 0x04	; 4
+    137e:	62 d9       	rcall	.-3388   	; 0x644 <UART_AddStringFromFlash>
+    1380:	be 01       	movw	r22, r28
+    1382:	6f 5f       	subi	r22, 0xFF	; 255
+    1384:	7f 4f       	sbci	r23, 0xFF	; 255
+    1386:	80 91 a8 02 	lds	r24, 0x02A8	; 0x8002a8 <tsens+0x1>
+    138a:	52 d3       	rcall	.+1700   	; 0x1a30 <hex_to_ascii>
+    138c:	11 d9       	rcall	.-3550   	; 0x5b0 <UART_AddString>
+    138e:	81 e7       	ldi	r24, 0x71	; 113
+    1390:	95 e0       	ldi	r25, 0x05	; 5
+    1392:	58 d9       	rcall	.-3408   	; 0x644 <UART_AddStringFromFlash>
+    1394:	0f ea       	ldi	r16, 0xAF	; 175
+    1396:	12 e0       	ldi	r17, 0x02	; 2
+    1398:	be 01       	movw	r22, r28
+    139a:	6f 5f       	subi	r22, 0xFF	; 255
+    139c:	7f 4f       	sbci	r23, 0xFF	; 255
+    139e:	f8 01       	movw	r30, r16
+    13a0:	82 91       	ld	r24, -Z
+    13a2:	8f 01       	movw	r16, r30
+    13a4:	45 d3       	rcall	.+1674   	; 0x1a30 <hex_to_ascii>
+    13a6:	04 d9       	rcall	.-3576   	; 0x5b0 <UART_AddString>
+    13a8:	f2 e0       	ldi	r31, 0x02	; 2
+    13aa:	09 3a       	cpi	r16, 0xA9	; 169
+    13ac:	1f 07       	cpc	r17, r31
+    13ae:	a1 f7       	brne	.-24     	; 0x1398 <FSM_UART_Process+0xbe>
+    13b0:	81 e7       	ldi	r24, 0x71	; 113
+    13b2:	95 e0       	ldi	r25, 0x05	; 5
+    13b4:	47 d9       	rcall	.-3442   	; 0x644 <UART_AddStringFromFlash>
+    13b6:	be 01       	movw	r22, r28
+    13b8:	6f 5f       	subi	r22, 0xFF	; 255
+    13ba:	7f 4f       	sbci	r23, 0xFF	; 255
+    13bc:	80 91 af 02 	lds	r24, 0x02AF	; 0x8002af <tsens+0x8>
+    13c0:	37 d3       	rcall	.+1646   	; 0x1a30 <hex_to_ascii>
+    13c2:	f6 d8       	rcall	.-3604   	; 0x5b0 <UART_AddString>
+    13c4:	85 e8       	ldi	r24, 0x85	; 133
+    13c6:	95 e0       	ldi	r25, 0x05	; 5
+    13c8:	3d d9       	rcall	.-3462   	; 0x644 <UART_AddStringFromFlash>
+    13ca:	86 eb       	ldi	r24, 0xB6	; 182
+    13cc:	94 e0       	ldi	r25, 0x04	; 4
+    13ce:	3a d9       	rcall	.-3468   	; 0x644 <UART_AddStringFromFlash>
+    13d0:	80 91 b2 02 	lds	r24, 0x02B2	; 0x8002b2 <tsens+0xb>
+    13d4:	88 23       	and	r24, r24
+    13d6:	19 f0       	breq	.+6      	; 0x13de <FSM_UART_Process+0x104>
+    13d8:	87 e5       	ldi	r24, 0x57	; 87
+    13da:	95 e0       	ldi	r25, 0x05	; 5
+    13dc:	02 c0       	rjmp	.+4      	; 0x13e2 <FSM_UART_Process+0x108>
+    13de:	85 e5       	ldi	r24, 0x55	; 85
+    13e0:	95 e0       	ldi	r25, 0x05	; 5
+    13e2:	30 d9       	rcall	.-3488   	; 0x644 <UART_AddStringFromFlash>
+    13e4:	83 eb       	ldi	r24, 0xB3	; 179
+    13e6:	92 e0       	ldi	r25, 0x02	; 2
+    13e8:	e3 d8       	rcall	.-3642   	; 0x5b0 <UART_AddString>
+    13ea:	8b e8       	ldi	r24, 0x8B	; 139
+    13ec:	95 e0       	ldi	r25, 0x05	; 5
+    13ee:	02 c0       	rjmp	.+4      	; 0x13f4 <FSM_UART_Process+0x11a>
+    13f0:	89 e5       	ldi	r24, 0x59	; 89
+    13f2:	95 e0       	ldi	r25, 0x05	; 5
+    13f4:	27 d9       	rcall	.-3506   	; 0x644 <UART_AddStringFromFlash>
+    13f6:	85 e8       	ldi	r24, 0x85	; 133
+    13f8:	95 e0       	ldi	r25, 0x05	; 5
+    13fa:	24 d9       	rcall	.-3512   	; 0x644 <UART_AddStringFromFlash>
+    13fc:	8a ea       	ldi	r24, 0xAA	; 170
+    13fe:	94 e0       	ldi	r25, 0x04	; 4
+    1400:	21 d9       	rcall	.-3518   	; 0x644 <UART_AddStringFromFlash>
+    1402:	80 91 9c 02 	lds	r24, 0x029C	; 0x80029c <fan+0x1>
+    1406:	88 23       	and	r24, r24
+    1408:	19 f0       	breq	.+6      	; 0x1410 <FSM_UART_Process+0x136>
+    140a:	8e e7       	ldi	r24, 0x7E	; 126
+    140c:	95 e0       	ldi	r25, 0x05	; 5
+    140e:	05 c0       	rjmp	.+10     	; 0x141a <FSM_UART_Process+0x140>
+    1410:	81 ea       	ldi	r24, 0xA1	; 161
+    1412:	92 e0       	ldi	r25, 0x02	; 2
+    1414:	cd d8       	rcall	.-3686   	; 0x5b0 <UART_AddString>
+    1416:	83 e7       	ldi	r24, 0x73	; 115
+    1418:	95 e0       	ldi	r25, 0x05	; 5
+    141a:	14 d9       	rcall	.-3544   	; 0x644 <UART_AddStringFromFlash>
+    141c:	85 e8       	ldi	r24, 0x85	; 133
+    141e:	95 e0       	ldi	r25, 0x05	; 5
+    1420:	11 d9       	rcall	.-3550   	; 0x644 <UART_AddStringFromFlash>
+    1422:	8d e9       	ldi	r24, 0x9D	; 157
+    1424:	94 e0       	ldi	r25, 0x04	; 4
+    1426:	0e d9       	rcall	.-3556   	; 0x644 <UART_AddStringFromFlash>
+    1428:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+    142c:	88 23       	and	r24, r24
+    142e:	19 f0       	breq	.+6      	; 0x1436 <FSM_UART_Process+0x15c>
+    1430:	87 e7       	ldi	r24, 0x77	; 119
+    1432:	95 e0       	ldi	r25, 0x05	; 5
+    1434:	02 c0       	rjmp	.+4      	; 0x143a <FSM_UART_Process+0x160>
+    1436:	8a e7       	ldi	r24, 0x7A	; 122
+    1438:	95 e0       	ldi	r25, 0x05	; 5
+    143a:	04 d9       	rcall	.-3576   	; 0x644 <UART_AddStringFromFlash>
+    143c:	85 e8       	ldi	r24, 0x85	; 133
+    143e:	95 e0       	ldi	r25, 0x05	; 5
+    1440:	01 d9       	rcall	.-3582   	; 0x644 <UART_AddStringFromFlash>
+    1442:	85 e8       	ldi	r24, 0x85	; 133
+    1444:	95 e0       	ldi	r25, 0x05	; 5
+    1446:	fe d8       	rcall	.-3588   	; 0x644 <UART_AddStringFromFlash>
+    1448:	8a e8       	ldi	r24, 0x8A	; 138
+    144a:	94 e0       	ldi	r25, 0x04	; 4
+    144c:	fb d8       	rcall	.-3594   	; 0x644 <UART_AddStringFromFlash>
+    144e:	83 e8       	ldi	r24, 0x83	; 131
+    1450:	94 e0       	ldi	r25, 0x04	; 4
+    1452:	f8 d8       	rcall	.-3600   	; 0x644 <UART_AddStringFromFlash>
+    1454:	be 01       	movw	r22, r28
+    1456:	6f 5f       	subi	r22, 0xFF	; 255
+    1458:	7f 4f       	sbci	r23, 0xFF	; 255
+    145a:	80 91 bb 02 	lds	r24, 0x02BB	; 0x8002bb <device+0x4>
+    145e:	fe d2       	rcall	.+1532   	; 0x1a5c <utoa_cycle_sub8>
+    1460:	a7 d8       	rcall	.-3762   	; 0x5b0 <UART_AddString>
+    1462:	8b e8       	ldi	r24, 0x8B	; 139
+    1464:	95 e0       	ldi	r25, 0x05	; 5
+    1466:	ee d8       	rcall	.-3620   	; 0x644 <UART_AddStringFromFlash>
+    1468:	85 e8       	ldi	r24, 0x85	; 133
+    146a:	95 e0       	ldi	r25, 0x05	; 5
+    146c:	eb d8       	rcall	.-3626   	; 0x644 <UART_AddStringFromFlash>
+    146e:	8b e7       	ldi	r24, 0x7B	; 123
+    1470:	94 e0       	ldi	r25, 0x04	; 4
+    1472:	e8 d8       	rcall	.-3632   	; 0x644 <UART_AddStringFromFlash>
+    1474:	be 01       	movw	r22, r28
+    1476:	6f 5f       	subi	r22, 0xFF	; 255
+    1478:	7f 4f       	sbci	r23, 0xFF	; 255
+    147a:	80 91 bc 02 	lds	r24, 0x02BC	; 0x8002bc <device+0x5>
+    147e:	ee d2       	rcall	.+1500   	; 0x1a5c <utoa_cycle_sub8>
+    1480:	97 d8       	rcall	.-3794   	; 0x5b0 <UART_AddString>
+    1482:	8b e8       	ldi	r24, 0x8B	; 139
+    1484:	95 e0       	ldi	r25, 0x05	; 5
+    1486:	de d8       	rcall	.-3652   	; 0x644 <UART_AddStringFromFlash>
+    1488:	85 e8       	ldi	r24, 0x85	; 133
+    148a:	95 e0       	ldi	r25, 0x05	; 5
+    148c:	db d8       	rcall	.-3658   	; 0x644 <UART_AddStringFromFlash>
+    148e:	84 e7       	ldi	r24, 0x74	; 116
+    1490:	94 e0       	ldi	r25, 0x04	; 4
+    1492:	d8 d8       	rcall	.-3664   	; 0x644 <UART_AddStringFromFlash>
+    1494:	be 01       	movw	r22, r28
+    1496:	6f 5f       	subi	r22, 0xFF	; 255
+    1498:	7f 4f       	sbci	r23, 0xFF	; 255
+    149a:	80 91 bd 02 	lds	r24, 0x02BD	; 0x8002bd <device+0x6>
+    149e:	de d2       	rcall	.+1468   	; 0x1a5c <utoa_cycle_sub8>
+    14a0:	87 d8       	rcall	.-3826   	; 0x5b0 <UART_AddString>
+    14a2:	8b e8       	ldi	r24, 0x8B	; 139
+    14a4:	95 e0       	ldi	r25, 0x05	; 5
+    14a6:	ce d8       	rcall	.-3684   	; 0x644 <UART_AddStringFromFlash>
+    14a8:	85 e8       	ldi	r24, 0x85	; 133
+    14aa:	95 e0       	ldi	r25, 0x05	; 5
+    14ac:	cb d8       	rcall	.-3690   	; 0x644 <UART_AddStringFromFlash>
+    14ae:	85 e8       	ldi	r24, 0x85	; 133
+    14b0:	95 e0       	ldi	r25, 0x05	; 5
+    14b2:	c8 d8       	rcall	.-3696   	; 0x644 <UART_AddStringFromFlash>
+    14b4:	88 e8       	ldi	r24, 0x88	; 136
+    14b6:	95 e0       	ldi	r25, 0x05	; 5
+    14b8:	c5 d8       	rcall	.-3702   	; 0x644 <UART_AddStringFromFlash>
+    14ba:	57 9a       	sbi	0x0a, 7	; 10
+    14bc:	a1 c1       	rjmp	.+834    	; 0x1800 <FSM_UART_Process+0x526>
+    14be:	85 e8       	ldi	r24, 0x85	; 133
+    14c0:	95 e0       	ldi	r25, 0x05	; 5
+    14c2:	c0 d8       	rcall	.-3712   	; 0x644 <UART_AddStringFromFlash>
+    14c4:	87 e2       	ldi	r24, 0x27	; 39
+    14c6:	94 e0       	ldi	r25, 0x04	; 4
+    14c8:	bd d8       	rcall	.-3718   	; 0x644 <UART_AddStringFromFlash>
+    14ca:	87 e5       	ldi	r24, 0x57	; 87
+    14cc:	94 e0       	ldi	r25, 0x04	; 4
+    14ce:	ba d8       	rcall	.-3724   	; 0x644 <UART_AddStringFromFlash>
+    14d0:	87 e2       	ldi	r24, 0x27	; 39
+    14d2:	94 e0       	ldi	r25, 0x04	; 4
+    14d4:	b7 d8       	rcall	.-3730   	; 0x644 <UART_AddStringFromFlash>
+    14d6:	87 e0       	ldi	r24, 0x07	; 7
+    14d8:	94 e0       	ldi	r25, 0x04	; 4
+    14da:	b4 d8       	rcall	.-3736   	; 0x644 <UART_AddStringFromFlash>
+    14dc:	85 ee       	ldi	r24, 0xE5	; 229
+    14de:	93 e0       	ldi	r25, 0x03	; 3
+    14e0:	b1 d8       	rcall	.-3742   	; 0x644 <UART_AddStringFromFlash>
+    14e2:	8d eb       	ldi	r24, 0xBD	; 189
+    14e4:	93 e0       	ldi	r25, 0x03	; 3
+    14e6:	ae d8       	rcall	.-3748   	; 0x644 <UART_AddStringFromFlash>
+    14e8:	86 e9       	ldi	r24, 0x96	; 150
+    14ea:	93 e0       	ldi	r25, 0x03	; 3
+    14ec:	ab d8       	rcall	.-3754   	; 0x644 <UART_AddStringFromFlash>
+    14ee:	83 e6       	ldi	r24, 0x63	; 99
+    14f0:	93 e0       	ldi	r25, 0x03	; 3
+    14f2:	a8 d8       	rcall	.-3760   	; 0x644 <UART_AddStringFromFlash>
+    14f4:	82 e4       	ldi	r24, 0x42	; 66
+    14f6:	93 e0       	ldi	r25, 0x03	; 3
+    14f8:	a5 d8       	rcall	.-3766   	; 0x644 <UART_AddStringFromFlash>
+    14fa:	86 e1       	ldi	r24, 0x16	; 22
+    14fc:	93 e0       	ldi	r25, 0x03	; 3
+    14fe:	a2 d8       	rcall	.-3772   	; 0x644 <UART_AddStringFromFlash>
+    1500:	82 ef       	ldi	r24, 0xF2	; 242
+    1502:	92 e0       	ldi	r25, 0x02	; 2
+    1504:	9f d8       	rcall	.-3778   	; 0x644 <UART_AddStringFromFlash>
+    1506:	80 ed       	ldi	r24, 0xD0	; 208
+    1508:	92 e0       	ldi	r25, 0x02	; 2
+    150a:	9c d8       	rcall	.-3784   	; 0x644 <UART_AddStringFromFlash>
+    150c:	85 e8       	ldi	r24, 0x85	; 133
+    150e:	95 e0       	ldi	r25, 0x05	; 5
+    1510:	0b c0       	rjmp	.+22     	; 0x1528 <FSM_UART_Process+0x24e>
+    1512:	85 e8       	ldi	r24, 0x85	; 133
+    1514:	95 e0       	ldi	r25, 0x05	; 5
+    1516:	96 d8       	rcall	.-3796   	; 0x644 <UART_AddStringFromFlash>
+    1518:	8b e8       	ldi	r24, 0x8B	; 139
+    151a:	92 e0       	ldi	r25, 0x02	; 2
+    151c:	6c c1       	rjmp	.+728    	; 0x17f6 <FSM_UART_Process+0x51c>
+    151e:	85 e8       	ldi	r24, 0x85	; 133
+    1520:	95 e0       	ldi	r25, 0x05	; 5
+    1522:	90 d8       	rcall	.-3808   	; 0x644 <UART_AddStringFromFlash>
+    1524:	84 ef       	ldi	r24, 0xF4	; 244
+    1526:	91 e0       	ldi	r25, 0x01	; 1
+    1528:	8d d8       	rcall	.-3814   	; 0x644 <UART_AddStringFromFlash>
+    152a:	88 e8       	ldi	r24, 0x88	; 136
+    152c:	95 e0       	ldi	r25, 0x05	; 5
+    152e:	8a d8       	rcall	.-3820   	; 0x644 <UART_AddStringFromFlash>
+    1530:	67 c1       	rjmp	.+718    	; 0x1800 <FSM_UART_Process+0x526>
+    1532:	85 e8       	ldi	r24, 0x85	; 133
+    1534:	95 e0       	ldi	r25, 0x05	; 5
+    1536:	86 d8       	rcall	.-3828   	; 0x644 <UART_AddStringFromFlash>
+    1538:	82 e2       	ldi	r24, 0x22	; 34
+    153a:	92 e0       	ldi	r25, 0x02	; 2
+    153c:	5c c1       	rjmp	.+696    	; 0x17f6 <FSM_UART_Process+0x51c>
+    153e:	85 e8       	ldi	r24, 0x85	; 133
+    1540:	95 e0       	ldi	r25, 0x05	; 5
+    1542:	80 d8       	rcall	.-3840   	; 0x644 <UART_AddStringFromFlash>
+    1544:	85 ed       	ldi	r24, 0xD5	; 213
+    1546:	91 e0       	ldi	r25, 0x01	; 1
+    1548:	7d d8       	rcall	.-3846   	; 0x644 <UART_AddStringFromFlash>
+    154a:	be 01       	movw	r22, r28
+    154c:	6f 5f       	subi	r22, 0xFF	; 255
+    154e:	7f 4f       	sbci	r23, 0xFF	; 255
+    1550:	80 91 82 00 	lds	r24, 0x0082	; 0x800082 <v_min>
+    1554:	83 d2       	rcall	.+1286   	; 0x1a5c <utoa_cycle_sub8>
+    1556:	2c d8       	rcall	.-4008   	; 0x5b0 <UART_AddString>
+    1558:	83 e5       	ldi	r24, 0x53	; 83
+    155a:	95 e0       	ldi	r25, 0x05	; 5
+    155c:	73 d8       	rcall	.-3866   	; 0x644 <UART_AddStringFromFlash>
+    155e:	be 01       	movw	r22, r28
+    1560:	6f 5f       	subi	r22, 0xFF	; 255
+    1562:	7f 4f       	sbci	r23, 0xFF	; 255
+    1564:	80 91 81 00 	lds	r24, 0x0081	; 0x800081 <v_max>
+    1568:	79 d2       	rcall	.+1266   	; 0x1a5c <utoa_cycle_sub8>
+    156a:	22 d8       	rcall	.-4028   	; 0x5b0 <UART_AddString>
+    156c:	40 c0       	rjmp	.+128    	; 0x15ee <FSM_UART_Process+0x314>
+    156e:	85 e8       	ldi	r24, 0x85	; 133
+    1570:	95 e0       	ldi	r25, 0x05	; 5
+    1572:	68 d8       	rcall	.-3888   	; 0x644 <UART_AddStringFromFlash>
+    1574:	80 e7       	ldi	r24, 0x70	; 112
+    1576:	92 e0       	ldi	r25, 0x02	; 2
+    1578:	65 d8       	rcall	.-3894   	; 0x644 <UART_AddStringFromFlash>
+    157a:	be 01       	movw	r22, r28
+    157c:	6f 5f       	subi	r22, 0xFF	; 255
+    157e:	7f 4f       	sbci	r23, 0xFF	; 255
+    1580:	85 e0       	ldi	r24, 0x05	; 5
+    1582:	6c d2       	rcall	.+1240   	; 0x1a5c <utoa_cycle_sub8>
+    1584:	15 d8       	rcall	.-4054   	; 0x5b0 <UART_AddString>
+    1586:	8b e8       	ldi	r24, 0x8B	; 139
+    1588:	95 e0       	ldi	r25, 0x05	; 5
+    158a:	5c d8       	rcall	.-3912   	; 0x644 <UART_AddStringFromFlash>
+    158c:	85 e8       	ldi	r24, 0x85	; 133
+    158e:	95 e0       	ldi	r25, 0x05	; 5
+    1590:	59 d8       	rcall	.-3918   	; 0x644 <UART_AddStringFromFlash>
+    1592:	82 e5       	ldi	r24, 0x52	; 82
+    1594:	92 e0       	ldi	r25, 0x02	; 2
+    1596:	56 d8       	rcall	.-3924   	; 0x644 <UART_AddStringFromFlash>
+    1598:	be 01       	movw	r22, r28
+    159a:	6f 5f       	subi	r22, 0xFF	; 255
+    159c:	7f 4f       	sbci	r23, 0xFF	; 255
+    159e:	80 91 bc 02 	lds	r24, 0x02BC	; 0x8002bc <device+0x5>
+    15a2:	1a c0       	rjmp	.+52     	; 0x15d8 <FSM_UART_Process+0x2fe>
+    15a4:	85 e8       	ldi	r24, 0x85	; 133
+    15a6:	95 e0       	ldi	r25, 0x05	; 5
+    15a8:	4d d8       	rcall	.-3942   	; 0x644 <UART_AddStringFromFlash>
+    15aa:	80 e7       	ldi	r24, 0x70	; 112
+    15ac:	92 e0       	ldi	r25, 0x02	; 2
+    15ae:	4a d8       	rcall	.-3948   	; 0x644 <UART_AddStringFromFlash>
+    15b0:	be 01       	movw	r22, r28
+    15b2:	6f 5f       	subi	r22, 0xFF	; 255
+    15b4:	7f 4f       	sbci	r23, 0xFF	; 255
+    15b6:	85 e0       	ldi	r24, 0x05	; 5
+    15b8:	51 d2       	rcall	.+1186   	; 0x1a5c <utoa_cycle_sub8>
+    15ba:	fa d7       	rcall	.+4084   	; 0x25b0 <__TEXT_REGION_LENGTH__+0x5b0>
+    15bc:	8b e8       	ldi	r24, 0x8B	; 139
+    15be:	95 e0       	ldi	r25, 0x05	; 5
+    15c0:	41 d8       	rcall	.-3966   	; 0x644 <UART_AddStringFromFlash>
+    15c2:	85 e8       	ldi	r24, 0x85	; 133
+    15c4:	95 e0       	ldi	r25, 0x05	; 5
+    15c6:	3e d8       	rcall	.-3972   	; 0x644 <UART_AddStringFromFlash>
+    15c8:	85 e3       	ldi	r24, 0x35	; 53
+    15ca:	92 e0       	ldi	r25, 0x02	; 2
+    15cc:	3b d8       	rcall	.-3978   	; 0x644 <UART_AddStringFromFlash>
+    15ce:	be 01       	movw	r22, r28
+    15d0:	6f 5f       	subi	r22, 0xFF	; 255
+    15d2:	7f 4f       	sbci	r23, 0xFF	; 255
+    15d4:	80 91 bb 02 	lds	r24, 0x02BB	; 0x8002bb <device+0x4>
+    15d8:	41 d2       	rcall	.+1154   	; 0x1a5c <utoa_cycle_sub8>
+    15da:	ea d7       	rcall	.+4052   	; 0x25b0 <__TEXT_REGION_LENGTH__+0x5b0>
+    15dc:	8b e8       	ldi	r24, 0x8B	; 139
+    15de:	95 e0       	ldi	r25, 0x05	; 5
+    15e0:	05 c0       	rjmp	.+10     	; 0x15ec <FSM_UART_Process+0x312>
+    15e2:	85 e8       	ldi	r24, 0x85	; 133
+    15e4:	95 e0       	ldi	r25, 0x05	; 5
+    15e6:	2e d8       	rcall	.-4004   	; 0x644 <UART_AddStringFromFlash>
+    15e8:	87 ea       	ldi	r24, 0xA7	; 167
+    15ea:	91 e0       	ldi	r25, 0x01	; 1
+    15ec:	2b d8       	rcall	.-4010   	; 0x644 <UART_AddStringFromFlash>
+    15ee:	85 e8       	ldi	r24, 0x85	; 133
+    15f0:	95 e0       	ldi	r25, 0x05	; 5
+    15f2:	01 c1       	rjmp	.+514    	; 0x17f6 <FSM_UART_Process+0x51c>
+    15f4:	60 91 67 00 	lds	r22, 0x0067	; 0x800067 <uart_rx_queue_length>
+    15f8:	87 e8       	ldi	r24, 0x87	; 135
+    15fa:	92 e0       	ldi	r25, 0x02	; 2
+    15fc:	a5 d1       	rcall	.+842    	; 0x1948 <PARS_ParsStringFromBuffer>
+    15fe:	18 2f       	mov	r17, r24
+    1600:	88 23       	and	r24, r24
+    1602:	09 f4       	brne	.+2      	; 0x1606 <FSM_UART_Process+0x32c>
+    1604:	f3 c0       	rjmp	.+486    	; 0x17ec <FSM_UART_Process+0x512>
+    1606:	66 ec       	ldi	r22, 0xC6	; 198
+    1608:	72 e0       	ldi	r23, 0x02	; 2
+    160a:	80 91 1f 03 	lds	r24, 0x031F	; 0x80031f <words>
+    160e:	90 91 20 03 	lds	r25, 0x0320	; 0x800320 <words+0x1>
+    1612:	d6 d1       	rcall	.+940    	; 0x19c0 <PARS_StrCmpF>
+    1614:	88 23       	and	r24, r24
+    1616:	11 f0       	breq	.+4      	; 0x161c <FSM_UART_Process+0x342>
+    1618:	81 e0       	ldi	r24, 0x01	; 1
+    161a:	0a c0       	rjmp	.+20     	; 0x1630 <FSM_UART_Process+0x356>
+    161c:	6b ec       	ldi	r22, 0xCB	; 203
+    161e:	72 e0       	ldi	r23, 0x02	; 2
+    1620:	80 91 1f 03 	lds	r24, 0x031F	; 0x80031f <words>
+    1624:	90 91 20 03 	lds	r25, 0x0320	; 0x800320 <words+0x1>
+    1628:	cb d1       	rcall	.+918    	; 0x19c0 <PARS_StrCmpF>
+    162a:	88 23       	and	r24, r24
+    162c:	29 f0       	breq	.+10     	; 0x1638 <FSM_UART_Process+0x35e>
+    162e:	82 e0       	ldi	r24, 0x02	; 2
+    1630:	80 93 83 00 	sts	0x0083, r24	; 0x800083 <FSM_state>
+    1634:	c6 d8       	rcall	.-3700   	; 0x7c2 <UART_RX_FlushBuffer>
+    1636:	e6 c0       	rjmp	.+460    	; 0x1804 <FSM_UART_Process+0x52a>
+    1638:	60 ec       	ldi	r22, 0xC0	; 192
+    163a:	72 e0       	ldi	r23, 0x02	; 2
+    163c:	80 91 1f 03 	lds	r24, 0x031F	; 0x80031f <words>
+    1640:	90 91 20 03 	lds	r25, 0x0320	; 0x800320 <words+0x1>
+    1644:	bd d1       	rcall	.+890    	; 0x19c0 <PARS_StrCmpF>
+    1646:	88 23       	and	r24, r24
+    1648:	19 f0       	breq	.+6      	; 0x1650 <FSM_UART_Process+0x376>
+    164a:	8f e0       	ldi	r24, 0x0F	; 15
+    164c:	0c d1       	rcall	.+536    	; 0x1866 <SendMessageWOParam>
+    164e:	da c0       	rjmp	.+436    	; 0x1804 <FSM_UART_Process+0x52a>
+    1650:	6b eb       	ldi	r22, 0xBB	; 187
+    1652:	72 e0       	ldi	r23, 0x02	; 2
+    1654:	80 91 1f 03 	lds	r24, 0x031F	; 0x80031f <words>
+    1658:	90 91 20 03 	lds	r25, 0x0320	; 0x800320 <words+0x1>
+    165c:	b1 d1       	rcall	.+866    	; 0x19c0 <PARS_StrCmpF>
+    165e:	88 23       	and	r24, r24
+    1660:	11 f0       	breq	.+4      	; 0x1666 <FSM_UART_Process+0x38c>
+    1662:	8e e0       	ldi	r24, 0x0E	; 14
+    1664:	0a c0       	rjmp	.+20     	; 0x167a <FSM_UART_Process+0x3a0>
+    1666:	66 eb       	ldi	r22, 0xB6	; 182
+    1668:	72 e0       	ldi	r23, 0x02	; 2
+    166a:	80 91 1f 03 	lds	r24, 0x031F	; 0x80031f <words>
+    166e:	90 91 20 03 	lds	r25, 0x0320	; 0x800320 <words+0x1>
+    1672:	a6 d1       	rcall	.+844    	; 0x19c0 <PARS_StrCmpF>
+    1674:	88 23       	and	r24, r24
+    1676:	19 f0       	breq	.+6      	; 0x167e <FSM_UART_Process+0x3a4>
+    1678:	8d e0       	ldi	r24, 0x0D	; 13
+    167a:	f5 d0       	rcall	.+490    	; 0x1866 <SendMessageWOParam>
+    167c:	c1 c0       	rjmp	.+386    	; 0x1800 <FSM_UART_Process+0x526>
+    167e:	62 eb       	ldi	r22, 0xB2	; 178
+    1680:	72 e0       	ldi	r23, 0x02	; 2
+    1682:	80 91 1f 03 	lds	r24, 0x031F	; 0x80031f <words>
+    1686:	90 91 20 03 	lds	r25, 0x0320	; 0x800320 <words+0x1>
+    168a:	9a d1       	rcall	.+820    	; 0x19c0 <PARS_StrCmpF>
+    168c:	88 23       	and	r24, r24
+    168e:	09 f4       	brne	.+2      	; 0x1692 <FSM_UART_Process+0x3b8>
+    1690:	ad c0       	rjmp	.+346    	; 0x17ec <FSM_UART_Process+0x512>
+    1692:	13 30       	cpi	r17, 0x03	; 3
+    1694:	08 f4       	brcc	.+2      	; 0x1698 <FSM_UART_Process+0x3be>
+    1696:	a6 c0       	rjmp	.+332    	; 0x17e4 <FSM_UART_Process+0x50a>
+    1698:	6d e9       	ldi	r22, 0x9D	; 157
+    169a:	72 e0       	ldi	r23, 0x02	; 2
+    169c:	80 91 21 03 	lds	r24, 0x0321	; 0x800321 <words+0x2>
+    16a0:	90 91 22 03 	lds	r25, 0x0322	; 0x800322 <words+0x3>
+    16a4:	8d d1       	rcall	.+794    	; 0x19c0 <PARS_StrCmpF>
+    16a6:	88 23       	and	r24, r24
+    16a8:	c1 f0       	breq	.+48     	; 0x16da <FSM_UART_Process+0x400>
+    16aa:	66 e9       	ldi	r22, 0x96	; 150
+    16ac:	72 e0       	ldi	r23, 0x02	; 2
+    16ae:	80 91 23 03 	lds	r24, 0x0323	; 0x800323 <words+0x4>
+    16b2:	90 91 24 03 	lds	r25, 0x0324	; 0x800324 <words+0x5>
+    16b6:	84 d1       	rcall	.+776    	; 0x19c0 <PARS_StrCmpF>
+    16b8:	88 23       	and	r24, r24
+    16ba:	11 f0       	breq	.+4      	; 0x16c0 <FSM_UART_Process+0x3e6>
+    16bc:	81 e0       	ldi	r24, 0x01	; 1
+    16be:	0b c0       	rjmp	.+22     	; 0x16d6 <FSM_UART_Process+0x3fc>
+    16c0:	69 e9       	ldi	r22, 0x99	; 153
+    16c2:	72 e0       	ldi	r23, 0x02	; 2
+    16c4:	80 91 23 03 	lds	r24, 0x0323	; 0x800323 <words+0x4>
+    16c8:	90 91 24 03 	lds	r25, 0x0324	; 0x800324 <words+0x5>
+    16cc:	79 d1       	rcall	.+754    	; 0x19c0 <PARS_StrCmpF>
+    16ce:	88 23       	and	r24, r24
+    16d0:	09 f4       	brne	.+2      	; 0x16d4 <FSM_UART_Process+0x3fa>
+    16d2:	88 c0       	rjmp	.+272    	; 0x17e4 <FSM_UART_Process+0x50a>
+    16d4:	82 e0       	ldi	r24, 0x02	; 2
+    16d6:	c7 d0       	rcall	.+398    	; 0x1866 <SendMessageWOParam>
+    16d8:	83 c0       	rjmp	.+262    	; 0x17e0 <FSM_UART_Process+0x506>
+    16da:	6d ea       	ldi	r22, 0xAD	; 173
+    16dc:	72 e0       	ldi	r23, 0x02	; 2
+    16de:	80 91 21 03 	lds	r24, 0x0321	; 0x800321 <words+0x2>
+    16e2:	90 91 22 03 	lds	r25, 0x0322	; 0x800322 <words+0x3>
+    16e6:	6c d1       	rcall	.+728    	; 0x19c0 <PARS_StrCmpF>
+    16e8:	88 23       	and	r24, r24
+    16ea:	39 f1       	breq	.+78     	; 0x173a <FSM_UART_Process+0x460>
+    16ec:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+    16f0:	81 11       	cpse	r24, r1
+    16f2:	5f c0       	rjmp	.+190    	; 0x17b2 <FSM_UART_Process+0x4d8>
+    16f4:	80 91 23 03 	lds	r24, 0x0323	; 0x800323 <words+0x4>
+    16f8:	90 91 24 03 	lds	r25, 0x0324	; 0x800324 <words+0x5>
+    16fc:	00 97       	sbiw	r24, 0x00	; 0
+    16fe:	09 f4       	brne	.+2      	; 0x1702 <FSM_UART_Process+0x428>
+    1700:	71 c0       	rjmp	.+226    	; 0x17e4 <FSM_UART_Process+0x50a>
+    1702:	7b d1       	rcall	.+758    	; 0x19fa <PARS_StrToUint8t>
+    1704:	92 ee       	ldi	r25, 0xE2	; 226
+    1706:	98 0f       	add	r25, r24
+    1708:	9e 32       	cpi	r25, 0x2E	; 46
+    170a:	28 f0       	brcs	.+10     	; 0x1716 <FSM_UART_Process+0x43c>
+    170c:	8e e1       	ldi	r24, 0x1E	; 30
+    170e:	80 93 82 00 	sts	0x0082, r24	; 0x800082 <v_min>
+    1712:	8b e4       	ldi	r24, 0x4B	; 75
+    1714:	5f c0       	rjmp	.+190    	; 0x17d4 <FSM_UART_Process+0x4fa>
+    1716:	80 93 bb 02 	sts	0x02BB, r24	; 0x8002bb <device+0x4>
+    171a:	48 2f       	mov	r20, r24
+    171c:	50 e0       	ldi	r21, 0x00	; 0
+    171e:	20 91 bc 02 	lds	r18, 0x02BC	; 0x8002bc <device+0x5>
+    1722:	30 e0       	ldi	r19, 0x00	; 0
+    1724:	2b 5f       	subi	r18, 0xFB	; 251
+    1726:	3f 4f       	sbci	r19, 0xFF	; 255
+    1728:	24 17       	cp	r18, r20
+    172a:	35 07       	cpc	r19, r21
+    172c:	0c f4       	brge	.+2      	; 0x1730 <FSM_UART_Process+0x456>
+    172e:	58 c0       	rjmp	.+176    	; 0x17e0 <FSM_UART_Process+0x506>
+    1730:	85 50       	subi	r24, 0x05	; 5
+    1732:	80 93 bc 02 	sts	0x02BC, r24	; 0x8002bc <device+0x5>
+    1736:	84 e0       	ldi	r24, 0x04	; 4
+    1738:	56 c0       	rjmp	.+172    	; 0x17e6 <FSM_UART_Process+0x50c>
+    173a:	67 ea       	ldi	r22, 0xA7	; 167
+    173c:	72 e0       	ldi	r23, 0x02	; 2
+    173e:	80 91 21 03 	lds	r24, 0x0321	; 0x800321 <words+0x2>
+    1742:	90 91 22 03 	lds	r25, 0x0322	; 0x800322 <words+0x3>
+    1746:	3c d1       	rcall	.+632    	; 0x19c0 <PARS_StrCmpF>
+    1748:	88 23       	and	r24, r24
+    174a:	31 f1       	breq	.+76     	; 0x1798 <FSM_UART_Process+0x4be>
+    174c:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+    1750:	81 11       	cpse	r24, r1
+    1752:	2f c0       	rjmp	.+94     	; 0x17b2 <FSM_UART_Process+0x4d8>
+    1754:	80 91 23 03 	lds	r24, 0x0323	; 0x800323 <words+0x4>
+    1758:	90 91 24 03 	lds	r25, 0x0324	; 0x800324 <words+0x5>
+    175c:	00 97       	sbiw	r24, 0x00	; 0
+    175e:	09 f4       	brne	.+2      	; 0x1762 <FSM_UART_Process+0x488>
+    1760:	41 c0       	rjmp	.+130    	; 0x17e4 <FSM_UART_Process+0x50a>
+    1762:	4b d1       	rcall	.+662    	; 0x19fa <PARS_StrToUint8t>
+    1764:	97 ee       	ldi	r25, 0xE7	; 231
+    1766:	98 0f       	add	r25, r24
+    1768:	9e 32       	cpi	r25, 0x2E	; 46
+    176a:	28 f0       	brcs	.+10     	; 0x1776 <FSM_UART_Process+0x49c>
+    176c:	89 e1       	ldi	r24, 0x19	; 25
+    176e:	80 93 82 00 	sts	0x0082, r24	; 0x800082 <v_min>
+    1772:	86 e4       	ldi	r24, 0x46	; 70
+    1774:	2f c0       	rjmp	.+94     	; 0x17d4 <FSM_UART_Process+0x4fa>
+    1776:	80 93 bc 02 	sts	0x02BC, r24	; 0x8002bc <device+0x5>
+    177a:	48 2f       	mov	r20, r24
+    177c:	50 e0       	ldi	r21, 0x00	; 0
+    177e:	20 91 bb 02 	lds	r18, 0x02BB	; 0x8002bb <device+0x4>
+    1782:	30 e0       	ldi	r19, 0x00	; 0
+    1784:	25 50       	subi	r18, 0x05	; 5
+    1786:	31 09       	sbc	r19, r1
+    1788:	42 17       	cp	r20, r18
+    178a:	53 07       	cpc	r21, r19
+    178c:	4c f1       	brlt	.+82     	; 0x17e0 <FSM_UART_Process+0x506>
+    178e:	8b 5f       	subi	r24, 0xFB	; 251
+    1790:	80 93 bb 02 	sts	0x02BB, r24	; 0x8002bb <device+0x4>
+    1794:	85 e0       	ldi	r24, 0x05	; 5
+    1796:	27 c0       	rjmp	.+78     	; 0x17e6 <FSM_UART_Process+0x50c>
+    1798:	62 ea       	ldi	r22, 0xA2	; 162
+    179a:	72 e0       	ldi	r23, 0x02	; 2
+    179c:	80 91 21 03 	lds	r24, 0x0321	; 0x800321 <words+0x2>
+    17a0:	90 91 22 03 	lds	r25, 0x0322	; 0x800322 <words+0x3>
+    17a4:	0d d1       	rcall	.+538    	; 0x19c0 <PARS_StrCmpF>
+    17a6:	88 23       	and	r24, r24
+    17a8:	59 f1       	breq	.+86     	; 0x1800 <FSM_UART_Process+0x526>
+    17aa:	80 91 b7 02 	lds	r24, 0x02B7	; 0x8002b7 <device>
+    17ae:	88 23       	and	r24, r24
+    17b0:	11 f0       	breq	.+4      	; 0x17b6 <FSM_UART_Process+0x4dc>
+    17b2:	89 e0       	ldi	r24, 0x09	; 9
+    17b4:	18 c0       	rjmp	.+48     	; 0x17e6 <FSM_UART_Process+0x50c>
+    17b6:	80 91 23 03 	lds	r24, 0x0323	; 0x800323 <words+0x4>
+    17ba:	90 91 24 03 	lds	r25, 0x0324	; 0x800324 <words+0x5>
+    17be:	00 97       	sbiw	r24, 0x00	; 0
+    17c0:	89 f0       	breq	.+34     	; 0x17e4 <FSM_UART_Process+0x50a>
+    17c2:	1b d1       	rcall	.+566    	; 0x19fa <PARS_StrToUint8t>
+    17c4:	92 ee       	ldi	r25, 0xE2	; 226
+    17c6:	98 0f       	add	r25, r24
+    17c8:	93 33       	cpi	r25, 0x33	; 51
+    17ca:	40 f0       	brcs	.+16     	; 0x17dc <FSM_UART_Process+0x502>
+    17cc:	8e e1       	ldi	r24, 0x1E	; 30
+    17ce:	80 93 82 00 	sts	0x0082, r24	; 0x800082 <v_min>
+    17d2:	80 e5       	ldi	r24, 0x50	; 80
+    17d4:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <v_max>
+    17d8:	88 e0       	ldi	r24, 0x08	; 8
+    17da:	05 c0       	rjmp	.+10     	; 0x17e6 <FSM_UART_Process+0x50c>
+    17dc:	80 93 bd 02 	sts	0x02BD, r24	; 0x8002bd <device+0x6>
+    17e0:	83 e0       	ldi	r24, 0x03	; 3
+    17e2:	01 c0       	rjmp	.+2      	; 0x17e6 <FSM_UART_Process+0x50c>
+    17e4:	86 e0       	ldi	r24, 0x06	; 6
+    17e6:	80 93 83 00 	sts	0x0083, r24	; 0x800083 <FSM_state>
+    17ea:	0c c0       	rjmp	.+24     	; 0x1804 <FSM_UART_Process+0x52a>
+    17ec:	85 e8       	ldi	r24, 0x85	; 133
+    17ee:	95 e0       	ldi	r25, 0x05	; 5
+    17f0:	29 d7       	rcall	.+3666   	; 0x2644 <__TEXT_REGION_LENGTH__+0x644>
+    17f2:	8c e7       	ldi	r24, 0x7C	; 124
+    17f4:	91 e0       	ldi	r25, 0x01	; 1
+    17f6:	26 d7       	rcall	.+3660   	; 0x2644 <__TEXT_REGION_LENGTH__+0x644>
+    17f8:	88 e8       	ldi	r24, 0x88	; 136
+    17fa:	95 e0       	ldi	r25, 0x05	; 5
+    17fc:	23 d7       	rcall	.+3654   	; 0x2644 <__TEXT_REGION_LENGTH__+0x644>
+    17fe:	e1 d7       	rcall	.+4034   	; 0x27c2 <__TEXT_REGION_LENGTH__+0x7c2>
+    1800:	10 92 83 00 	sts	0x0083, r1	; 0x800083 <FSM_state>
+    1804:	0f 90       	pop	r0
+    1806:	0f 90       	pop	r0
+    1808:	0f 90       	pop	r0
+    180a:	0f 90       	pop	r0
+    180c:	df 91       	pop	r29
+    180e:	cf 91       	pop	r28
+    1810:	1f 91       	pop	r17
+    1812:	0f 91       	pop	r16
+    1814:	08 95       	ret
+
+00001816 <InitMessages>:
+    1816:	80 e0       	ldi	r24, 0x00	; 0
+    1818:	90 e0       	ldi	r25, 0x00	; 0
+    181a:	fc 01       	movw	r30, r24
+    181c:	ee 0f       	add	r30, r30
+    181e:	ff 1f       	adc	r31, r31
+    1820:	e8 0f       	add	r30, r24
+    1822:	f9 1f       	adc	r31, r25
+    1824:	e5 52       	subi	r30, 0x25	; 37
+    1826:	fd 4f       	sbci	r31, 0xFD	; 253
+    1828:	10 82       	st	Z, r1
+    182a:	01 96       	adiw	r24, 0x01	; 1
+    182c:	80 31       	cpi	r24, 0x10	; 16
+    182e:	91 05       	cpc	r25, r1
+    1830:	a1 f7       	brne	.-24     	; 0x181a <InitMessages+0x4>
+    1832:	10 92 d7 02 	sts	0x02D7, r1	; 0x8002d7 <BroadcastMessages>
+    1836:	10 92 d8 02 	sts	0x02D8, r1	; 0x8002d8 <BroadcastMessages+0x1>
+    183a:	10 92 d9 02 	sts	0x02D9, r1	; 0x8002d9 <BroadcastMessages+0x2>
+    183e:	10 92 da 02 	sts	0x02DA, r1	; 0x8002da <BroadcastMessages+0x3>
+    1842:	08 95       	ret
+
+00001844 <SendMessageWParam>:
+    1844:	90 e0       	ldi	r25, 0x00	; 0
+    1846:	fc 01       	movw	r30, r24
+    1848:	ee 0f       	add	r30, r30
+    184a:	ff 1f       	adc	r31, r31
+    184c:	8e 0f       	add	r24, r30
+    184e:	9f 1f       	adc	r25, r31
+    1850:	fc 01       	movw	r30, r24
+    1852:	e5 52       	subi	r30, 0x25	; 37
+    1854:	fd 4f       	sbci	r31, 0xFD	; 253
+    1856:	80 81       	ld	r24, Z
+    1858:	81 11       	cpse	r24, r1
+    185a:	04 c0       	rjmp	.+8      	; 0x1864 <SendMessageWParam+0x20>
+    185c:	81 e0       	ldi	r24, 0x01	; 1
+    185e:	80 83       	st	Z, r24
+    1860:	72 83       	std	Z+2, r23	; 0x02
+    1862:	61 83       	std	Z+1, r22	; 0x01
+    1864:	08 95       	ret
+
+00001866 <SendMessageWOParam>:
+    1866:	90 e0       	ldi	r25, 0x00	; 0
+    1868:	fc 01       	movw	r30, r24
+    186a:	ee 0f       	add	r30, r30
+    186c:	ff 1f       	adc	r31, r31
+    186e:	8e 0f       	add	r24, r30
+    1870:	9f 1f       	adc	r25, r31
+    1872:	fc 01       	movw	r30, r24
+    1874:	e5 52       	subi	r30, 0x25	; 37
+    1876:	fd 4f       	sbci	r31, 0xFD	; 253
+    1878:	80 81       	ld	r24, Z
+    187a:	81 11       	cpse	r24, r1
+    187c:	02 c0       	rjmp	.+4      	; 0x1882 <SendMessageWOParam+0x1c>
+    187e:	81 e0       	ldi	r24, 0x01	; 1
+    1880:	80 83       	st	Z, r24
+    1882:	08 95       	ret
+
+00001884 <GetMessage>:
+    1884:	90 e0       	ldi	r25, 0x00	; 0
+    1886:	fc 01       	movw	r30, r24
+    1888:	ee 0f       	add	r30, r30
+    188a:	ff 1f       	adc	r31, r31
+    188c:	8e 0f       	add	r24, r30
+    188e:	9f 1f       	adc	r25, r31
+    1890:	fc 01       	movw	r30, r24
+    1892:	e5 52       	subi	r30, 0x25	; 37
+    1894:	fd 4f       	sbci	r31, 0xFD	; 253
+    1896:	80 81       	ld	r24, Z
+    1898:	82 30       	cpi	r24, 0x02	; 2
+    189a:	19 f4       	brne	.+6      	; 0x18a2 <GetMessage+0x1e>
+    189c:	10 82       	st	Z, r1
+    189e:	81 e0       	ldi	r24, 0x01	; 1
+    18a0:	08 95       	ret
+    18a2:	80 e0       	ldi	r24, 0x00	; 0
+    18a4:	08 95       	ret
+
+000018a6 <GetMessageParam>:
+    18a6:	90 e0       	ldi	r25, 0x00	; 0
+    18a8:	fc 01       	movw	r30, r24
+    18aa:	ee 0f       	add	r30, r30
+    18ac:	ff 1f       	adc	r31, r31
+    18ae:	8e 0f       	add	r24, r30
+    18b0:	9f 1f       	adc	r25, r31
+    18b2:	fc 01       	movw	r30, r24
+    18b4:	e5 52       	subi	r30, 0x25	; 37
+    18b6:	fd 4f       	sbci	r31, 0xFD	; 253
+    18b8:	81 81       	ldd	r24, Z+1	; 0x01
+    18ba:	92 81       	ldd	r25, Z+2	; 0x02
+    18bc:	08 95       	ret
+
+000018be <SendBCMessage>:
+    18be:	e8 2f       	mov	r30, r24
+    18c0:	f0 e0       	ldi	r31, 0x00	; 0
+    18c2:	e9 52       	subi	r30, 0x29	; 41
+    18c4:	fd 4f       	sbci	r31, 0xFD	; 253
+    18c6:	80 81       	ld	r24, Z
+    18c8:	81 11       	cpse	r24, r1
+    18ca:	02 c0       	rjmp	.+4      	; 0x18d0 <SendBCMessage+0x12>
+    18cc:	81 e0       	ldi	r24, 0x01	; 1
+    18ce:	80 83       	st	Z, r24
+    18d0:	08 95       	ret
+
+000018d2 <GetBCMessage>:
+    18d2:	e8 2f       	mov	r30, r24
+    18d4:	f0 e0       	ldi	r31, 0x00	; 0
+    18d6:	e9 52       	subi	r30, 0x29	; 41
+    18d8:	fd 4f       	sbci	r31, 0xFD	; 253
+    18da:	90 81       	ld	r25, Z
+    18dc:	81 e0       	ldi	r24, 0x01	; 1
+    18de:	92 30       	cpi	r25, 0x02	; 2
+    18e0:	09 f0       	breq	.+2      	; 0x18e4 <GetBCMessage+0x12>
+    18e2:	80 e0       	ldi	r24, 0x00	; 0
+    18e4:	08 95       	ret
+
+000018e6 <ProcessMessages>:
+    18e6:	2f b7       	in	r18, 0x3f	; 63
+    18e8:	f8 94       	cli
+    18ea:	80 e0       	ldi	r24, 0x00	; 0
+    18ec:	90 e0       	ldi	r25, 0x00	; 0
+    18ee:	32 e0       	ldi	r19, 0x02	; 2
+    18f0:	fc 01       	movw	r30, r24
+    18f2:	ee 0f       	add	r30, r30
+    18f4:	ff 1f       	adc	r31, r31
+    18f6:	df 01       	movw	r26, r30
+    18f8:	a8 0f       	add	r26, r24
+    18fa:	b9 1f       	adc	r27, r25
+    18fc:	a5 52       	subi	r26, 0x25	; 37
+    18fe:	bd 4f       	sbci	r27, 0xFD	; 253
+    1900:	4c 91       	ld	r20, X
+    1902:	42 30       	cpi	r20, 0x02	; 2
+    1904:	09 f4       	brne	.+2      	; 0x1908 <ProcessMessages+0x22>
+    1906:	1c 92       	st	X, r1
+    1908:	e8 0f       	add	r30, r24
+    190a:	f9 1f       	adc	r31, r25
+    190c:	e5 52       	subi	r30, 0x25	; 37
+    190e:	fd 4f       	sbci	r31, 0xFD	; 253
+    1910:	40 81       	ld	r20, Z
+    1912:	41 30       	cpi	r20, 0x01	; 1
+    1914:	09 f4       	brne	.+2      	; 0x1918 <ProcessMessages+0x32>
+    1916:	30 83       	st	Z, r19
+    1918:	01 96       	adiw	r24, 0x01	; 1
+    191a:	80 31       	cpi	r24, 0x10	; 16
+    191c:	91 05       	cpc	r25, r1
+    191e:	41 f7       	brne	.-48     	; 0x18f0 <ProcessMessages+0xa>
+    1920:	80 e0       	ldi	r24, 0x00	; 0
+    1922:	90 e0       	ldi	r25, 0x00	; 0
+    1924:	32 e0       	ldi	r19, 0x02	; 2
+    1926:	fc 01       	movw	r30, r24
+    1928:	e9 52       	subi	r30, 0x29	; 41
+    192a:	fd 4f       	sbci	r31, 0xFD	; 253
+    192c:	40 81       	ld	r20, Z
+    192e:	42 30       	cpi	r20, 0x02	; 2
+    1930:	09 f4       	brne	.+2      	; 0x1934 <ProcessMessages+0x4e>
+    1932:	10 82       	st	Z, r1
+    1934:	40 81       	ld	r20, Z
+    1936:	41 30       	cpi	r20, 0x01	; 1
+    1938:	09 f4       	brne	.+2      	; 0x193c <ProcessMessages+0x56>
+    193a:	30 83       	st	Z, r19
+    193c:	01 96       	adiw	r24, 0x01	; 1
+    193e:	84 30       	cpi	r24, 0x04	; 4
+    1940:	91 05       	cpc	r25, r1
+    1942:	89 f7       	brne	.-30     	; 0x1926 <ProcessMessages+0x40>
+    1944:	2f bf       	out	0x3f, r18	; 63
+    1946:	08 95       	ret
+
+00001948 <PARS_ParsStringFromBuffer>:
+    1948:	cf 93       	push	r28
+    194a:	df 93       	push	r29
+    194c:	66 23       	and	r22, r22
+    194e:	91 f1       	breq	.+100    	; 0x19b4 <PARS_ParsStringFromBuffer+0x6c>
+    1950:	ab e0       	ldi	r26, 0x0B	; 11
+    1952:	b3 e0       	ldi	r27, 0x03	; 3
+    1954:	fd 01       	movw	r30, r26
+    1956:	11 92       	st	Z+, r1
+    1958:	23 e0       	ldi	r18, 0x03	; 3
+    195a:	ef 31       	cpi	r30, 0x1F	; 31
+    195c:	f2 07       	cpc	r31, r18
+    195e:	d9 f7       	brne	.-10     	; 0x1956 <PARS_ParsStringFromBuffer+0xe>
+    1960:	48 2f       	mov	r20, r24
+    1962:	fc 01       	movw	r30, r24
+    1964:	80 e0       	ldi	r24, 0x00	; 0
+    1966:	90 e0       	ldi	r25, 0x00	; 0
+    1968:	20 e0       	ldi	r18, 0x00	; 0
+    196a:	3e 2f       	mov	r19, r30
+    196c:	34 1b       	sub	r19, r20
+    196e:	36 17       	cp	r19, r22
+    1970:	20 f5       	brcc	.+72     	; 0x19ba <PARS_ParsStringFromBuffer+0x72>
+    1972:	30 81       	ld	r19, Z
+    1974:	30 32       	cpi	r19, 0x20	; 32
+    1976:	11 f0       	breq	.+4      	; 0x197c <PARS_ParsStringFromBuffer+0x34>
+    1978:	3d 33       	cpi	r19, 0x3D	; 61
+    197a:	41 f4       	brne	.+16     	; 0x198c <PARS_ParsStringFromBuffer+0x44>
+    197c:	91 11       	cpse	r25, r1
+    197e:	13 c0       	rjmp	.+38     	; 0x19a6 <PARS_ParsStringFromBuffer+0x5e>
+    1980:	83 30       	cpi	r24, 0x03	; 3
+    1982:	d1 f0       	breq	.+52     	; 0x19b8 <PARS_ParsStringFromBuffer+0x70>
+    1984:	1c 92       	st	X, r1
+    1986:	91 e0       	ldi	r25, 0x01	; 1
+    1988:	20 e0       	ldi	r18, 0x00	; 0
+    198a:	11 c0       	rjmp	.+34     	; 0x19ae <PARS_ParsStringFromBuffer+0x66>
+    198c:	3c 93       	st	X, r19
+    198e:	21 11       	cpse	r18, r1
+    1990:	0c c0       	rjmp	.+24     	; 0x19aa <PARS_ParsStringFromBuffer+0x62>
+    1992:	c8 2f       	mov	r28, r24
+    1994:	d0 e0       	ldi	r29, 0x00	; 0
+    1996:	cc 0f       	add	r28, r28
+    1998:	dd 1f       	adc	r29, r29
+    199a:	c1 5e       	subi	r28, 0xE1	; 225
+    199c:	dc 4f       	sbci	r29, 0xFC	; 252
+    199e:	b9 83       	std	Y+1, r27	; 0x01
+    19a0:	a8 83       	st	Y, r26
+    19a2:	8f 5f       	subi	r24, 0xFF	; 255
+    19a4:	02 c0       	rjmp	.+4      	; 0x19aa <PARS_ParsStringFromBuffer+0x62>
+    19a6:	91 e0       	ldi	r25, 0x01	; 1
+    19a8:	02 c0       	rjmp	.+4      	; 0x19ae <PARS_ParsStringFromBuffer+0x66>
+    19aa:	90 e0       	ldi	r25, 0x00	; 0
+    19ac:	21 e0       	ldi	r18, 0x01	; 1
+    19ae:	11 96       	adiw	r26, 0x01	; 1
+    19b0:	31 96       	adiw	r30, 0x01	; 1
+    19b2:	db cf       	rjmp	.-74     	; 0x196a <PARS_ParsStringFromBuffer+0x22>
+    19b4:	80 e0       	ldi	r24, 0x00	; 0
+    19b6:	01 c0       	rjmp	.+2      	; 0x19ba <PARS_ParsStringFromBuffer+0x72>
+    19b8:	83 e0       	ldi	r24, 0x03	; 3
+    19ba:	df 91       	pop	r29
+    19bc:	cf 91       	pop	r28
+    19be:	08 95       	ret
+
+000019c0 <PARS_StrCmpF>:
+    19c0:	ac 01       	movw	r20, r24
+    19c2:	20 e0       	ldi	r18, 0x00	; 0
+    19c4:	e2 2f       	mov	r30, r18
+    19c6:	f0 e0       	ldi	r31, 0x00	; 0
+    19c8:	da 01       	movw	r26, r20
+    19ca:	ae 0f       	add	r26, r30
+    19cc:	bf 1f       	adc	r27, r31
+    19ce:	9c 91       	ld	r25, X
+    19d0:	e6 0f       	add	r30, r22
+    19d2:	f7 1f       	adc	r31, r23
+    19d4:	84 91       	lpm	r24, Z
+    19d6:	98 13       	cpse	r25, r24
+    19d8:	0c c0       	rjmp	.+24     	; 0x19f2 <PARS_StrCmpF+0x32>
+    19da:	91 11       	cpse	r25, r1
+    19dc:	05 c0       	rjmp	.+10     	; 0x19e8 <PARS_StrCmpF+0x28>
+    19de:	e4 91       	lpm	r30, Z
+    19e0:	81 e0       	ldi	r24, 0x01	; 1
+    19e2:	ee 23       	and	r30, r30
+    19e4:	49 f0       	breq	.+18     	; 0x19f8 <PARS_StrCmpF+0x38>
+    19e6:	07 c0       	rjmp	.+14     	; 0x19f6 <PARS_StrCmpF+0x36>
+    19e8:	e4 91       	lpm	r30, Z
+    19ea:	ee 23       	and	r30, r30
+    19ec:	21 f0       	breq	.+8      	; 0x19f6 <PARS_StrCmpF+0x36>
+    19ee:	2f 5f       	subi	r18, 0xFF	; 255
+    19f0:	e9 cf       	rjmp	.-46     	; 0x19c4 <PARS_StrCmpF+0x4>
+    19f2:	99 23       	and	r25, r25
+    19f4:	a1 f3       	breq	.-24     	; 0x19de <PARS_StrCmpF+0x1e>
+    19f6:	80 e0       	ldi	r24, 0x00	; 0
+    19f8:	08 95       	ret
+
+000019fa <PARS_StrToUint8t>:
+    19fa:	fc 01       	movw	r30, r24
+    19fc:	80 e0       	ldi	r24, 0x00	; 0
+    19fe:	31 91       	ld	r19, Z+
+    1a00:	33 23       	and	r19, r19
+    1a02:	71 f0       	breq	.+28     	; 0x1a20 <PARS_StrToUint8t+0x26>
+    1a04:	96 ed       	ldi	r25, 0xD6	; 214
+    1a06:	93 0f       	add	r25, r19
+    1a08:	96 31       	cpi	r25, 0x16	; 22
+    1a0a:	c8 f7       	brcc	.-14     	; 0x19fe <PARS_StrToUint8t+0x4>
+    1a0c:	98 2f       	mov	r25, r24
+    1a0e:	99 0f       	add	r25, r25
+    1a10:	29 2f       	mov	r18, r25
+    1a12:	22 0f       	add	r18, r18
+    1a14:	22 0f       	add	r18, r18
+    1a16:	92 0f       	add	r25, r18
+    1a18:	90 53       	subi	r25, 0x30	; 48
+    1a1a:	89 2f       	mov	r24, r25
+    1a1c:	83 0f       	add	r24, r19
+    1a1e:	ef cf       	rjmp	.-34     	; 0x19fe <PARS_StrToUint8t+0x4>
+    1a20:	08 95       	ret
+
+00001a22 <CRC8>:
+    1a22:	86 27       	eor	r24, r22
+    1a24:	e8 2f       	mov	r30, r24
+    1a26:	f0 e0       	ldi	r31, 0x00	; 0
+    1a28:	e4 58       	subi	r30, 0x84	; 132
+    1a2a:	ff 4f       	sbci	r31, 0xFF	; 255
+    1a2c:	84 91       	lpm	r24, Z
+    1a2e:	08 95       	ret
+
+00001a30 <hex_to_ascii>:
+    1a30:	db 01       	movw	r26, r22
+    1a32:	e8 2f       	mov	r30, r24
+    1a34:	e2 95       	swap	r30
+    1a36:	ef 70       	andi	r30, 0x0F	; 15
+    1a38:	f0 e0       	ldi	r31, 0x00	; 0
+    1a3a:	e5 59       	subi	r30, 0x95	; 149
+    1a3c:	ff 4f       	sbci	r31, 0xFF	; 255
+    1a3e:	e4 91       	lpm	r30, Z
+    1a40:	ec 93       	st	X, r30
+    1a42:	e8 2f       	mov	r30, r24
+    1a44:	ef 70       	andi	r30, 0x0F	; 15
+    1a46:	f0 e0       	ldi	r31, 0x00	; 0
+    1a48:	e5 59       	subi	r30, 0x95	; 149
+    1a4a:	ff 4f       	sbci	r31, 0xFF	; 255
+    1a4c:	e4 91       	lpm	r30, Z
+    1a4e:	11 96       	adiw	r26, 0x01	; 1
+    1a50:	ec 93       	st	X, r30
+    1a52:	11 97       	sbiw	r26, 0x01	; 1
+    1a54:	12 96       	adiw	r26, 0x02	; 2
+    1a56:	1c 92       	st	X, r1
+    1a58:	cb 01       	movw	r24, r22
+    1a5a:	08 95       	ret
+
+00001a5c <utoa_cycle_sub8>:
+    1a5c:	ef 92       	push	r14
+    1a5e:	ff 92       	push	r15
+    1a60:	0f 93       	push	r16
+    1a62:	1f 93       	push	r17
+    1a64:	cf 93       	push	r28
+    1a66:	df 93       	push	r29
+    1a68:	db 01       	movw	r26, r22
+    1a6a:	81 11       	cpse	r24, r1
+    1a6c:	06 c0       	rjmp	.+12     	; 0x1a7a <utoa_cycle_sub8+0x1e>
+    1a6e:	80 e3       	ldi	r24, 0x30	; 48
+    1a70:	8c 93       	st	X, r24
+    1a72:	11 96       	adiw	r26, 0x01	; 1
+    1a74:	1c 92       	st	X, r1
+    1a76:	11 97       	sbiw	r26, 0x01	; 1
+    1a78:	2b c0       	rjmp	.+86     	; 0x1ad0 <utoa_cycle_sub8+0x74>
+    1a7a:	91 e0       	ldi	r25, 0x01	; 1
+    1a7c:	8a 30       	cpi	r24, 0x0A	; 10
+    1a7e:	08 f0       	brcs	.+2      	; 0x1a82 <utoa_cycle_sub8+0x26>
+    1a80:	90 e0       	ldi	r25, 0x00	; 0
+    1a82:	08 e6       	ldi	r16, 0x68	; 104
+    1a84:	10 e0       	ldi	r17, 0x00	; 0
+    1a86:	ed 01       	movw	r28, r26
+    1a88:	7d 01       	movw	r14, r26
+    1a8a:	23 e0       	ldi	r18, 0x03	; 3
+    1a8c:	e2 0e       	add	r14, r18
+    1a8e:	f1 1c       	adc	r15, r1
+    1a90:	f8 01       	movw	r30, r16
+    1a92:	45 91       	lpm	r20, Z+
+    1a94:	55 91       	lpm	r21, Z+
+    1a96:	65 91       	lpm	r22, Z+
+    1a98:	74 91       	lpm	r23, Z
+    1a9a:	20 e0       	ldi	r18, 0x00	; 0
+    1a9c:	84 17       	cp	r24, r20
+    1a9e:	18 f0       	brcs	.+6      	; 0x1aa6 <utoa_cycle_sub8+0x4a>
+    1aa0:	2f 5f       	subi	r18, 0xFF	; 255
+    1aa2:	84 1b       	sub	r24, r20
+    1aa4:	fb cf       	rjmp	.-10     	; 0x1a9c <utoa_cycle_sub8+0x40>
+    1aa6:	20 5d       	subi	r18, 0xD0	; 208
+    1aa8:	29 93       	st	Y+, r18
+    1aaa:	0f 5f       	subi	r16, 0xFF	; 255
+    1aac:	1f 4f       	sbci	r17, 0xFF	; 255
+    1aae:	ce 15       	cp	r28, r14
+    1ab0:	df 05       	cpc	r29, r15
+    1ab2:	71 f7       	brne	.-36     	; 0x1a90 <utoa_cycle_sub8+0x34>
+    1ab4:	13 96       	adiw	r26, 0x03	; 3
+    1ab6:	1c 92       	st	X, r1
+    1ab8:	13 97       	sbiw	r26, 0x03	; 3
+    1aba:	89 2f       	mov	r24, r25
+    1abc:	90 e0       	ldi	r25, 0x00	; 0
+    1abe:	fd 01       	movw	r30, r26
+    1ac0:	e8 0f       	add	r30, r24
+    1ac2:	f9 1f       	adc	r31, r25
+    1ac4:	df 01       	movw	r26, r30
+    1ac6:	a8 1b       	sub	r26, r24
+    1ac8:	b9 0b       	sbc	r27, r25
+    1aca:	21 91       	ld	r18, Z+
+    1acc:	20 33       	cpi	r18, 0x30	; 48
+    1ace:	d1 f3       	breq	.-12     	; 0x1ac4 <utoa_cycle_sub8+0x68>
+    1ad0:	cd 01       	movw	r24, r26
+    1ad2:	df 91       	pop	r29
+    1ad4:	cf 91       	pop	r28
+    1ad6:	1f 91       	pop	r17
+    1ad8:	0f 91       	pop	r16
+    1ada:	ff 90       	pop	r15
+    1adc:	ef 90       	pop	r14
+    1ade:	08 95       	ret
+
+00001ae0 <utoa_cycle_sub16>:
+    1ae0:	cf 92       	push	r12
+    1ae2:	df 92       	push	r13
+    1ae4:	ef 92       	push	r14
+    1ae6:	ff 92       	push	r15
+    1ae8:	0f 93       	push	r16
+    1aea:	1f 93       	push	r17
+    1aec:	cf 93       	push	r28
+    1aee:	df 93       	push	r29
+    1af0:	9c 01       	movw	r18, r24
+    1af2:	db 01       	movw	r26, r22
+    1af4:	89 2b       	or	r24, r25
+    1af6:	31 f4       	brne	.+12     	; 0x1b04 <utoa_cycle_sub16+0x24>
+    1af8:	80 e3       	ldi	r24, 0x30	; 48
+    1afa:	8c 93       	st	X, r24
+    1afc:	11 96       	adiw	r26, 0x01	; 1
+    1afe:	1c 92       	st	X, r1
+    1b00:	11 97       	sbiw	r26, 0x01	; 1
+    1b02:	23 c0       	rjmp	.+70     	; 0x1b4a <utoa_cycle_sub16+0x6a>
+    1b04:	6e e5       	ldi	r22, 0x5E	; 94
+    1b06:	70 e0       	ldi	r23, 0x00	; 0
+    1b08:	ad 01       	movw	r20, r26
+    1b0a:	8d 01       	movw	r16, r26
+    1b0c:	0b 5f       	subi	r16, 0xFB	; 251
+    1b0e:	1f 4f       	sbci	r17, 0xFF	; 255
+    1b10:	ed 01       	movw	r28, r26
+    1b12:	fb 01       	movw	r30, r22
+    1b14:	c5 90       	lpm	r12, Z+
+    1b16:	d5 90       	lpm	r13, Z+
+    1b18:	e5 90       	lpm	r14, Z+
+    1b1a:	f4 90       	lpm	r15, Z
+    1b1c:	90 e0       	ldi	r25, 0x00	; 0
+    1b1e:	2c 15       	cp	r18, r12
+    1b20:	3d 05       	cpc	r19, r13
+    1b22:	20 f0       	brcs	.+8      	; 0x1b2c <utoa_cycle_sub16+0x4c>
+    1b24:	9f 5f       	subi	r25, 0xFF	; 255
+    1b26:	2c 19       	sub	r18, r12
+    1b28:	3d 09       	sbc	r19, r13
+    1b2a:	f9 cf       	rjmp	.-14     	; 0x1b1e <utoa_cycle_sub16+0x3e>
+    1b2c:	90 5d       	subi	r25, 0xD0	; 208
+    1b2e:	99 93       	st	Y+, r25
+    1b30:	6e 5f       	subi	r22, 0xFE	; 254
+    1b32:	7f 4f       	sbci	r23, 0xFF	; 255
+    1b34:	c0 17       	cp	r28, r16
+    1b36:	d1 07       	cpc	r29, r17
+    1b38:	61 f7       	brne	.-40     	; 0x1b12 <utoa_cycle_sub16+0x32>
+    1b3a:	15 96       	adiw	r26, 0x05	; 5
+    1b3c:	1c 92       	st	X, r1
+    1b3e:	da 01       	movw	r26, r20
+    1b40:	4f 5f       	subi	r20, 0xFF	; 255
+    1b42:	5f 4f       	sbci	r21, 0xFF	; 255
+    1b44:	8c 91       	ld	r24, X
+    1b46:	80 33       	cpi	r24, 0x30	; 48
+    1b48:	d1 f3       	breq	.-12     	; 0x1b3e <utoa_cycle_sub16+0x5e>
+    1b4a:	cd 01       	movw	r24, r26
+    1b4c:	df 91       	pop	r29
+    1b4e:	cf 91       	pop	r28
+    1b50:	1f 91       	pop	r17
+    1b52:	0f 91       	pop	r16
+    1b54:	ff 90       	pop	r15
+    1b56:	ef 90       	pop	r14
+    1b58:	df 90       	pop	r13
+    1b5a:	cf 90       	pop	r12
+    1b5c:	08 95       	ret
+
+00001b5e <InitTimers>:
+    1b5e:	80 e0       	ldi	r24, 0x00	; 0
+    1b60:	90 e0       	ldi	r25, 0x00	; 0
+    1b62:	fc 01       	movw	r30, r24
+    1b64:	ee 0f       	add	r30, r30
+    1b66:	ff 1f       	adc	r31, r31
+    1b68:	ec 57       	subi	r30, 0x7C	; 124
+    1b6a:	ff 4f       	sbci	r31, 0xFF	; 255
+    1b6c:	11 82       	std	Z+1, r1	; 0x01
+    1b6e:	10 82       	st	Z, r1
+    1b70:	01 96       	adiw	r24, 0x01	; 1
+    1b72:	87 30       	cpi	r24, 0x07	; 7
+    1b74:	91 05       	cpc	r25, r1
+    1b76:	a9 f7       	brne	.-22     	; 0x1b62 <InitTimers+0x4>
+    1b78:	08 95       	ret
+
+00001b7a <ProcessTimers>:
+    1b7a:	fc 01       	movw	r30, r24
+    1b7c:	40 81       	ld	r20, Z
+    1b7e:	af b7       	in	r26, 0x3f	; 63
+    1b80:	f8 94       	cli
+    1b82:	44 23       	and	r20, r20
+    1b84:	a9 f0       	breq	.+42     	; 0x1bb0 <ProcessTimers+0x36>
+    1b86:	20 e0       	ldi	r18, 0x00	; 0
+    1b88:	30 e0       	ldi	r19, 0x00	; 0
+    1b8a:	50 e0       	ldi	r21, 0x00	; 0
+    1b8c:	f9 01       	movw	r30, r18
+    1b8e:	ee 0f       	add	r30, r30
+    1b90:	ff 1f       	adc	r31, r31
+    1b92:	ec 57       	subi	r30, 0x7C	; 124
+    1b94:	ff 4f       	sbci	r31, 0xFF	; 255
+    1b96:	60 81       	ld	r22, Z
+    1b98:	71 81       	ldd	r23, Z+1	; 0x01
+    1b9a:	64 0f       	add	r22, r20
+    1b9c:	75 1f       	adc	r23, r21
+    1b9e:	71 83       	std	Z+1, r23	; 0x01
+    1ba0:	60 83       	st	Z, r22
+    1ba2:	2f 5f       	subi	r18, 0xFF	; 255
+    1ba4:	3f 4f       	sbci	r19, 0xFF	; 255
+    1ba6:	27 30       	cpi	r18, 0x07	; 7
+    1ba8:	31 05       	cpc	r19, r1
+    1baa:	81 f7       	brne	.-32     	; 0x1b8c <ProcessTimers+0x12>
+    1bac:	fc 01       	movw	r30, r24
+    1bae:	10 82       	st	Z, r1
+    1bb0:	af bf       	out	0x3f, r26	; 63
+    1bb2:	08 95       	ret
+
+00001bb4 <GetTimer>:
+    1bb4:	e8 2f       	mov	r30, r24
+    1bb6:	f0 e0       	ldi	r31, 0x00	; 0
+    1bb8:	ee 0f       	add	r30, r30
+    1bba:	ff 1f       	adc	r31, r31
+    1bbc:	ec 57       	subi	r30, 0x7C	; 124
+    1bbe:	ff 4f       	sbci	r31, 0xFF	; 255
+    1bc0:	80 81       	ld	r24, Z
+    1bc2:	91 81       	ldd	r25, Z+1	; 0x01
+    1bc4:	08 95       	ret
+
+00001bc6 <ResetTimer>:
+    1bc6:	e8 2f       	mov	r30, r24
+    1bc8:	f0 e0       	ldi	r31, 0x00	; 0
+    1bca:	ee 0f       	add	r30, r30
+    1bcc:	ff 1f       	adc	r31, r31
+    1bce:	ec 57       	subi	r30, 0x7C	; 124
+    1bd0:	ff 4f       	sbci	r31, 0xFF	; 255
+    1bd2:	11 82       	std	Z+1, r1	; 0x01
+    1bd4:	10 82       	st	Z, r1
+    1bd6:	08 95       	ret
+
+00001bd8 <InitGPIO>:
+    1bd8:	8c e0       	ldi	r24, 0x0C	; 12
+    1bda:	85 bd       	out	0x25, r24	; 37
+    1bdc:	12 bc       	out	0x22, r1	; 34
+    1bde:	8d e7       	ldi	r24, 0x7D	; 125
+    1be0:	83 bd       	out	0x23, r24	; 35
+    1be2:	14 bc       	out	0x24, r1	; 36
+    1be4:	89 b7       	in	r24, 0x39	; 57
+    1be6:	80 68       	ori	r24, 0x80	; 128
+    1be8:	89 bf       	out	0x39, r24	; 57
+    1bea:	a2 98       	cbi	0x14, 2	; 20
+    1bec:	95 9a       	sbi	0x12, 5	; 18
+    1bee:	8d 98       	cbi	0x11, 5	; 17
+    1bf0:	a5 9a       	sbi	0x14, 5	; 20
+    1bf2:	ad 98       	cbi	0x15, 5	; 21
+    1bf4:	b8 9a       	sbi	0x17, 0	; 23
+    1bf6:	c0 98       	cbi	0x18, 0	; 24
+    1bf8:	92 9a       	sbi	0x12, 2	; 18
+    1bfa:	8a 98       	cbi	0x11, 2	; 17
+    1bfc:	85 b7       	in	r24, 0x35	; 53
+    1bfe:	82 60       	ori	r24, 0x02	; 2
+    1c00:	85 bf       	out	0x35, r24	; 53
+    1c02:	8b b7       	in	r24, 0x3b	; 59
+    1c04:	80 64       	ori	r24, 0x40	; 64
+    1c06:	8b bf       	out	0x3b, r24	; 59
+    1c08:	8e 9a       	sbi	0x11, 6	; 17
+    1c0a:	96 98       	cbi	0x12, 6	; 18
+    1c0c:	8f 9a       	sbi	0x11, 7	; 17
+    1c0e:	83 e3       	ldi	r24, 0x33	; 51
+    1c10:	89 b9       	out	0x09, r24	; 9
+    1c12:	10 bc       	out	0x20, r1	; 32
+    1c14:	1b b8       	out	0x0b, r1	; 11
+    1c16:	88 e1       	ldi	r24, 0x18	; 24
+    1c18:	8a b9       	out	0x0a, r24	; 10
+    1c1a:	86 e8       	ldi	r24, 0x86	; 134
+    1c1c:	80 bd       	out	0x20, r24	; 32
+    1c1e:	55 9a       	sbi	0x0a, 5	; 10
+    1c20:	a2 98       	cbi	0x14, 2	; 20
+    1c22:	08 95       	ret
+
+00001c24 <main>:
+    1c24:	d9 df       	rcall	.-78     	; 0x1bd8 <InitGPIO>
+    1c26:	f7 dd       	rcall	.-1042   	; 0x1816 <InitMessages>
+    1c28:	9a df       	rcall	.-204    	; 0x1b5e <InitTimers>
+    1c2a:	67 d8       	rcall	.-3890   	; 0xcfa <FSM_SYSTEM_Init>
+    1c2c:	53 db       	rcall	.-2394   	; 0x12d4 <FSM_UART_Init>
+    1c2e:	67 d7       	rcall	.+3790   	; 0x2afe <__TEXT_REGION_LENGTH__+0xafe>
+    1c30:	53 da       	rcall	.-2906   	; 0x10d8 <FSM_DS18X20_Init>
+    1c32:	12 d6       	rcall	.+3108   	; 0x2858 <__TEXT_REGION_LENGTH__+0x858>
+    1c34:	cb d5       	rcall	.+2966   	; 0x27cc <__TEXT_REGION_LENGTH__+0x7cc>
+    1c36:	b2 d6       	rcall	.+3428   	; 0x299c <__TEXT_REGION_LENGTH__+0x99c>
+    1c38:	78 94       	sei
+    1c3a:	82 e9       	ldi	r24, 0x92	; 146
+    1c3c:	90 e0       	ldi	r25, 0x00	; 0
+    1c3e:	9d df       	rcall	.-198    	; 0x1b7a <ProcessTimers>
+    1c40:	8a d8       	rcall	.-3820   	; 0xd56 <FSM_SYSTEM_Process>
+    1c42:	4b db       	rcall	.-2410   	; 0x12da <FSM_UART_Process>
+    1c44:	5f d7       	rcall	.+3774   	; 0x2b04 <__TEXT_REGION_LENGTH__+0xb04>
+    1c46:	4e da       	rcall	.-2916   	; 0x10e4 <FSM_DS18X20_Process>
+    1c48:	33 d6       	rcall	.+3174   	; 0x28b0 <__TEXT_REGION_LENGTH__+0x8b0>
+    1c4a:	c7 d5       	rcall	.+2958   	; 0x27da <__TEXT_REGION_LENGTH__+0x7da>
+    1c4c:	ac d6       	rcall	.+3416   	; 0x29a6 <__TEXT_REGION_LENGTH__+0x9a6>
+    1c4e:	4b de       	rcall	.-874    	; 0x18e6 <ProcessMessages>
+    1c50:	f4 cf       	rjmp	.-24     	; 0x1c3a <main+0x16>
+
+00001c52 <__vector_3>:
+    1c52:	1f 92       	push	r1
+    1c54:	0f 92       	push	r0
+    1c56:	0f b6       	in	r0, 0x3f	; 63
+    1c58:	0f 92       	push	r0
+    1c5a:	11 24       	eor	r1, r1
+    1c5c:	8f 93       	push	r24
+    1c5e:	80 91 92 00 	lds	r24, 0x0092	; 0x800092 <systick>
+    1c62:	8f 5f       	subi	r24, 0xFF	; 255
+    1c64:	80 93 92 00 	sts	0x0092, r24	; 0x800092 <systick>
+    1c68:	8f 91       	pop	r24
+    1c6a:	0f 90       	pop	r0
+    1c6c:	0f be       	out	0x3f, r0	; 63
+    1c6e:	0f 90       	pop	r0
+    1c70:	1f 90       	pop	r1
+    1c72:	18 95       	reti
+
+00001c74 <__vector_1>:
+    1c74:	1f 92       	push	r1
+    1c76:	0f 92       	push	r0
+    1c78:	0f b6       	in	r0, 0x3f	; 63
+    1c7a:	0f 92       	push	r0
+    1c7c:	11 24       	eor	r1, r1
+    1c7e:	8f 93       	push	r24
+    1c80:	9f 93       	push	r25
+    1c82:	ef 93       	push	r30
+    1c84:	ff 93       	push	r31
+    1c86:	eb e9       	ldi	r30, 0x9B	; 155
+    1c88:	f2 e0       	ldi	r31, 0x02	; 2
+    1c8a:	82 81       	ldd	r24, Z+2	; 0x02
+    1c8c:	93 81       	ldd	r25, Z+3	; 0x03
+    1c8e:	01 96       	adiw	r24, 0x01	; 1
+    1c90:	93 83       	std	Z+3, r25	; 0x03
+    1c92:	82 83       	std	Z+2, r24	; 0x02
+    1c94:	ff 91       	pop	r31
+    1c96:	ef 91       	pop	r30
+    1c98:	9f 91       	pop	r25
+    1c9a:	8f 91       	pop	r24
+    1c9c:	0f 90       	pop	r0
+    1c9e:	0f be       	out	0x3f, r0	; 63
+    1ca0:	0f 90       	pop	r0
+    1ca2:	1f 90       	pop	r1
+    1ca4:	18 95       	reti
+
+00001ca6 <__vector_11>:
+    1ca6:	1f 92       	push	r1
+    1ca8:	0f 92       	push	r0
+    1caa:	0f b6       	in	r0, 0x3f	; 63
+    1cac:	0f 92       	push	r0
+    1cae:	11 24       	eor	r1, r1
+    1cb0:	2f 93       	push	r18
+    1cb2:	3f 93       	push	r19
+    1cb4:	4f 93       	push	r20
+    1cb6:	5f 93       	push	r21
+    1cb8:	6f 93       	push	r22
+    1cba:	7f 93       	push	r23
+    1cbc:	8f 93       	push	r24
+    1cbe:	9f 93       	push	r25
+    1cc0:	af 93       	push	r26
+    1cc2:	bf 93       	push	r27
+    1cc4:	ef 93       	push	r30
+    1cc6:	ff 93       	push	r31
+    1cc8:	3b d5       	rcall	.+2678   	; 0x2740 <__TEXT_REGION_LENGTH__+0x740>
+    1cca:	ff 91       	pop	r31
+    1ccc:	ef 91       	pop	r30
+    1cce:	bf 91       	pop	r27
+    1cd0:	af 91       	pop	r26
+    1cd2:	9f 91       	pop	r25
+    1cd4:	8f 91       	pop	r24
+    1cd6:	7f 91       	pop	r23
+    1cd8:	6f 91       	pop	r22
+    1cda:	5f 91       	pop	r21
+    1cdc:	4f 91       	pop	r20
+    1cde:	3f 91       	pop	r19
+    1ce0:	2f 91       	pop	r18
+    1ce2:	0f 90       	pop	r0
+    1ce4:	0f be       	out	0x3f, r0	; 63
+    1ce6:	0f 90       	pop	r0
+    1ce8:	1f 90       	pop	r1
+    1cea:	18 95       	reti
+
+00001cec <__vector_12>:
+    1cec:	1f 92       	push	r1
+    1cee:	0f 92       	push	r0
+    1cf0:	0f b6       	in	r0, 0x3f	; 63
+    1cf2:	0f 92       	push	r0
+    1cf4:	11 24       	eor	r1, r1
+    1cf6:	2f 93       	push	r18
+    1cf8:	3f 93       	push	r19
+    1cfa:	4f 93       	push	r20
+    1cfc:	5f 93       	push	r21
+    1cfe:	6f 93       	push	r22
+    1d00:	7f 93       	push	r23
+    1d02:	8f 93       	push	r24
+    1d04:	9f 93       	push	r25
+    1d06:	af 93       	push	r26
+    1d08:	bf 93       	push	r27
+    1d0a:	ef 93       	push	r30
+    1d0c:	ff 93       	push	r31
+    1d0e:	ea d4       	rcall	.+2516   	; 0x26e4 <__TEXT_REGION_LENGTH__+0x6e4>
+    1d10:	ff 91       	pop	r31
+    1d12:	ef 91       	pop	r30
+    1d14:	bf 91       	pop	r27
+    1d16:	af 91       	pop	r26
+    1d18:	9f 91       	pop	r25
+    1d1a:	8f 91       	pop	r24
+    1d1c:	7f 91       	pop	r23
+    1d1e:	6f 91       	pop	r22
+    1d20:	5f 91       	pop	r21
+    1d22:	4f 91       	pop	r20
+    1d24:	3f 91       	pop	r19
+    1d26:	2f 91       	pop	r18
+    1d28:	0f 90       	pop	r0
+    1d2a:	0f be       	out	0x3f, r0	; 63
+    1d2c:	0f 90       	pop	r0
+    1d2e:	1f 90       	pop	r1
+    1d30:	18 95       	reti
+
+00001d32 <eeprom_read_block>:
+    1d32:	dc 01       	movw	r26, r24
+    1d34:	cb 01       	movw	r24, r22
+
+00001d36 <eeprom_read_blraw>:
+    1d36:	fc 01       	movw	r30, r24
+    1d38:	e1 99       	sbic	0x1c, 1	; 28
+    1d3a:	fe cf       	rjmp	.-4      	; 0x1d38 <eeprom_read_blraw+0x2>
+    1d3c:	06 c0       	rjmp	.+12     	; 0x1d4a <eeprom_read_blraw+0x14>
+    1d3e:	ff bb       	out	0x1f, r31	; 31
+    1d40:	ee bb       	out	0x1e, r30	; 30
+    1d42:	e0 9a       	sbi	0x1c, 0	; 28
+    1d44:	31 96       	adiw	r30, 0x01	; 1
+    1d46:	0d b2       	in	r0, 0x1d	; 29
+    1d48:	0d 92       	st	X+, r0
+    1d4a:	41 50       	subi	r20, 0x01	; 1
+    1d4c:	50 40       	sbci	r21, 0x00	; 0
+    1d4e:	b8 f7       	brcc	.-18     	; 0x1d3e <eeprom_read_blraw+0x8>
+    1d50:	08 95       	ret
+
+00001d52 <eeprom_write_block>:
+    1d52:	dc 01       	movw	r26, r24
+    1d54:	cb 01       	movw	r24, r22
+    1d56:	02 c0       	rjmp	.+4      	; 0x1d5c <eeprom_write_block+0xa>
+    1d58:	2d 91       	ld	r18, X+
+    1d5a:	05 d0       	rcall	.+10     	; 0x1d66 <eeprom_write_r18>
+    1d5c:	41 50       	subi	r20, 0x01	; 1
+    1d5e:	50 40       	sbci	r21, 0x00	; 0
+    1d60:	d8 f7       	brcc	.-10     	; 0x1d58 <eeprom_write_block+0x6>
+    1d62:	08 95       	ret
+
+00001d64 <eeprom_write_byte>:
+    1d64:	26 2f       	mov	r18, r22
+
+00001d66 <eeprom_write_r18>:
+    1d66:	e1 99       	sbic	0x1c, 1	; 28
+    1d68:	fe cf       	rjmp	.-4      	; 0x1d66 <eeprom_write_r18>
+    1d6a:	9f bb       	out	0x1f, r25	; 31
+    1d6c:	8e bb       	out	0x1e, r24	; 30
+    1d6e:	2d bb       	out	0x1d, r18	; 29
+    1d70:	0f b6       	in	r0, 0x3f	; 63
+    1d72:	f8 94       	cli
+    1d74:	e2 9a       	sbi	0x1c, 2	; 28
+    1d76:	e1 9a       	sbi	0x1c, 1	; 28
+    1d78:	0f be       	out	0x3f, r0	; 63
+    1d7a:	01 96       	adiw	r24, 0x01	; 1
+    1d7c:	08 95       	ret
+
+00001d7e <_exit>:
+    1d7e:	f8 94       	cli
+
+00001d80 <__stop_program>:
+    1d80:	ff cf       	rjmp	.-2      	; 0x1d80 <__stop_program>
